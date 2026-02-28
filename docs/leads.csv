@@ -1,0 +1,21 @@
+id,name,industry,address,city,lat,lng,decision_maker,title,phone,email,website,capacity_kw,solar_potential,state
+1,KVV Liepajas Metalurgs,Steel Manufacturing,"Kurzemes prosp. 3, Liepaja, LV-3405",Liepaja,56.5107,21.0175,Management,General Manager,+371 634 88200,info@liepajasmetalurgs.lv,liepajasmetalurgs.lv,2500,"Large roof space, industrial site",cold
+2,Latvijas Finieris,Wood/Plywood,"Virsnieku iela 7, Riga, LV-1010",Riga,56.9496,24.1052,Janis Berzins,CEO,+371 6780 6900,finieris@finieris.lv,finieris.lv,1800,Large production facility,cold
+3,Grindeks,Pharmaceuticals,"Krustpils iela 53, Riga, LV-1057",Riga,56.9558,24.1892,Juris Bundulis,Chairman,+371 6708 3201,grindeks@grindeks.lv,grindeks.lv,1200,"Multiple buildings, clean facilities",cold
+4,Laima,Confectionery,"Miera iela 22, Riga, LV-1001",Riga,56.9641,24.0812,Uldis Zimelis,Production Director,+371 6780 5700,laima@laima.lv,laima.lv,900,Production facility roof,cold
+5,Riga Wood,Wood Processing,"Ganibu dambis 24, Riga, LV-1045",Riga,56.9392,24.1205,Technical Director,Production Manager,+371 6780 2200,info@rigawerke.lv,rigawerke.lv,1500,Large warehouse facilities,cold
+6,Valmieras Stikla Skiedra,Glass Fiber,"Cempu iela 13, Valmiera, LV-4201",Valmiera,57.5407,25.4276,Karlis Podnieks,Plant Director,+371 6420 7600,vss@valmiera.lv,valmiera.lv,3000,Very large industrial complex,cold
+7,Riga Dairy,Dairy Production,"Salgales iela 1, Riga, LV-1021",Riga,56.9325,24.149,Production Manager,Operations Manager,+371 6780 1200,info@rigaspiena.lv,rigaspiena.k группа,800,Processing facility,cold
+8,Putnu Fabrika Kekava,Poultry,"Rigas iela 18, Kekava, LV-2123",Kekava,56.7908,24.2287,Valdis Zeltins,CEO,+371 6796 5100,pfk@putnufabrika.lv,putnufabrika.lv,2000,Large facility with roof space,cold
+9,Kalnapilis,Beverages,"Talsu iela 40, Ventspils, LV-3601",Ventspils,57.3897,22.0345,Plant Manager,Production Director,+371 6362 5500,kalnapilis@at姿态.lv,kalnapilis.lv,1100,Brewery facility,cold
+10,Ventspils Nafta Terminals,Oil Terminal,"Talsu iela 57, Ventspils, LV-3602",Ventspils,57.4046,21.5447,Aleksejs Klementjevs,Terminal Director,+371 6362 4500,vnt@vnt.lv,vnt.lv,5000,"Massive terminal, huge solar potential",cold
+11,Krimelte,Construction Chemicals,"Mellu lauks 1, Riga, LV-1067",Riga,56.934,24.127,Maris Smirnovs,Production Manager,+371 6780 4000,krimelte@krimelte.lv,krimelte.lv,600,Production warehouse,cold
+12,Knauf,Construction Materials,"Kekavas iela 24, Kekava, LV-2123",Kekava,56.7965,24.2415,Juris Ivanovs,Site Manager,+371 6797 2500,info@knauf.lv,knauf.lv,1400,Large warehouse,cold
+13,Rockwool,Insulation,"Daugavgrivas iela 83, Riga, LV-1007",Riga,56.9077,24.0835,Andris Vitols,Plant Manager,+371 6780 9900,rockwool@rockwool.lv,rockwool.lv,2200,Production facility,cold
+14,Saint Gobain,Glass/Construction,"Daugavgrivas iela 86, Riga, LV-1007",Riga,56.907,24.084,Regional Manager,Operations Manager,+371 6780 1000,info@saint-gobain.lv,saint-gobain.lv,1800,Warehouse complex,cold
+15,Forbo,Floor Coverings,"Katlakalna iela 9, Riga, LV-1073",Riga,56.936,24.169,Sales Director,Commercial Manager,+371 6780 3300,forbo@forbo.lv,forbo.lv,750,Warehouse,cold
+16,SAF Tehnika,Electronics,"Muku iela 8, Riga, LV-1006",Riga,56.9512,24.0705,Normunds Klausons,CEO,+371 6784 7100,saf@saf.lv,saftehnika.lv,450,Electronics facility,cold
+17,Elko,Electronics Distribution,"Eksporta iela 12, Riga, LV-1045",Riga,56.9405,24.118,Janis Tiltins,CEO,+371 6780 9000,elko@elko.lv,elko.lv,600,Warehouse,cold
+18,Hansa Matrix,Electronics,"Maskavas iela 240, Riga, LV-1063",Riga,55.8717,26.5369,Production Director,Operations Manager,+371 6722 2100,info@hansamatrix.lv,hansamatrix.com,550,Manufacturing,cold
+19,Riga Shipyard,Shipbuilding,"Lienes iela 5, Riga, LV-1005",Riga,56.948,24.095,Toms Cigans,CEO,+371 6780 7200,rfs@rfs.lv,rfs.lv,3500,Huge covered areas,cold
+20,Depo DIY,Retail/DIY,"Katlakalna iela 4, Riga, LV-1073",Riga,56.9365,24.168,Store Manager,Branch Manager,+371 6780 8100,riga@depodiy.lv,depodiy.lv,1200,Large retail roof,cold
