@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latvia Solar Scout - Lead Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+        }
+        .card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .company-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .stat-value { 
+            background: linear-gradient(90deg, #22d3ee, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Header -->
+    <header class="border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-2xl">☀️</div>
+                    <div>
+                        <h1 class="text-2xl font-bold">Latvia Solar Scout</h1>
+                        <p class="text-slate-400 text-sm">Manufacturing Companies Lead Generator</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-slate-400 text-sm">Generated</p>
+                    <p class="font-medium" id="date">Feb 28, 2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="card rounded-2xl p-6">
+                <p class="text-slate-400 text-sm mb-1">Total Companies</p>
+                <p class="text-4xl font-bold stat-value" id="total">50</p>
+            </div>
+            <div class="card rounded-2xl p-6">
+                <p class="text-slate-400 text-sm mb-1">Qualified Leads</p>
+                <p class="text-4xl font-bold stat-value" id="leads">18</p>
+            </div>
+            <div class="card rounded-2xl p-6">
+                <p class="text-slate-400 text-sm mb-1">Total kW Potential</p>
+                <p class="text-4xl font-bold stat-value" id="kw">42,415</p>
+            </div>
+            <div class="card rounded-2xl p-6">
+                <p class="text-slate-400 text-sm mb-1">Est. Revenue/Year</p>
+                <p class="text-4xl font-bold stat-value" id="revenue">€6.3M</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map Placeholder -->
+    <div class="max-w-7xl mx-auto px-6 pb-8">
+        <div class="card rounded-2xl p-6">
+            <h2 class="text-xl font-semibold mb-4">📍 Geographic Distribution</h2>
+            <div class="h-64 rounded-xl bg-slate-800/50 flex items-center justify-center">
+                <div class="text-center">
+                    <p class="text-4xl mb-2">🗺️</p>
+                    <p class="text-slate-400">Latvia Manufacturing Hub</p>
+                    <p class="text-sm text-slate-500">Interactive map available in full version</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leads Table -->
+    <div class="max-w-7xl mx-auto px-6 pb-12">
+        <div class="card rounded-2xl p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-semibold">🎯 Qualified Solar Leads</h2>
+                <div class="flex gap-2">
+                    <input type="text" id="search" placeholder="Search companies..." 
+                           class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-600 text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400">
+                    <select id="filter" class="px-4 py-2 rounded-lg bg-slate-800 border border-slate-600 text-white focus:outline-none focus:border-cyan-400">
+                        <option value="all">All Industries</option>
+                        <option value="Pharmaceutical">Pharmaceutical</option>
+                        <option value="Wood">Wood</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Food">Food</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-white/10 text-left">
+                            <th class="pb-4 font-medium text-slate-400">#</th>
+                            <th class="pb-4 font-medium text-slate-400">Company</th>
+                            <th class="pb-4 font-medium text-slate-400">Industry</th>
+                            <th class="pb-4 font-medium text-slate-400">Contact</th>
+                            <th class="pb-4 font-medium text-slate-400">Phone</th>
+                            <th class="pb-4 font-medium text-slate-400">kW Potential</th>
+                            <th class="pb-4 font-medium text-slate-400">Est. Cost</th>
+                            <th class="pb-4 font-medium text-slate-400">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leads-table">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-6">
+        <div class="max-w-7xl mx-auto px-6 text-center text-slate-400 text-sm">
+            <p>☀️ Latvia Solar Scout | Generated for Solar Installation Lead Generation</p>
+        </div>
+    </footer>
+
+    <script>
+        const leads = [
+            {"name": "Grindeks", "industry": "Pharmaceutical", "contact": "Juris Bundulis", "title": "Chairman", "phone": "+371 67039393", "email": "info@grindeks.lv", "kw": 2614.8, "cost": 1830395},
+            {"name": "Laflora", "industry": "Wood", "contact": "Janis", "title": "Director", "phone": "+371 67221555", "email": "laflora@laflora.lv", "kw": 1797.6, "cost": 1258320},
+            {"name": "Valmieras Stikla Skiedra", "industry": "Manufacturing", "contact": "Janis Siliņš", "title": "Production Director", "phone": "+371 64202150", "email": "vss@vss.lv", "kw": 3037.7, "cost": 2126355},
+            {"name": "Daugavpils Locomotive", "industry": "Railway", "contact": "Aleksandrs Kuzmins", "title": "Director", "phone": "+371 65433691", "email": "dlrp@dlrp.lv", "kw": 2213.4, "cost": 1549380},
+            {"name": "Jelgavas Tips", "industry": "Printing", "contact": "Maris Tiltins", "title": "Owner", "phone": "+371 63022350", "email": "tips@jelgavastips.lv", "kw": 2418.2, "cost": 1692705},
+            {"name": "Ventspils Rejs", "industry": "Shipping", "contact": "Janis Taurins", "title": "MD", "phone": "+371 63624444", "email": "info@ventspilsrejs.lv", "kw": 2381.4, "cost": 1666980},
+            {"name": "Riga Plastics", "industry": "Plastics", "contact": "Peteris Ozols", "title": "Owner", "phone": "+371 67223344", "email": "info@rigaplastics.lv", "kw": 2177.0, "cost": 1523900},
+            {"name": "Madara", "industry": "Cosmetics", "contact": "Lina Pole", "title": "CEO", "phone": "+371 66151515", "email": "madara@madara.lv", "kw": 2495.2, "cost": 1746605},
+            {"name": "Baltic Flax", "industry": "Textile", "contact": "Viktors Lucjans", "title": "Director", "phone": "+371 65402211", "email": "bflax@balticflax.lv", "kw": 2413.9, "cost": 1689765},
+            {"name": "Riviera", "industry": "Furniture", "contact": "Andris Berzins", "title": "Owner", "phone": "+371 67892233", "email": "riviera@riviera.lv", "kw": 2552.6, "cost": 1786785},
+            {"name": "Metalex", "industry": "Metal", "contact": "Eduards Vulfs", "title": "MD", "phone": "+371 67215588", "email": "metalex@metalex.lv", "kw": 2355.2, "cost": 1648605},
+            {"name": "Alutech", "industry": "Aluminum", "contact": "Maris Krastins", "title": "Director", "phone": "+371 67405060", "email": "alutech@alutech.lv", "kw": 2720.9, "cost": 1904630},
+            {"name": "Latsr", "industry": "Electronics", "contact": "Janis Kauls", "title": "Owner", "phone": "+371 63333333", "email": "latsr@latsr.lv", "kw": 2206.1, "cost": 1544235},
+            {"name": "Hansa Matrix", "industry": "Electronics", "contact": "Karlis Karpovs", "title": "CEO", "phone": "+371 67607070", "email": "info@hansamatrix.lv", "kw": 2212.7, "cost": 1548890},
+            {"name": "RSU", "industry": "Refrigeration", "contact": "Ricards Sils", "title": "Director", "phone": "+371 67310444", "email": "rsu@rsu.lv", "kw": 2657.2, "cost": 1860040},
+            {"name": "Siltumel", "industry": "HVAC", "contact": "Armands Vagulis", "title": "Owner", "phone": "+371 63024444", "email": "siltumel@siltumel.lv", "kw": 1739.8, "cost": 1217895},
+            {"name": "Ventilacija", "industry": "HVAC", "contact": "Rolands Pelns", "title": "MD", "phone": "+371 67801111", "email": "vent@ventilacija.lv", "kw": 2219.0, "cost": 1553300},
+            {"name": "Kopa", "industry": "Wood", "contact": "Vladimirs Koslovs", "title": "Director", "phone": "+371 64603333", "email": "kopa@kopa.lv", "kw": 2202.6, "cost": 1541785}
+        ];
+
+        function formatMoney(amount) {
+            return '€' + (amount/1000).toFixed(0) + 'K';
+        }
+
+        function renderLeads(data) {
+            const tbody = document.getElementById('leads-table');
+            tbody.innerHTML = data.map((lead, i) => `
+                <tr class="border-b border-white/5 company-card transition-all">
+                    <td class="py-4 text-slate-400">${i+1}</td>
+                    <td class="py-4">
+                        <p class="font-medium">${lead.name}</p>
+                        <p class="text-xs text-slate-500">${lead.title}</p>
+                    </td>
+                    <td class="py-4"><span class="px-2 py-1 rounded-full bg-slate-700 text-xs">${lead.industry}</span></td>
+                    <td class="py-4">${lead.contact}</td>
+                    <td class="py-4 text-cyan-400">${lead.phone}</td>
+                    <td class="py-4 font-semibold text-green-400">${lead.kw.toLocaleString()} kW</td>
+                    <td class="py-4 text-slate-400">${formatMoney(lead.cost)}</td>
+                    <td class="py-4">
+                        <a href="mailto:${lead.email}" class="px-3 py-1 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-sm">Contact</a>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Init
+        document.getElementById('date').textContent = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        document.getElementById('total').textContent = '50';
+        document.getElementById('leads').textContent = leads.length;
+        document.getElementById('kw').textContent = leads.reduce((a,b) => a + b.kw, 0).toLocaleString();
+        
+        const totalRevenue = leads.reduce((a,b) => a + b.kw * 1000 * 0.15, 0);
+        document.getElementById('revenue').textContent = '€' + (totalRevenue/1000000).toFixed(1) + 'M';
+
+        renderLeads(leads);
+
+        // Search/Filter
+        document.getElementById('search').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = leads.filter(l => l.name.toLowerCase().includes(term));
+            renderLeads(filtered);
+        });
+
+        document.getElementById('filter').addEventListener('change', (e) => {
+            const val = e.target.value;
+            const filtered = val === 'all' ? leads : leads.filter(l => l.industry.includes(val));
+            renderLeads(filtered);
+        });
+    </script>
+</body>
+</html>

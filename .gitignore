@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+*.json
+!SPEC.md
+output/images/*.jpg
+output/images/*.png
+output/*.jpg
+output/*.png
+.DS_Store
