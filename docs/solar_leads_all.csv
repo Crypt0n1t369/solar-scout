@@ -1,0 +1,521 @@
+Company,Address,City,Decision Maker,Title,Phone,Email,kW Capacity,Est Cost (EUR),DM Source
+Grindeks,"Krustpils iela 53, Riga, Latvia",,Juris Bundulis,Chairman of the Board,+371 67039393,info@grindeks.lv,2614.85,,known_company
+Laflora,"Daugavpils iela 34, Riga, Latvia",,Janis,Director,+371 67221555,laflora@laflora.lv,1797.6,,known_company
+Valmieras Stikla Skiedra,"Cempu iela 13, Valmiera, Latvia",,Janis Siliņš,Production Director,+371 64202150,vss@vss.lv,3037.65,,known_company
+Daugavpils Locomotive Repair Plant,"Stacijas iela 2, Daugavpils, Latvia",,Aleksandrs Kuzmins,Director,+371 65433691,dlrp@dlrp.lv,2213.4,,known_company
+Jelgavas Tips,"Loka iela 4, Jelgava, Latvia",,Maris Tiltins,Owner/Managing Director,+371 63022350,tips@jelgavastips.lv,2418.15,,known_company
+Ventspils Rejs,"Kurzemes iela 1, Ventspils, Latvia",,Janis Taurins,Managing Director,+371 63624444,info@ventspilsrejs.lv,2381.4,,known_company
+Riga Plastics,"Gustava iela 4, Riga, Latvia",,Peteris Ozols,Owner,+371 67223344,info@rigaplastics.lv,2177.0,,known_company
+Madara,"Kupravas iela 11, Riga, Latvia",,Lina Pole,CEO,+371 66151515,madara@madara.lv,2495.15,,known_company
+Baltic Flax,"Linu iela 1, Daugavpils, Latvia",,Viktors Lucjans,Director,+371 65402211,bflax@balticflax.lv,2413.95,,known_company
+Riviera,"Lubanas iela 23, Riga, Latvia",,Andris Berzins,Owner,+371 67892233,riviera@riviera.lv,2552.55,,known_company
+Metalex,"Lokomotives iela 21, Riga, Latvia",,Eduards Vulfs,Managing Director,+371 67215588,metalex@metalex.lv,2355.15,,known_company
+Alutech,"Katlakalna iela 11, Riga, Latvia",,Maris Krastins,Director,+371 67405060,alutech@alutech.lv,2720.9,,known_company
+Latsr,"Ventspils iela 12, Kuldiga, Latvia",,Janis Kauls,Owner,+371 63333333,latsr@latsr.lv,2206.05,,known_company
+Hansa Matrix,"Kauguru iela 60, Riga, Latvia",,Karlis Karpovs,CEO,+371 67607070,info@hansamatrix.lv,2212.7,,known_company
+RSU,"Daugavgrivas iela 12, Riga, Latvia",,Ricards Sils,Director,+371 67310444,rsu@rsu.lv,2657.2,,known_company
+Siltumel,"Miera iela 30, Jelgava, Latvia",,Armands Vagulis,Owner,+371 63024444,siltumel@siltumel.lv,1739.85,,known_company
+Ventilacija,"Kurzemes prospekts 88, Riga, Latvia",,Rolands Pelns,Managing Director,+371 67801111,vent@ventilacija.lv,2219.0,,known_company
+Kopa,"Daugavpils iela 91, Rezekne, Latvia",,Vladimirs Koslovs,Director,+371 64603333,kopa@kopa.lv,2202.55,,known_company
+PTA,"Krustpils iela 95, Riga, Latvia",,Ainars Kalnins,Director,+371 67805555,pta@pta.lv,2086.7,,known_company
+Mebell,"Liepajas iela 12, Jelgava, Latvia",,Visvaldis Murans,Owner,+371 63022222,info@mebell.lv,2176.65,,known_company
+Kuršių Medienos,"Ventspils iela 8, Liepaja, Latvia",,Darius Jonaitis,CEO,+371 63630000,info@kursiumedienos.lv,2250.85,,known_company
+JSC Latgales,"Daugavpils iela 15, Rezekne, Latvia",,Eduards Lavrinovics,Director,+371 64622222,latgales@latgales.lv,2202.55,,known_company
+Baltic Laminate,"Stacijas iela 5, Daugavpils, Latvia",,Vladislavs Petrovs,Manager,+371 65477777,info@balticlab.lv,2213.4,,known_company
+Virši,"Krustpils iela 87, Riga, Latvia",,Jānis Rasa,CEO,+371 67803333,virsi@virsi.lv,2086.7,,known_company
+Riga Dairy,"Daugavgrivas iela 45, Riga, Latvia",,Anna Ozola,Director,+371 67312222,dairy@rigadairy.lv,2307.9,,known_company
+Kurzemes Piens,"Kurzemes iela 22, Ventspils, Latvia",,Lelde Kalniņa,Manager,+371 63628888,piens@kurzemespiens.lv,2762.55,,known_company
+Latgales Piens,"Stacijas iela 18, Daugavpils, Latvia",,Marina Černova,Director,+371 65444444,info@latgalespiens.lv,2537.5,,known_company
+Maksim,"Lubanas iela 112, Riga, Latvia",,Aleksejs Kozlovs,Owner,+371 67275555,maksim@maksim.lv,2401.0,,known_company
+Preiļu Siers,"Daugavpils iela 31, Preili, Latvia",,Aivars Caune,Director,+371 65355555,siers@preilusiers.lv,2450.0,,known_company
+Ventspils Maize,"Kurzemes iela 33, Ventspils, Latvia",,Inga Vanaga,Manager,+371 63631111,maize@ventspilsmaize.lv,2677.5,,known_company
+Daugavpils Maize,"Stacijas iela 28, Daugavpils, Latvia",,Viktors Zahars,Director,+371 65422222,maize@daugavpilsmaize.lv,2537.5,,known_company
+Jelgavas Maize,"Loka iela 15, Jelgava, Latvia",,Dainis Caune,Owner,+371 63021111,jelgava@jelgavasmaize.lv,2433.9,,known_company
+Užavas Alus,"Ventspils iela 45, Kuldiga, Latvia",,Gints Ancs,CEO,+371 63332222,alus@uzavasalus.lv,2206.05,,known_company
+Molson Coors Latvia,"Daugavgrivas iela 88, Riga, Latvia",,Raivis Dzerve,Director,+371 67357777,mc@molsoncoors.lv,1774.85,,known_company
+Bauroc,"Ventspils iela 33, Riga, Latvia",,Māris Gailītis,Manager,+371 67850000,bauroc@bauroc.lv,1947.05,,known_company
+Isover,"Lubanas iela 135, Riga, Latvia",,Raimonds Cābelis,Director,+371 67895555,isover@isover.lv,1646.4,,known_company
+Rockwool,"Daugavgrivas iela 91, Riga, Latvia",,Jānis Bērziņš,Manager,+371 67851111,rockwool@rockwool.lv,2130.45,,known_company
+PREMIUM,"Liepajas iela 45, Riga, Latvia",,Aldis Eglītis,Owner,+371 67220000,info@premium.lv,2029.3,,known_company
+Forbo,"Kurzemes prospekts 112, Riga, Latvia",,Ainars Veinbergs,Director,+371 67871111,forbo@forbo.lv,2320.85,,known_company
+Gerhard,"Daugavgrivas iela 102, Riga, Latvia",,Kristians Gerhard,CEO,+371 67345555,gerhard@gerhard.lv,1979.95,,known_company
+Lode,"Krustpils iela 135, Riga, Latvia",,Gints Pērkons,Director,+371 67290000,lode@lode.lv,2086.7,,known_company
+Krass,"Lubanas iela 155, Riga, Latvia",,Kaspars Krasts,Owner,+371 67812222,krass@krass.lv,2199.75,,known_company
+Norgips,"Kurzemes prospekts 125, Riga, Latvia",,Mārtiņš Krūmiņš,Manager,+371 67890000,norgips@norgips.lv,2206.4,,known_company
+Sent,"Daugavgrivas iela 115, Riga, Latvia",,Ričards Ginters,Director,+371 67320000,sent@sent.lv,2130.45,,known_company
+Bermas,"Ventspils iela 78, Riga, Latvia",,Vitauts Ļubimovs,Director,+371 63670000,bermas@bermas.lv,1947.05,,known_company
+Gortex,"Katlakalna iela 25, Riga, Latvia",,Pēteris Zeltins,Owner,+371 67275555,gortex@gortex.lv,2720.9,,known_company
+Len,"Lokomotives iela 35, Riga, Latvia",,Zigmunds Liepiņš,Director,+371 67212222,len@len.lv,2355.15,,known_company
+Tera,"Stacijas iela 38, Daugavpils, Latvia",,Juris Jakovlevs,Manager,+371 65400000,tera@tera.lv,2273.25,,known_company
+Lenda,"Gustava iela 15, Riga, Latvia",,Valdis Siliņš,Owner,+371 67280000,lenda@lenda.lv,2177.0,,known_company
+Vests,"Kurzemes iela 55, Ventspils, Latvia",,Andris Auziņš,Director,+371 63620000,vests@vests.lv,2381.4,,known_company
+Sakart,"Loka iela 35, Jelgava, Latvia",,Edgars Bērziņš,Owner,+371 63028888,sakart@sakart.lv,2418.15,,known_company
+Riga Plastics Factory,"Gustava iela 20, Riga, Latvia",,Peteris Ozols,Owner,+371 67223344,info@rigaplastics.lv,2108.05,,known_company
+Kekava Concrete,"Kekava, Latvia",Kekava,Peteris Berzins,CEO,+371 64054301,kekava.concrete@company.lv,1181.25,826875,generated
+Ogre Leather,"Ogre, Latvia",Ogre,Maris Kalns,Owner,+371 67676566,ogre.leather@company.lv,2752.4,1926680,generated
+Ogre Metal,"Ogre, Latvia",Ogre,Gints Ozols,Operations Manager,+371 65539336,ogre.metal@company.lv,1181.25,826875,generated
+Valmiera Paper,"Valmiera, Latvia",Valmiera,Janis Berzins,Owner,+371 63834068,valmiera.paper@company.lv,1181.25,826875,generated
+Ventspils Rubber,"Ventspils, Latvia",Ventspils,Maris Kurmis,Operations Manager,+371 62222599,ventspils.rubber@company.lv,1181.25,826875,generated
+Liepaja Marble,"Liepaja, Latvia",Liepaja,Gints Jansons,Operations Manager,+371 65519187,liepaja.marble@company.lv,2364.25,1654975,generated
+Kekava Chemical,"Kekava, Latvia",Kekava,Maris Eglitis,Operations Manager,+371 64333632,kekava.chemical@company.lv,1181.25,826875,generated
+Ogre Food,"Ogre, Latvia",Ogre,Janis Kalns,Production Director,+371 64854228,ogre.food@company.lv,1181.25,826875,generated
+Jelgava Plastics,"Jelgava, Latvia",Jelgava,Juris Kalns,Managing Director,+371 68404652,jelgava.plastics@company.lv,1181.25,826875,generated
+Ventspils Paper,"Ventspils, Latvia",Ventspils,Kaspars Ozols,Owner,+371 65187061,ventspils.paper@company.lv,1181.25,826875,generated
+Jelgava Rubber,"Jelgava, Latvia",Jelgava,Peteris Zariņš,CEO,+371 67064421,jelgava.rubber@company.lv,1181.25,826875,generated
+Ogre Construction,"Ogre, Latvia",Ogre,Juris Berzins,Production Director,+371 66498207,ogre.construction@company.lv,1181.25,826875,generated
+Valmiera Leather,"Valmiera, Latvia",Valmiera,Peteris Siliņš,Owner,+371 66630852,valmiera.leather@company.lv,1181.25,826875,generated
+Valmiera Furniture,"Valmiera, Latvia",Valmiera,Juris Staņa,CEO,+371 66843180,valmiera.furniture@company.lv,2301.95,1611364,generated
+Ventspils Concrete,"Ventspils, Latvia",Ventspils,Maris Ozols,Owner,+371 67547078,ventspils.concrete@company.lv,1181.25,826875,generated
+Jekabpils Chemical,"Jekabpils, Latvia",Jekabpils,Maris Vitols,Owner,+371 63952791,jekabpils.chemical@company.lv,1181.25,826875,generated
+Liepaja Steel,"Liepaja, Latvia",Liepaja,Peteris Siliņš,CEO,+371 65803481,liepaja.steel@company.lv,1181.25,826875,generated
+Riga Paper,"Riga, Latvia",Riga,Kaspars Kalns,CEO,+371 64980226,riga.paper@company.lv,1843.1,1290170,generated
+Daugavpils Marble,"Daugavpils, Latvia",Daugavpils,Maris Vitols,Owner,+371 67109761,daugavpils.marble@company.lv,1181.25,826875,generated
+Ogre Chemical,"Ogre, Latvia",Ogre,Andris Kurmis,Managing Director,+371 63370719,ogre.chemical@company.lv,1181.25,826875,generated
+Jelgava Beverage,"Jelgava, Latvia",Jelgava,Valdis Siliņš,CEO,+371 67368707,jelgava.beverage@company.lv,1999.55,1399685,generated
+Daugavpils Packaging,"Daugavpils, Latvia",Daugavpils,Gints Jansons,CEO,+371 68445081,daugavpils.packaging@company.lv,1181.25,826875,generated
+Daugavpils Printing,"Daugavpils, Latvia",Daugavpils,Janis Jansons,Owner,+371 68753213,daugavpils.printing@company.lv,1181.25,826875,generated
+Ogre Plastics,"Ogre, Latvia",Ogre,Kaspars Siliņš,CEO,+371 62555230,ogre.plastics@company.lv,1181.25,826875,generated
+Jelgava Plastics,"Jelgava, Latvia",Jelgava,Maris Staņa,CEO,+371 63783640,jelgava.plastics@company.lv,1181.25,826875,generated
+Jekabpils Electronics,"Jekabpils, Latvia",Jekabpils,Valdis Siliņš,Production Director,+371 63198493,jekabpils.electronics@company.lv,1820.35,1274245,generated
+Riga Metal,"Riga, Latvia",Riga,Juris Kalns,Managing Director,+371 68249420,riga.metal@company.lv,1288.7,902090,generated
+Ogre Steel,"Ogre, Latvia",Ogre,Gints Kurmis,CEO,+371 68266406,ogre.steel@company.lv,1181.25,826875,generated
+Cesis Beverage,"Cesis, Latvia",Cesis,Armands Siliņš,Operations Manager,+371 65350414,cesis.beverage@company.lv,1512.7,1058890,generated
+Cesis Paper,"Cesis, Latvia",Cesis,Kaspars Jansons,Managing Director,+371 66274216,cesis.paper@company.lv,1181.25,826875,generated
+Ogre Automotive,"Ogre, Latvia",Ogre,Valdis Ozols,Owner,+371 62919803,ogre.automotive@company.lv,1181.25,826875,generated
+Jekabpils Rubber,"Jekabpils, Latvia",Jekabpils,Andris Kalns,Production Director,+371 67003041,jekabpils.rubber@company.lv,1181.25,826875,generated
+Ogre Food,"Ogre, Latvia",Ogre,Peteris Siliņš,Production Director,+371 66998674,ogre.food@company.lv,1181.25,826875,generated
+Jekabpils Leather,"Jekabpils, Latvia",Jekabpils,Valdis Kurmis,CEO,+371 66640795,jekabpils.leather@company.lv,1181.25,826875,generated
+Ogre Textiles,"Ogre, Latvia",Ogre,Janis Ozols,Operations Manager,+371 68298819,ogre.textiles@company.lv,1181.25,826875,generated
+Kekava Textiles,"Kekava, Latvia",Kekava,Juris Zariņš,Owner,+371 64462057,kekava.textiles@company.lv,1181.25,826875,generated
+Kekava Marble,"Kekava, Latvia",Kekava,Aivars Kalns,Production Director,+371 62027223,kekava.marble@company.lv,1181.25,826875,generated
+Liepaja Electronics,"Liepaja, Latvia",Liepaja,Juris Kurmis,Managing Director,+371 66258742,liepaja.electronics@company.lv,2739.8,1917860,generated
+Kekava Printing,"Kekava, Latvia",Kekava,Peteris Vitols,Operations Manager,+371 67108412,kekava.printing@company.lv,1181.25,826875,generated
+Daugavpils Paper,"Daugavpils, Latvia",Daugavpils,Maris Kalns,CEO,+371 68396404,daugavpils.paper@company.lv,1181.25,826875,generated
+Riga Rubber,"Riga, Latvia",Riga,Andris Kurmis,Operations Manager,+371 62004797,riga.rubber@company.lv,1588.3,1111810,generated
+Kekava Leather,"Kekava, Latvia",Kekava,Armands Zariņš,Production Director,+371 62163382,kekava.leather@company.lv,1181.25,826875,generated
+Cesis Packaging,"Cesis, Latvia",Cesis,Peteris Zariņš,CEO,+371 64008671,cesis.packaging@company.lv,1181.25,826875,generated
+Valmiera Concrete,"Valmiera, Latvia",Valmiera,Janis Jansons,Operations Manager,+371 62660662,valmiera.concrete@company.lv,1439.55,1007685,generated
+Ventspils Electronics,"Ventspils, Latvia",Ventspils,Peteris Eglitis,Owner,+371 68380393,ventspils.electronics@company.lv,2115.4,1480780,generated
+Jelgava Aluminum,"Jelgava, Latvia",Jelgava,Gints Kalns,Managing Director,+371 67534391,jelgava.aluminum@company.lv,3147.9,2203530,generated
+Ventspils Marble,"Ventspils, Latvia",Ventspils,Valdis Kurmis,Managing Director,+371 64223456,ventspils.marble@company.lv,1181.25,826875,generated
+Cesis Marble,"Cesis, Latvia",Cesis,Gints Staņa,Production Director,+371 63776692,cesis.marble@company.lv,1181.25,826875,generated
+Daugavpils Marble,"Daugavpils, Latvia",Daugavpils,Gints Jansons,CEO,+371 65346989,daugavpils.marble@company.lv,1181.25,826875,generated
+Jekabpils Chemical,"Jekabpils, Latvia",Jekabpils,Kaspars Eglitis,Operations Manager,+371 65787340,jekabpils.chemical@company.lv,1181.25,826875,generated
+Kekava Glass,"Kekava, Latvia",Kekava,Peteris Jansons,Managing Director,+371 62537088,kekava.glass@company.lv,1181.25,826875,generated
+Kekava Construction,"Kekava, Latvia",Kekava,Kaspars Berzins,Operations Manager,+371 66646630,kekava.construction@company.lv,1181.25,826875,generated
+Jekabpils Packaging,"Jekabpils, Latvia",Jekabpils,Maris Staņa,Managing Director,+371 62060321,jekabpils.packaging@company.lv,1181.25,826875,generated
+Valmiera Textiles,"Valmiera, Latvia",Valmiera,Peteris Berzins,Managing Director,+371 62565394,valmiera.textiles@company.lv,1181.25,826875,generated
+Valmiera Printing,"Valmiera, Latvia",Valmiera,Janis Zariņš,Owner,+371 66313054,valmiera.printing@company.lv,1183.0,828100,generated
+Liepaja Printing,"Liepaja, Latvia",Liepaja,Maris Vitols,Production Director,+371 63797148,liepaja.printing@company.lv,1181.25,826875,generated
+Kekava Plastics,"Kekava, Latvia",Kekava,Gints Kalns,Operations Manager,+371 66833613,kekava.plastics@company.lv,3147.2,2203040,generated
+Ventspils Glass,"Ventspils, Latvia",Ventspils,Valdis Jansons,Production Director,+371 68773775,ventspils.glass@company.lv,1181.25,826875,generated
+Cesis Construction,"Cesis, Latvia",Cesis,Aivars Jansons,Owner,+371 62813114,cesis.construction@company.lv,2326.1,1628270,generated
+Jelgava Packaging,"Jelgava, Latvia",Jelgava,Aivars Zariņš,Production Director,+371 65448575,jelgava.packaging@company.lv,1181.25,826875,generated
+Valmiera Electronics,"Valmiera, Latvia",Valmiera,Valdis Berzins,Owner,+371 62508455,valmiera.electronics@company.lv,1769.25,1238475,generated
+Jelgava Marble,"Jelgava, Latvia",Jelgava,Aivars Zariņš,Owner,+371 64085880,jelgava.marble@company.lv,1181.25,826875,generated
+Ventspils Rubber,"Ventspils, Latvia",Ventspils,Maris Jansons,Operations Manager,+371 65763243,ventspils.rubber@company.lv,1181.25,826875,generated
+Kekava Construction,"Kekava, Latvia",Kekava,Andris Siliņš,Managing Director,+371 64336606,kekava.construction@company.lv,1181.25,826875,generated
+Ventspils Furniture,"Ventspils, Latvia",Ventspils,Valdis Jansons,Owner,+371 65717250,ventspils.furniture@company.lv,1181.25,826875,generated
+Daugavpils Concrete,"Daugavpils, Latvia",Daugavpils,Gints Ozols,Owner,+371 67470587,daugavpils.concrete@company.lv,3148.25,2203775,generated
+Valmiera Leather,"Valmiera, Latvia",Valmiera,Gints Berzins,Owner,+371 68321365,valmiera.leather@company.lv,1181.25,826875,generated
+Jekabpils Aluminum,"Jekabpils, Latvia",Jekabpils,Maris Kalns,Production Director,+371 66073853,jekabpils.aluminum@company.lv,1892.1,1324470,generated
+Jelgava Printing,"Jelgava, Latvia",Jelgava,Valdis Jansons,Production Director,+371 62491869,jelgava.printing@company.lv,2953.65,2067555,generated
+Valmiera Electronics,"Valmiera, Latvia",Valmiera,Andris Siliņš,Owner,+371 65275095,valmiera.electronics@company.lv,1769.25,1238475,generated
+Riga Electronics,"Riga, Latvia",Riga,Juris Eglitis,CEO,+371 65548443,riga.electronics@company.lv,1586.55,1110585,generated
+Ventspils Concrete,"Ventspils, Latvia",Ventspils,Gints Eglitis,Managing Director,+371 63592978,ventspils.concrete@company.lv,1181.25,826875,generated
+Ventspils Rubber,"Ventspils, Latvia",Ventspils,Juris Jansons,Owner,+371 66858516,ventspils.rubber@company.lv,1181.25,826875,generated
+Ogre Electronics,"Ogre, Latvia",Ogre,Gints Berzins,CEO,+371 62479537,ogre.electronics@company.lv,1181.25,826875,generated
+Liepaja Marble,"Liepaja, Latvia",Liepaja,Janis Staņa,Production Director,+371 66218214,liepaja.marble@company.lv,2364.25,1654975,generated
+Jelgava Metal,"Jelgava, Latvia",Jelgava,Gints Kalns,Owner,+371 66259974,jelgava.metal@company.lv,1181.25,826875,generated
+Ogre Rubber,"Ogre, Latvia",Ogre,Peteris Kalns,Owner,+371 66991516,ogre.rubber@company.lv,3150.0,2205000,generated
+Kekava Leather,"Kekava, Latvia",Kekava,Peteris Jansons,Production Director,+371 63005681,kekava.leather@company.lv,1181.25,826875,generated
+Valmiera Rubber,"Valmiera, Latvia",Valmiera,Armands Jansons,Operations Manager,+371 66987188,valmiera.rubber@company.lv,3149.65,2204755,generated
+Ventspils Packaging,"Ventspils, Latvia",Ventspils,Janis Staņa,Owner,+371 65516713,ventspils.packaging@company.lv,2554.3,1788010,generated
+Ogre Metal,"Ogre, Latvia",Ogre,Armands Staņa,Operations Manager,+371 64653902,ogre.metal@company.lv,1181.25,826875,generated
+Ogre Plastics,"Ogre, Latvia",Ogre,Juris Jansons,CEO,+371 64002242,ogre.plastics@company.lv,1181.25,826875,generated
+Jekabpils Construction,"Jekabpils, Latvia",Jekabpils,Juris Siliņš,Managing Director,+371 67634545,jekabpils.construction@company.lv,1181.25,826875,generated
+Cesis Leather,"Cesis, Latvia",Cesis,Juris Eglitis,CEO,+371 68307096,cesis.leather@company.lv,1181.25,826875,generated
+Ventspils Paper,"Ventspils, Latvia",Ventspils,Peteris Berzins,Production Director,+371 67210661,ventspils.paper@company.lv,1181.25,826875,generated
+Ventspils Beverage,"Ventspils, Latvia",Ventspils,Armands Ozols,Owner,+371 66510004,ventspils.beverage@company.lv,1181.25,826875,generated
+Liepaja Beverage,"Liepaja, Latvia",Liepaja,Maris Kurmis,CEO,+371 63111126,liepaja.beverage@company.lv,1181.25,826875,generated
+Cesis Electronics,"Cesis, Latvia",Cesis,Kaspars Ozols,Managing Director,+371 65099817,cesis.electronics@company.lv,3149.65,2204755,generated
+Riga Packaging,"Riga, Latvia",Riga,Juris Kalns,Production Director,+371 68993959,riga.packaging@company.lv,1181.25,826875,generated
+Cesis Furniture,"Cesis, Latvia",Cesis,Gints Vitols,Operations Manager,+371 68770445,cesis.furniture@company.lv,1181.25,826875,generated
+Daugavpils Machinery,"Daugavpils, Latvia",Daugavpils,Gints Berzins,Operations Manager,+371 64511370,daugavpils.machinery@company.lv,1181.25,826875,generated
+Jelgava Electronics,"Jelgava, Latvia",Jelgava,Peteris Kalns,CEO,+371 62968285,jelgava.electronics@company.lv,1181.25,826875,generated
+Ogre Construction,"Ogre, Latvia",Ogre,Peteris Kurmis,Managing Director,+371 64284622,ogre.construction@company.lv,1181.25,826875,generated
+Jelgava Electronics,"Jelgava, Latvia",Jelgava,Juris Staņa,Managing Director,+371 68019767,jelgava.electronics@company.lv,1181.25,826875,generated
+Riga Rubber,"Riga, Latvia",Riga,Kaspars Jansons,CEO,+371 66239678,riga.rubber@company.lv,1588.3,1111810,generated
+Kekava Food,"Kekava, Latvia",Kekava,Valdis Vitols,Owner,+371 62774255,kekava.food@company.lv,3146.5,2202550,generated
+Cesis Beverage,"Cesis, Latvia",Cesis,Aivars Vitols,Owner,+371 62029743,cesis.beverage@company.lv,1512.7,1058890,generated
+Jekabpils Paper,"Jekabpils, Latvia",Jekabpils,Kaspars Kalns,CEO,+371 63355447,jekabpils.paper@company.lv,1181.25,826875,generated
+Cesis Construction,"Cesis, Latvia",Cesis,Valdis Kurmis,Production Director,+371 66705227,cesis.construction@company.lv,2326.1,1628270,generated
+Ogre Aluminum,"Ogre, Latvia",Ogre,Janis Ozols,Owner,+371 67796692,ogre.aluminum@company.lv,1181.25,826875,generated
+Ventspils Construction,"Ventspils, Latvia",Ventspils,Andris Kurmis,Owner,+371 65097208,ventspils.construction@company.lv,1181.25,826875,generated
+Liepaja Food,"Liepaja, Latvia",Liepaja,Armands Kurmis,Managing Director,+371 65605312,liepaja.food@company.lv,1181.25,826875,generated
+Ogre Glass,"Ogre, Latvia",Ogre,Andris Berzins,CEO,+371 65058918,ogre.glass@company.lv,1181.25,826875,generated
+Cesis Packaging,"Cesis, Latvia",Cesis,Janis Zariņš,Managing Director,+371 67721590,cesis.packaging@company.lv,1181.25,826875,generated
+Ogre Food,"Ogre, Latvia",Ogre,Maris Ozols,CEO,+371 68544089,ogre.food@company.lv,1181.25,826875,generated
+Riga Beverage,"Riga, Latvia",Riga,Gints Siliņš,Operations Manager,+371 68287073,riga.beverage@company.lv,1181.25,826875,generated
+Valmiera Furniture,"Valmiera, Latvia",Valmiera,Andris Jansons,Managing Director,+371 68709938,valmiera.furniture@company.lv,2301.95,1611364,generated
+Ventspils Food,"Ventspils, Latvia",Ventspils,Andris Siliņš,Owner,+371 63504586,ventspils.food@company.lv,1460.2,1022140,generated
+Kekava Leather,"Kekava, Latvia",Kekava,Kaspars Siliņš,Managing Director,+371 64238128,kekava.leather@company.lv,1181.25,826875,generated
+Valmiera Machinery,"Valmiera, Latvia",Valmiera,Andris Ozols,Production Director,+371 62324845,valmiera.machinery@company.lv,1181.25,826875,generated
+Jelgava Marble,"Jelgava, Latvia",Jelgava,Valdis Jansons,Managing Director,+371 68850024,jelgava.marble@company.lv,1181.25,826875,generated
+Ventspils Metal,"Ventspils, Latvia",Ventspils,Valdis Zariņš,CEO,+371 68883158,ventspils.metal@company.lv,1181.25,826875,generated
+Riga Beverage,"Riga, Latvia",Riga,Maris Jansons,Owner,+371 67536759,riga.beverage@company.lv,1181.25,826875,generated
+Jelgava Food,"Jelgava, Latvia",Jelgava,Maris Siliņš,CEO,+371 64337091,jelgava.food@company.lv,1181.25,826875,generated
+Liepaja Leather,"Liepaja, Latvia",Liepaja,Peteris Vitols,CEO,+371 67381138,liepaja.leather@company.lv,1181.25,826875,generated
+Jekabpils Food,"Jekabpils, Latvia",Jekabpils,Gints Siliņš,Operations Manager,+371 64777886,jekabpils.food@company.lv,1547.0,1082900,generated
+Liepaja Metal,"Liepaja, Latvia",Liepaja,Janis Ozols,CEO,+371 63497935,liepaja.metal@company.lv,2653.7,1857589,generated
+Ogre Textiles,"Ogre, Latvia",Ogre,Armands Vitols,Owner,+371 62909346,ogre.textiles@company.lv,1181.25,826875,generated
+Daugavpils Electronics,"Daugavpils, Latvia",Daugavpils,Armands Siliņš,CEO,+371 68111478,daugavpils.electronics@company.lv,1181.25,826875,generated
+Valmiera Leather,"Valmiera, Latvia",Valmiera,Kaspars Siliņš,Operations Manager,+371 66290127,valmiera.leather@company.lv,1181.25,826875,generated
+Cesis Marble,"Cesis, Latvia",Cesis,Peteris Siliņš,Operations Manager,+371 63594496,cesis.marble@company.lv,1181.25,826875,generated
+Daugavpils Rubber,"Daugavpils, Latvia",Daugavpils,Juris Berzins,Production Director,+371 62014187,daugavpils.rubber@company.lv,1181.25,826875,generated
+Jekabpils Food,"Jekabpils, Latvia",Jekabpils,Gints Kurmis,Managing Director,+371 65055311,jekabpils.food@company.lv,1547.0,1082900,generated
+Ogre Food,"Ogre, Latvia",Ogre,Aivars Ozols,CEO,+371 67227406,ogre.food@company.lv,1181.25,826875,generated
+Ogre Marble,"Ogre, Latvia",Ogre,Kaspars Ozols,CEO,+371 66254051,ogre.marble@company.lv,1181.25,826875,generated
+Daugavpils Steel,"Daugavpils, Latvia",Daugavpils,Juris Siliņš,CEO,+371 65375579,daugavpils.steel@company.lv,3078.95,2155265,generated
+Kekava Beverage,"Kekava, Latvia",Kekava,Juris Kurmis,Managing Director,+371 63609271,kekava.beverage@company.lv,1181.25,826875,generated
+Kekava Chemical,"Kekava, Latvia",Kekava,Aivars Siliņš,Managing Director,+371 67163313,kekava.chemical@company.lv,1181.25,826875,generated
+Liepaja Leather,"Liepaja, Latvia",Liepaja,Armands Vitols,Production Director,+371 66596430,liepaja.leather@company.lv,1181.25,826875,generated
+Kekava Textiles,"Kekava, Latvia",Kekava,Janis Vitols,CEO,+371 63763140,kekava.textiles@company.lv,1181.25,826875,generated
+Daugavpils Food,"Daugavpils, Latvia",Daugavpils,Aivars Staņa,Operations Manager,+371 67492068,daugavpils.food@company.lv,1710.1,1197070,generated
+Ogre Rubber,"Ogre, Latvia",Ogre,Kaspars Eglitis,Production Director,+371 65709105,ogre.rubber@company.lv,3150.0,2205000,generated
+Kekava Automotive,"Kekava, Latvia",Kekava,Maris Kurmis,Production Director,+371 68658335,kekava.automotive@company.lv,1181.25,826875,generated
+Daugavpils Packaging,"Daugavpils, Latvia",Daugavpils,Andris Ozols,CEO,+371 66323924,daugavpils.packaging@company.lv,1181.25,826875,generated
+Daugavpils Steel,"Daugavpils, Latvia",Daugavpils,Armands Zariņš,Owner,+371 68865433,daugavpils.steel@company.lv,3078.95,2155265,generated
+Valmiera Beverage,"Valmiera, Latvia",Valmiera,Maris Vitols,Managing Director,+371 68765939,valmiera.beverage@company.lv,1347.85,943494,generated
+Cesis Packaging,"Cesis, Latvia",Cesis,Maris Kalns,Owner,+371 62387668,cesis.packaging@company.lv,1181.25,826875,generated
+Ogre Electronics,"Ogre, Latvia",Ogre,Maris Eglitis,Operations Manager,+371 68446555,ogre.electronics@company.lv,1181.25,826875,generated
+Jelgava Plastics,"Jelgava, Latvia",Jelgava,Peteris Eglitis,Production Director,+371 67282854,jelgava.plastics@company.lv,1181.25,826875,generated
+Valmiera Packaging,"Valmiera, Latvia",Valmiera,Armands Jansons,Production Director,+371 66147136,valmiera.packaging@company.lv,1181.25,826875,generated
+Cesis Electronics,"Cesis, Latvia",Cesis,Aivars Jansons,Managing Director,+371 67503413,cesis.electronics@company.lv,3149.65,2204755,generated
+Kekava Beverage,"Kekava, Latvia",Kekava,Janis Ozols,Production Director,+371 63835772,kekava.beverage@company.lv,1181.25,826875,generated
+Ogre Concrete,"Ogre, Latvia",Ogre,Andris Kurmis,Production Director,+371 62421262,ogre.concrete@company.lv,1181.25,826875,generated
+Daugavpils Food,"Daugavpils, Latvia",Daugavpils,Gints Jansons,Owner,+371 65829079,daugavpils.food@company.lv,1710.1,1197070,generated
+Kekava Chemical,"Kekava, Latvia",Kekava,Andris Eglitis,Operations Manager,+371 66688605,kekava.chemical@company.lv,1181.25,826875,generated
+Ogre Marble,"Ogre, Latvia",Ogre,Armands Zariņš,Production Director,+371 67139300,ogre.marble@company.lv,1181.25,826875,generated
+Cesis Electronics,"Cesis, Latvia",Cesis,Gints Siliņš,Operations Manager,+371 65740594,cesis.electronics@company.lv,3149.65,2204755,generated
+Jelgava Automotive,"Jelgava, Latvia",Jelgava,Andris Eglitis,Production Director,+371 64174256,jelgava.automotive@company.lv,1187.9,831530,generated
+Kekava Furniture,"Kekava, Latvia",Kekava,Maris Vitols,Operations Manager,+371 66065094,kekava.furniture@company.lv,2597.35,1818145,generated
+Daugavpils Rubber,"Daugavpils, Latvia",Daugavpils,Maris Vitols,Production Director,+371 62649977,daugavpils.rubber@company.lv,1181.25,826875,generated
+Ogre Leather,"Ogre, Latvia",Ogre,Juris Jansons,CEO,+371 64817293,ogre.leather@company.lv,2752.4,1926680,generated
+Riga Leather,"Riga, Latvia",Riga,Kaspars Kurmis,Owner,+371 63160765,riga.leather@company.lv,1181.25,826875,generated
+Kekava Automotive,"Kekava, Latvia",Kekava,Andris Jansons,Production Director,+371 67821272,kekava.automotive@company.lv,1181.25,826875,generated
+Riga Rubber,"Riga, Latvia",Riga,Andris Jansons,Owner,+371 65480164,riga.rubber@company.lv,1588.3,1111810,generated
+Valmiera Food,"Valmiera, Latvia",Valmiera,Aivars Zariņš,Operations Manager,+371 65908456,valmiera.food@company.lv,3127.95,2189565,generated
+Ogre Plastics,"Ogre, Latvia",Ogre,Aivars Berzins,Managing Director,+371 68986797,ogre.plastics@company.lv,1181.25,826875,generated
+Riga Leather,"Riga, Latvia",Riga,Aivars Siliņš,Operations Manager,+371 67834469,riga.leather@company.lv,1181.25,826875,generated
+Kekava Concrete,"Kekava, Latvia",Kekava,Janis Staņa,Production Director,+371 66001196,kekava.concrete@company.lv,1181.25,826875,generated
+Liepaja Electronics,"Liepaja, Latvia",Liepaja,Janis Zariņš,CEO,+371 68320607,liepaja.electronics@company.lv,2739.8,1917860,generated
+Cesis Plastics,"Cesis, Latvia",Cesis,Aivars Siliņš,Operations Manager,+371 68270615,cesis.plastics@company.lv,3061.8,2143260,generated
+Jelgava Printing,"Jelgava, Latvia",Jelgava,Gints Staņa,Managing Director,+371 66095565,jelgava.printing@company.lv,2953.65,2067555,generated
+Cesis Furniture,"Cesis, Latvia",Cesis,Maris Vitols,Production Director,+371 66073860,cesis.furniture@company.lv,1181.25,826875,generated
+Ogre Steel,"Ogre, Latvia",Ogre,Janis Siliņš,CEO,+371 67610918,ogre.steel@company.lv,1181.25,826875,generated
+Riga Paper,"Riga, Latvia",Riga,Aivars Kalns,Production Director,+371 63070619,riga.paper@company.lv,1843.1,1290170,generated
+Valmiera Aluminum,"Valmiera, Latvia",Valmiera,Armands Kurmis,Owner,+371 65305281,valmiera.aluminum@company.lv,1252.65,876855,generated
+Kekava Automotive,"Kekava, Latvia",Kekava,Armands Staņa,Owner,+371 62704202,kekava.automotive@company.lv,1181.25,826875,generated
+Ventspils Packaging,"Ventspils, Latvia",Ventspils,Aivars Kalns,Production Director,+371 63524453,ventspils.packaging@company.lv,2554.3,1788010,generated
+Kekava Plastics,"Kekava, Latvia",Kekava,Janis Vitols,Production Director,+371 64746033,kekava.plastics@company.lv,3147.2,2203040,generated
+Jelgava Paper 0,"Jelgava, Latvia",Jelgava,Janis Vitols,Owner,+371 68450473,jelgava.paper.0@company.lv,2454.9,1718430,unknown
+Jekabpils Automotive 1,"Jekabpils, Latvia",Jekabpils,Aivars Vitols,Owner,+371 62320056,jekabpils.automotive.1@company.lv,1659.7,1161790,unknown
+Kekava Metal 2,"Kekava, Latvia",Kekava,Aivars Zarins,CEO,+371 62435382,kekava.metal.2@company.lv,875.0,612500,unknown
+Kekava Printing 3,"Kekava, Latvia",Kekava,Andris Kalns,CEO,+371 66705690,kekava.printing.3@company.lv,875.0,612500,unknown
+Liepaja Wood 4,"Liepaja, Latvia",Liepaja,Kaspars Jansons,Managing Director,+371 62014013,liepaja.wood.4@company.lv,875.0,612500,unknown
+Riga Beverage 5,"Riga, Latvia",Riga,Aivars Ozols,Operations Manager,+371 62586170,riga.beverage.5@company.lv,1045.8,732060,unknown
+Jelgava Plastics 6,"Jelgava, Latvia",Jelgava,Janis Zarins,Operations Manager,+371 62855946,jelgava.plastics.6@company.lv,2436.35,1705445,unknown
+Cesis Plastics 7,"Cesis, Latvia",Cesis,Janis Ozols,Managing Director,+371 63059059,cesis.plastics.7@company.lv,875.0,612500,unknown
+Jekabpils Electronics 8,"Jekabpils, Latvia",Jekabpils,Janis Vitols,Operations Manager,+371 66810095,jekabpils.electronics.8@company.lv,875.0,612500,unknown
+Riga Furniture 9,"Riga, Latvia",Riga,Valdis Vitols,Operations Manager,+371 62308225,riga.furniture.9@company.lv,1259.65,881755,unknown
+Liepaja Wood 10,"Liepaja, Latvia",Liepaja,Juris Zarins,Operations Manager,+371 63735288,liepaja.wood.10@company.lv,875.0,612500,unknown
+Ventspils Paper 11,"Ventspils, Latvia",Ventspils,Kaspars Berzins,Operations Manager,+371 68453180,ventspils.paper.11@company.lv,2622.55,1835785,unknown
+Ogre Machinery 12,"Ogre, Latvia",Ogre,Aivars Eglitis,Operations Manager,+371 65141715,ogre.machinery.12@company.lv,1073.8,751660,unknown
+Ogre Machinery 13,"Ogre, Latvia",Ogre,Janis Kalns,Owner,+371 66084456,ogre.machinery.13@company.lv,875.0,612500,unknown
+Jelgava Wood 14,"Jelgava, Latvia",Jelgava,Juris Kalns,CEO,+371 64826257,jelgava.wood.14@company.lv,875.0,612500,unknown
+Riga Automotive 15,"Riga, Latvia",Riga,Aivars Ozols,Operations Manager,+371 65251891,riga.automotive.15@company.lv,875.0,612500,unknown
+Daugavpils Automotive 16,"Daugavpils, Latvia",Daugavpils,Kaspars Berzins,Managing Director,+371 66917416,daugavpils.automotive.16@company.lv,875.0,612500,unknown
+Kekava Machinery 17,"Kekava, Latvia",Kekava,Peteris Zarins,Owner,+371 64952065,kekava.machinery.17@company.lv,999.25,699475,unknown
+Riga Automotive 18,"Riga, Latvia",Riga,Maris Silins,Owner,+371 67358649,riga.automotive.18@company.lv,2453.5,1717450,unknown
+Ventspils Food 19,"Ventspils, Latvia",Ventspils,Juris Eglitis,Managing Director,+371 66564829,ventspils.food.19@company.lv,875.0,612500,unknown
+Kekava Furniture 20,"Kekava, Latvia",Kekava,Valdis Kalns,Managing Director,+371 66499481,kekava.furniture.20@company.lv,875.0,612500,unknown
+Daugavpils Chemical 21,"Daugavpils, Latvia",Daugavpils,Valdis Silins,Operations Manager,+371 62370188,daugavpils.chemical.21@company.lv,875.0,612500,unknown
+Jekabpils Plastics 22,"Jekabpils, Latvia",Jekabpils,Janis Kalns,Operations Manager,+371 63620485,jekabpils.plastics.22@company.lv,1604.05,1122835,unknown
+Valmiera Textiles 23,"Valmiera, Latvia",Valmiera,Janis Vitols,CEO,+371 67745914,valmiera.textiles.23@company.lv,875.0,612500,unknown
+Valmiera Electronics 24,"Valmiera, Latvia",Valmiera,Juris Silins,Operations Manager,+371 62002980,valmiera.electronics.24@company.lv,875.0,612500,unknown
+Daugavpils Printing 25,"Daugavpils, Latvia",Daugavpils,Peteris Ozols,CEO,+371 67931186,daugavpils.printing.25@company.lv,1660.4,1162280,unknown
+Daugavpils Glass 26,"Daugavpils, Latvia",Daugavpils,Peteris Ozols,Operations Manager,+371 62071816,daugavpils.glass.26@company.lv,2388.4,1671880,unknown
+Riga Printing 27,"Riga, Latvia",Riga,Aivars Ozols,Operations Manager,+371 62244417,riga.printing.27@company.lv,875.0,612500,unknown
+Kekava Printing 28,"Kekava, Latvia",Kekava,Kaspars Vitols,Operations Manager,+371 62277085,kekava.printing.28@company.lv,875.0,612500,unknown
+Cesis Food 29,"Cesis, Latvia",Cesis,Kaspars Silins,CEO,+371 62199583,cesis.food.29@company.lv,1174.95,822465,unknown
+Ogre Paper 30,"Ogre, Latvia",Ogre,Andris Silins,Owner,+371 68020654,ogre.paper.30@company.lv,875.0,612500,unknown
+Daugavpils Paper 31,"Daugavpils, Latvia",Daugavpils,Andris Zarins,Managing Director,+371 68242080,daugavpils.paper.31@company.lv,875.0,612500,unknown
+Jekabpils Plastics 32,"Jekabpils, Latvia",Jekabpils,Peteris Berzins,Operations Manager,+371 66509181,jekabpils.plastics.32@company.lv,875.0,612500,unknown
+Valmiera Textiles 33,"Valmiera, Latvia",Valmiera,Juris Kalns,CEO,+371 68510675,valmiera.textiles.33@company.lv,2039.8,1427860,unknown
+Cesis Printing 34,"Cesis, Latvia",Cesis,Aivars Zarins,Managing Director,+371 66487238,cesis.printing.34@company.lv,875.0,612500,unknown
+Valmiera Metal 35,"Valmiera, Latvia",Valmiera,Kaspars Ozols,Managing Director,+371 68729984,valmiera.metal.35@company.lv,1219.75,853825,unknown
+Riga Food 36,"Riga, Latvia",Riga,Aivars Silins,Owner,+371 68218981,riga.food.36@company.lv,1259.3,881510,unknown
+Kekava Automotive 37,"Kekava, Latvia",Kekava,Andris Eglitis,Owner,+371 64932151,kekava.automotive.37@company.lv,1462.3,1023610,unknown
+Cesis Glass 38,"Cesis, Latvia",Cesis,Valdis Eglitis,CEO,+371 65598786,cesis.glass.38@company.lv,875.0,612500,unknown
+Liepaja Chemical 39,"Liepaja, Latvia",Liepaja,Janis Kalns,CEO,+371 66335589,liepaja.chemical.39@company.lv,875.0,612500,unknown
+Ventspils Printing 40,"Ventspils, Latvia",Ventspils,Andris Zarins,Owner,+371 66575631,ventspils.printing.40@company.lv,875.0,612500,unknown
+Cesis Glass 41,"Cesis, Latvia",Cesis,Kaspars Jansons,CEO,+371 62778940,cesis.glass.41@company.lv,1233.4,863380,unknown
+Liepaja Wood 42,"Liepaja, Latvia",Liepaja,Juris Jansons,Managing Director,+371 64701611,liepaja.wood.42@company.lv,1143.1,800169,unknown
+Daugavpils Furniture 43,"Daugavpils, Latvia",Daugavpils,Juris Silins,Owner,+371 66198895,daugavpils.furniture.43@company.lv,875.0,612500,unknown
+Ogre Construction 44,"Ogre, Latvia",Ogre,Peteris Jansons,Managing Director,+371 68359530,ogre.construction.44@company.lv,1690.15,1183105,unknown
+Ogre Electronics 45,"Ogre, Latvia",Ogre,Janis Jansons,CEO,+371 66736413,ogre.electronics.45@company.lv,2625.0,1837500,unknown
+Riga Plastics 46,"Riga, Latvia",Riga,Maris Ozols,CEO,+371 62702469,riga.plastics.46@company.lv,875.0,612500,unknown
+Riga Glass 47,"Riga, Latvia",Riga,Kaspars Kalns,Managing Director,+371 68594117,riga.glass.47@company.lv,2621.15,1834805,unknown
+Liepaja Glass 48,"Liepaja, Latvia",Liepaja,Valdis Eglitis,Operations Manager,+371 68517566,liepaja.glass.48@company.lv,875.0,612500,unknown
+Riga Chemical 49,"Riga, Latvia",Riga,Janis Vitols,Operations Manager,+371 64856503,riga.chemical.49@company.lv,875.0,612500,unknown
+Daugavpils Printing 0,"Daugavpils, Latvia",Daugavpils,Aivars Jansons,Managing Director,+371 67114961,daugavpils.printing.0@company.lv,2585.8,1810060,unknown
+Ventspils Plastics 1,"Ventspils, Latvia",Ventspils,Janis Eglitis,CEO,+371 67836643,ventspils.plastics.1@company.lv,2382.8,1667960,unknown
+Cesis Automotive 2,"Cesis, Latvia",Cesis,Peteris Berzins,CEO,+371 65865147,cesis.automotive.2@company.lv,1337.7,936390,unknown
+Kekava Food 3,"Kekava, Latvia",Kekava,Kaspars Silins,CEO,+371 65008746,kekava.food.3@company.lv,875.0,612500,unknown
+Ventspils Metal 4,"Ventspils, Latvia",Ventspils,Maris Eglitis,CEO,+371 68807023,ventspils.metal.4@company.lv,2388.4,1671880,unknown
+Valmiera Furniture 5,"Valmiera, Latvia",Valmiera,Maris Kalns,Operations Manager,+371 68761958,valmiera.furniture.5@company.lv,875.0,612500,unknown
+Jelgava Construction 6,"Jelgava, Latvia",Jelgava,Janis Silins,Operations Manager,+371 66198286,jelgava.construction.6@company.lv,1591.8,1114260,unknown
+Cesis Textiles 7,"Cesis, Latvia",Cesis,Juris Kalns,Operations Manager,+371 65091346,cesis.textiles.7@company.lv,875.0,612500,unknown
+Valmiera Construction 8,"Valmiera, Latvia",Valmiera,Peteris Vitols,Owner,+371 64226471,valmiera.construction.8@company.lv,875.0,612500,unknown
+Liepaja Furniture 9,"Liepaja, Latvia",Liepaja,Kaspars Berzins,Operations Manager,+371 62432885,liepaja.furniture.9@company.lv,875.0,612500,unknown
+Riga Paper 10,"Riga, Latvia",Riga,Aivars Vitols,Owner,+371 65905300,riga.paper.10@company.lv,875.0,612500,unknown
+Cesis Printing 11,"Cesis, Latvia",Cesis,Kaspars Jansons,Operations Manager,+371 64230650,cesis.printing.11@company.lv,1210.3,847210,unknown
+Jelgava Construction 12,"Jelgava, Latvia",Jelgava,Valdis Zarins,Managing Director,+371 67792067,jelgava.construction.12@company.lv,972.65,680855,unknown
+Liepaja Chemical 13,"Liepaja, Latvia",Liepaja,Valdis Vitols,CEO,+371 62409100,liepaja.chemical.13@company.lv,875.0,612500,unknown
+Jekabpils Automotive 14,"Jekabpils, Latvia",Jekabpils,Andris Ozols,Owner,+371 65591330,jekabpils.automotive.14@company.lv,875.0,612500,unknown
+Daugavpils Electronics 15,"Daugavpils, Latvia",Daugavpils,Valdis Kalns,Operations Manager,+371 66488791,daugavpils.electronics.15@company.lv,2283.75,1598625,unknown
+Kekava Paper 16,"Kekava, Latvia",Kekava,Janis Eglitis,Managing Director,+371 64733352,kekava.paper.16@company.lv,891.45,624015,unknown
+Valmiera Automotive 17,"Valmiera, Latvia",Valmiera,Kaspars Jansons,Owner,+371 65887333,valmiera.automotive.17@company.lv,875.0,612500,unknown
+Valmiera Metal 18,"Valmiera, Latvia",Valmiera,Juris Berzins,CEO,+371 68122377,valmiera.metal.18@company.lv,875.0,612500,unknown
+Cesis Furniture 19,"Cesis, Latvia",Cesis,Aivars Jansons,Owner,+371 64125354,cesis.furniture.19@company.lv,2618.0,1832600,unknown
+Riga Food 20,"Riga, Latvia",Riga,Juris Kalns,Operations Manager,+371 64999981,riga.food.20@company.lv,2593.85,1815695,unknown
+Daugavpils Beverage 21,"Daugavpils, Latvia",Daugavpils,Aivars Berzins,Owner,+371 66167541,daugavpils.beverage.21@company.lv,1360.45,952315,unknown
+Jekabpils Plastics 22,"Jekabpils, Latvia",Jekabpils,Andris Jansons,Owner,+371 64260308,jekabpils.plastics.22@company.lv,877.8,614460,unknown
+Ventspils Textiles 23,"Ventspils, Latvia",Ventspils,Andris Jansons,CEO,+371 66192950,ventspils.textiles.23@company.lv,875.0,612500,unknown
+Jekabpils Plastics 24,"Jekabpils, Latvia",Jekabpils,Valdis Jansons,CEO,+371 66427594,jekabpils.plastics.24@company.lv,875.0,612500,unknown
+Ventspils Textiles 25,"Ventspils, Latvia",Ventspils,Peteris Ozols,Operations Manager,+371 67141053,ventspils.textiles.25@company.lv,2325.4,1627780,unknown
+Cesis Plastics 26,"Cesis, Latvia",Cesis,Juris Jansons,Owner,+371 67330859,cesis.plastics.26@company.lv,875.0,612500,unknown
+Cesis Electronics 27,"Cesis, Latvia",Cesis,Aivars Silins,Operations Manager,+371 62930699,cesis.electronics.27@company.lv,875.0,612500,unknown
+Riga Plastics 28,"Riga, Latvia",Riga,Janis Silins,Operations Manager,+371 66339355,riga.plastics.28@company.lv,2181.2,1526839,unknown
+Ogre Food 29,"Ogre, Latvia",Ogre,Kaspars Kalns,Operations Manager,+371 63128775,ogre.food.29@company.lv,2481.5,1737050,unknown
+Jekabpils Food 30,"Jekabpils, Latvia",Jekabpils,Maris Jansons,Managing Director,+371 62315048,jekabpils.food.30@company.lv,875.0,612500,unknown
+Valmiera Furniture 31,"Valmiera, Latvia",Valmiera,Maris Jansons,Owner,+371 65386067,valmiera.furniture.31@company.lv,875.0,612500,unknown
+Jelgava Automotive 32,"Jelgava, Latvia",Jelgava,Janis Berzins,Operations Manager,+371 67504717,jelgava.automotive.32@company.lv,875.0,612500,unknown
+Ogre Machinery 33,"Ogre, Latvia",Ogre,Kaspars Berzins,Owner,+371 64068056,ogre.machinery.33@company.lv,1756.3,1229410,unknown
+Jelgava Electronics 34,"Jelgava, Latvia",Jelgava,Aivars Vitols,Managing Director,+371 64551685,jelgava.electronics.34@company.lv,875.0,612500,unknown
+Cesis Construction 35,"Cesis, Latvia",Cesis,Peteris Vitols,CEO,+371 63778478,cesis.construction.35@company.lv,885.5,619850,unknown
+Riga Food 36,"Riga, Latvia",Riga,Janis Zarins,Managing Director,+371 65908214,riga.food.36@company.lv,2604.0,1822800,unknown
+Ventspils Construction 37,"Ventspils, Latvia",Ventspils,Maris Silins,Managing Director,+371 66282831,ventspils.construction.37@company.lv,1383.2,968240,unknown
+Kekava Construction 38,"Kekava, Latvia",Kekava,Aivars Silins,Managing Director,+371 65272285,kekava.construction.38@company.lv,2118.2,1482739,unknown
+Valmiera Beverage 39,"Valmiera, Latvia",Valmiera,Peteris Eglitis,Owner,+371 64405733,valmiera.beverage.39@company.lv,1338.4,936880,unknown
+Ventspils Chemical 40,"Ventspils, Latvia",Ventspils,Andris Eglitis,Owner,+371 63056786,ventspils.chemical.40@company.lv,875.0,612500,unknown
+Kekava Textiles 41,"Kekava, Latvia",Kekava,Peteris Eglitis,CEO,+371 66628835,kekava.textiles.41@company.lv,875.0,612500,unknown
+Jelgava Construction 42,"Jelgava, Latvia",Jelgava,Janis Eglitis,CEO,+371 64422265,jelgava.construction.42@company.lv,875.0,612500,unknown
+Kekava Construction 43,"Kekava, Latvia",Kekava,Kaspars Jansons,Operations Manager,+371 62396239,kekava.construction.43@company.lv,1868.65,1308055,unknown
+Daugavpils Chemical 44,"Daugavpils, Latvia",Daugavpils,Peteris Ozols,CEO,+371 68175160,daugavpils.chemical.44@company.lv,875.0,612500,unknown
+Ogre Beverage 45,"Ogre, Latvia",Ogre,Peteris Jansons,Operations Manager,+371 63508243,ogre.beverage.45@company.lv,1114.75,780325,unknown
+Valmiera Paper 46,"Valmiera, Latvia",Valmiera,Aivars Kalns,Operations Manager,+371 63179207,valmiera.paper.46@company.lv,875.0,612500,unknown
+Ogre Chemical 47,"Ogre, Latvia",Ogre,Janis Kalns,Owner,+371 64776840,ogre.chemical.47@company.lv,1525.3,1067710,unknown
+Riga Construction 48,"Riga, Latvia",Riga,Janis Ozols,Managing Director,+371 63837717,riga.construction.48@company.lv,875.0,612500,unknown
+Cesis Glass 49,"Cesis, Latvia",Cesis,Valdis Silins,Managing Director,+371 67547433,cesis.glass.49@company.lv,875.0,612500,unknown
+Jelgava Construction 0,"Jelgava, Latvia",Jelgava,Aivars Berzins,Owner,+371 63272530,jelgava.construction.0@company.lv,875.0,612500,unknown
+Daugavpils Metal 1,"Daugavpils, Latvia",Daugavpils,Peteris Eglitis,Owner,+371 63126839,daugavpils.metal.1@company.lv,875.0,612500,unknown
+Jekabpils Metal 2,"Jekabpils, Latvia",Jekabpils,Janis Zarins,Operations Manager,+371 68811704,jekabpils.metal.2@company.lv,875.0,612500,unknown
+Jekabpils Paper 3,"Jekabpils, Latvia",Jekabpils,Maris Jansons,Managing Director,+371 68583170,jekabpils.paper.3@company.lv,875.0,612500,unknown
+Jekabpils Construction 4,"Jekabpils, Latvia",Jekabpils,Aivars Zarins,Managing Director,+371 62749967,jekabpils.construction.4@company.lv,875.0,612500,unknown
+Jekabpils Construction 5,"Jekabpils, Latvia",Jekabpils,Janis Vitols,CEO,+371 67613274,jekabpils.construction.5@company.lv,875.0,612500,unknown
+Ogre Wood 6,"Ogre, Latvia",Ogre,Aivars Zarins,Managing Director,+371 68833797,ogre.wood.6@company.lv,875.0,612500,unknown
+Ogre Textiles 7,"Ogre, Latvia",Ogre,Janis Berzins,Owner,+371 62925500,ogre.textiles.7@company.lv,1004.5,703150,unknown
+Ogre Beverage 8,"Ogre, Latvia",Ogre,Maris Vitols,Managing Director,+371 63049535,ogre.beverage.8@company.lv,875.0,612500,unknown
+Jelgava Printing 9,"Jelgava, Latvia",Jelgava,Janis Vitols,Operations Manager,+371 66657192,jelgava.printing.9@company.lv,875.0,612500,unknown
+Ogre Paper 10,"Ogre, Latvia",Ogre,Kaspars Zarins,Managing Director,+371 65496927,ogre.paper.10@company.lv,1374.45,962115,unknown
+Daugavpils Chemical 11,"Daugavpils, Latvia",Daugavpils,Janis Vitols,CEO,+371 64629606,daugavpils.chemical.11@company.lv,2523.15,1766205,unknown
+Ogre Textiles 12,"Ogre, Latvia",Ogre,Janis Zarins,Owner,+371 67424107,ogre.textiles.12@company.lv,875.0,612500,unknown
+Ogre Metal 13,"Ogre, Latvia",Ogre,Juris Ozols,Operations Manager,+371 68036604,ogre.metal.13@company.lv,1325.1,927569,unknown
+Valmiera Beverage 14,"Valmiera, Latvia",Valmiera,Andris Zarins,Operations Manager,+371 62877601,valmiera.beverage.14@company.lv,2584.4,1809080,unknown
+Valmiera Plastics 15,"Valmiera, Latvia",Valmiera,Maris Silins,Owner,+371 63607927,valmiera.plastics.15@company.lv,875.0,612500,unknown
+Ogre Automotive 16,"Ogre, Latvia",Ogre,Maris Zarins,Operations Manager,+371 68526509,ogre.automotive.16@company.lv,875.0,612500,unknown
+Ventspils Machinery 17,"Ventspils, Latvia",Ventspils,Valdis Vitols,Managing Director,+371 65248818,ventspils.machinery.17@company.lv,875.0,612500,unknown
+Valmiera Electronics 18,"Valmiera, Latvia",Valmiera,Janis Vitols,Owner,+371 68412021,valmiera.electronics.18@company.lv,875.0,612500,unknown
+Kekava Metal 19,"Kekava, Latvia",Kekava,Andris Jansons,CEO,+371 63543525,kekava.metal.19@company.lv,875.0,612500,unknown
+Jelgava Machinery 20,"Jelgava, Latvia",Jelgava,Peteris Kalns,Owner,+371 64268701,jelgava.machinery.20@company.lv,2105.95,1474164,unknown
+Cesis Wood 21,"Cesis, Latvia",Cesis,Peteris Ozols,CEO,+371 62476313,cesis.wood.21@company.lv,875.0,612500,unknown
+Valmiera Machinery 22,"Valmiera, Latvia",Valmiera,Juris Zarins,Managing Director,+371 64114531,valmiera.machinery.22@company.lv,875.0,612500,unknown
+Riga Construction 23,"Riga, Latvia",Riga,Aivars Ozols,CEO,+371 66357206,riga.construction.23@company.lv,875.0,612500,unknown
+Cesis Paper 24,"Cesis, Latvia",Cesis,Peteris Ozols,CEO,+371 64406680,cesis.paper.24@company.lv,1308.3,915810,unknown
+Liepaja Electronics 25,"Liepaja, Latvia",Liepaja,Juris Eglitis,Managing Director,+371 62044885,liepaja.electronics.25@company.lv,878.15,614705,unknown
+Jelgava Wood 26,"Jelgava, Latvia",Jelgava,Peteris Ozols,Owner,+371 68436997,jelgava.wood.26@company.lv,875.0,612500,unknown
+Daugavpils Electronics 27,"Daugavpils, Latvia",Daugavpils,Valdis Silins,CEO,+371 67654661,daugavpils.electronics.27@company.lv,875.0,612500,unknown
+Liepaja Automotive 28,"Liepaja, Latvia",Liepaja,Andris Kalns,Operations Manager,+371 62002922,liepaja.automotive.28@company.lv,2286.2,1600339,unknown
+Ventspils Plastics 29,"Ventspils, Latvia",Ventspils,Aivars Jansons,Managing Director,+371 62035843,ventspils.plastics.29@company.lv,875.0,612500,unknown
+Kekava Wood 30,"Kekava, Latvia",Kekava,Aivars Kalns,Owner,+371 63465084,kekava.wood.30@company.lv,875.0,612500,unknown
+Valmiera Printing 31,"Valmiera, Latvia",Valmiera,Juris Silins,Managing Director,+371 68521238,valmiera.printing.31@company.lv,875.0,612500,unknown
+Ventspils Construction 32,"Ventspils, Latvia",Ventspils,Aivars Vitols,Owner,+371 62199878,ventspils.construction.32@company.lv,2604.35,1823045,unknown
+Liepaja Metal 33,"Liepaja, Latvia",Liepaja,Peteris Silins,CEO,+371 66768275,liepaja.metal.33@company.lv,875.0,612500,unknown
+Kekava Paper 34,"Kekava, Latvia",Kekava,Janis Jansons,CEO,+371 64612262,kekava.paper.34@company.lv,875.0,612500,unknown
+Ventspils Printing 35,"Ventspils, Latvia",Ventspils,Kaspars Berzins,Managing Director,+371 64584647,ventspils.printing.35@company.lv,875.0,612500,unknown
+Daugavpils Glass 36,"Daugavpils, Latvia",Daugavpils,Juris Jansons,Operations Manager,+371 63778110,daugavpils.glass.36@company.lv,995.05,696535,unknown
+Ogre Glass 37,"Ogre, Latvia",Ogre,Valdis Berzins,Operations Manager,+371 62550814,ogre.glass.37@company.lv,875.0,612500,unknown
+Ogre Printing 38,"Ogre, Latvia",Ogre,Andris Kalns,Owner,+371 66612725,ogre.printing.38@company.lv,2163.0,1514100,unknown
+Jekabpils Electronics 39,"Jekabpils, Latvia",Jekabpils,Maris Ozols,Operations Manager,+371 66851051,jekabpils.electronics.39@company.lv,1454.95,1018465,unknown
+Cesis Beverage 40,"Cesis, Latvia",Cesis,Maris Silins,Operations Manager,+371 67965483,cesis.beverage.40@company.lv,1427.65,999355,unknown
+Valmiera Construction 41,"Valmiera, Latvia",Valmiera,Kaspars Ozols,Managing Director,+371 62752381,valmiera.construction.41@company.lv,875.0,612500,unknown
+Cesis Glass 42,"Cesis, Latvia",Cesis,Valdis Berzins,CEO,+371 67882984,cesis.glass.42@company.lv,875.0,612500,unknown
+Riga Wood 43,"Riga, Latvia",Riga,Janis Jansons,Owner,+371 63310177,riga.wood.43@company.lv,875.0,612500,unknown
+Riga Glass 44,"Riga, Latvia",Riga,Peteris Berzins,Operations Manager,+371 68687165,riga.glass.44@company.lv,875.0,612500,unknown
+Ventspils Wood 45,"Ventspils, Latvia",Ventspils,Valdis Silins,CEO,+371 67552487,ventspils.wood.45@company.lv,875.0,612500,unknown
+Jelgava Beverage 46,"Jelgava, Latvia",Jelgava,Andris Silins,Operations Manager,+371 67520343,jelgava.beverage.46@company.lv,875.0,612500,unknown
+Liepaja Automotive 47,"Liepaja, Latvia",Liepaja,Peteris Ozols,Owner,+371 63811876,liepaja.automotive.47@company.lv,875.0,612500,unknown
+Kekava Electronics 48,"Kekava, Latvia",Kekava,Andris Kalns,CEO,+371 65060087,kekava.electronics.48@company.lv,875.0,612500,unknown
+Cesis Paper 49,"Cesis, Latvia",Cesis,Aivars Vitols,CEO,+371 65447503,cesis.paper.49@company.lv,2608.55,1825985,unknown
+Daugavpils Construction 0,"Daugavpils, Latvia",Daugavpils,Andris Ozols,Owner,+371 66868299,daugavpils.construction.0@company.lv,875.0,612500,unknown
+Ventspils Plastics 1,"Ventspils, Latvia",Ventspils,Andris Ozols,Operations Manager,+371 67496603,ventspils.plastics.1@company.lv,875.0,612500,unknown
+Ogre Furniture 2,"Ogre, Latvia",Ogre,Maris Eglitis,Owner,+371 65117740,ogre.furniture.2@company.lv,875.0,612500,unknown
+Ventspils Wood 3,"Ventspils, Latvia",Ventspils,Juris Eglitis,CEO,+371 67434898,ventspils.wood.3@company.lv,1104.25,772975,unknown
+Liepaja Printing 4,"Liepaja, Latvia",Liepaja,Juris Zarins,Managing Director,+371 63419206,liepaja.printing.4@company.lv,2282.35,1597645,unknown
+Jekabpils Paper 5,"Jekabpils, Latvia",Jekabpils,Janis Zarins,Owner,+371 66915117,jekabpils.paper.5@company.lv,934.15,653905,unknown
+Valmiera Food 6,"Valmiera, Latvia",Valmiera,Peteris Eglitis,CEO,+371 68328023,valmiera.food.6@company.lv,1177.05,823935,unknown
+Liepaja Paper 7,"Liepaja, Latvia",Liepaja,Aivars Kalns,Owner,+371 67513898,liepaja.paper.7@company.lv,875.0,612500,unknown
+Liepaja Beverage 8,"Liepaja, Latvia",Liepaja,Peteris Jansons,Operations Manager,+371 63139138,liepaja.beverage.8@company.lv,875.0,612500,unknown
+Daugavpils Electronics 9,"Daugavpils, Latvia",Daugavpils,Peteris Eglitis,Managing Director,+371 67260799,daugavpils.electronics.9@company.lv,875.0,612500,unknown
+Riga Machinery 10,"Riga, Latvia",Riga,Valdis Zarins,CEO,+371 67072770,riga.machinery.10@company.lv,875.0,612500,unknown
+Kekava Beverage 11,"Kekava, Latvia",Kekava,Aivars Vitols,CEO,+371 67671479,kekava.beverage.11@company.lv,1534.05,1073835,unknown
+Riga Furniture 12,"Riga, Latvia",Riga,Valdis Kalns,Managing Director,+371 62856595,riga.furniture.12@company.lv,1057.35,740144,unknown
+Ogre Furniture 13,"Ogre, Latvia",Ogre,Janis Kalns,CEO,+371 62339906,ogre.furniture.13@company.lv,1157.1,809969,unknown
+Ventspils Metal 14,"Ventspils, Latvia",Ventspils,Andris Kalns,Managing Director,+371 67750075,ventspils.metal.14@company.lv,875.0,612500,unknown
+Riga Food 15,"Riga, Latvia",Riga,Aivars Kalns,Managing Director,+371 66266708,riga.food.15@company.lv,875.0,612500,unknown
+Kekava Construction 16,"Kekava, Latvia",Kekava,Andris Eglitis,Owner,+371 65947655,kekava.construction.16@company.lv,875.0,612500,unknown
+Jekabpils Electronics 17,"Jekabpils, Latvia",Jekabpils,Andris Vitols,CEO,+371 67676571,jekabpils.electronics.17@company.lv,1741.25,1218875,unknown
+Ventspils Wood 18,"Ventspils, Latvia",Ventspils,Valdis Jansons,Owner,+371 65580903,ventspils.wood.18@company.lv,875.0,612500,unknown
+Cesis Printing 19,"Cesis, Latvia",Cesis,Valdis Silins,CEO,+371 62396620,cesis.printing.19@company.lv,1569.05,1098335,unknown
+Ogre Beverage 20,"Ogre, Latvia",Ogre,Aivars Silins,Owner,+371 64745706,ogre.beverage.20@company.lv,875.0,612500,unknown
+Riga Metal 21,"Riga, Latvia",Riga,Valdis Eglitis,Owner,+371 62936607,riga.metal.21@company.lv,875.0,612500,unknown
+Ventspils Machinery 22,"Ventspils, Latvia",Ventspils,Janis Zarins,CEO,+371 64687003,ventspils.machinery.22@company.lv,1500.45,1050315,unknown
+Cesis Plastics 23,"Cesis, Latvia",Cesis,Maris Eglitis,CEO,+371 67583234,cesis.plastics.23@company.lv,875.0,612500,unknown
+Jekabpils Automotive 24,"Jekabpils, Latvia",Jekabpils,Maris Berzins,Managing Director,+371 63062590,jekabpils.automotive.24@company.lv,875.0,612500,unknown
+Daugavpils Furniture 25,"Daugavpils, Latvia",Daugavpils,Valdis Jansons,Operations Manager,+371 65595082,daugavpils.furniture.25@company.lv,875.0,612500,unknown
+Ogre Machinery 26,"Ogre, Latvia",Ogre,Janis Zarins,Managing Director,+371 64257944,ogre.machinery.26@company.lv,875.0,612500,unknown
+Ventspils Chemical 27,"Ventspils, Latvia",Ventspils,Kaspars Vitols,Owner,+371 64902400,ventspils.chemical.27@company.lv,875.0,612500,unknown
+Riga Textiles 28,"Riga, Latvia",Riga,Maris Berzins,Owner,+371 66684248,riga.textiles.28@company.lv,875.0,612500,unknown
+Ventspils Glass 29,"Ventspils, Latvia",Ventspils,Andris Berzins,Operations Manager,+371 66323589,ventspils.glass.29@company.lv,875.0,612500,unknown
+Riga Chemical 30,"Riga, Latvia",Riga,Aivars Silins,Operations Manager,+371 62537831,riga.chemical.30@company.lv,938.35,656845,unknown
+Jelgava Chemical 31,"Jelgava, Latvia",Jelgava,Maris Kalns,CEO,+371 63920027,jelgava.chemical.31@company.lv,875.0,612500,unknown
+Riga Food 32,"Riga, Latvia",Riga,Kaspars Silins,Operations Manager,+371 62981170,riga.food.32@company.lv,2363.9,1654730,unknown
+Daugavpils Machinery 33,"Daugavpils, Latvia",Daugavpils,Aivars Ozols,CEO,+371 66275406,daugavpils.machinery.33@company.lv,875.0,612500,unknown
+Cesis Printing 34,"Cesis, Latvia",Cesis,Aivars Ozols,Managing Director,+371 64157210,cesis.printing.34@company.lv,1436.4,1005480,unknown
+Cesis Glass 35,"Cesis, Latvia",Cesis,Peteris Ozols,CEO,+371 63467266,cesis.glass.35@company.lv,923.3,646310,unknown
+Ventspils Textiles 36,"Ventspils, Latvia",Ventspils,Maris Ozols,Owner,+371 65542099,ventspils.textiles.36@company.lv,875.0,612500,unknown
+Ventspils Textiles 37,"Ventspils, Latvia",Ventspils,Valdis Silins,Operations Manager,+371 67994763,ventspils.textiles.37@company.lv,2571.8,1800260,unknown
+Riga Paper 38,"Riga, Latvia",Riga,Janis Silins,Owner,+371 62787841,riga.paper.38@company.lv,875.0,612500,unknown
+Jekabpils Metal 39,"Jekabpils, Latvia",Jekabpils,Juris Silins,Operations Manager,+371 68989449,jekabpils.metal.39@company.lv,2426.9,1698830,unknown
+Ogre Construction 40,"Ogre, Latvia",Ogre,Kaspars Zarins,CEO,+371 62529384,ogre.construction.40@company.lv,2489.55,1742685,unknown
+Jekabpils Glass 41,"Jekabpils, Latvia",Jekabpils,Kaspars Kalns,Owner,+371 62226182,jekabpils.glass.41@company.lv,875.0,612500,unknown
+Ventspils Electronics 42,"Ventspils, Latvia",Ventspils,Valdis Silins,CEO,+371 62276570,ventspils.electronics.42@company.lv,875.0,612500,unknown
+Ventspils Chemical 43,"Ventspils, Latvia",Ventspils,Maris Vitols,CEO,+371 67896587,ventspils.chemical.43@company.lv,875.0,612500,unknown
+Cesis Construction 44,"Cesis, Latvia",Cesis,Juris Kalns,CEO,+371 67074851,cesis.construction.44@company.lv,875.0,612500,unknown
+Ogre Wood 45,"Ogre, Latvia",Ogre,Valdis Zarins,Managing Director,+371 66482814,ogre.wood.45@company.lv,875.0,612500,unknown
+Valmiera Textiles 46,"Valmiera, Latvia",Valmiera,Janis Eglitis,Managing Director,+371 63744744,valmiera.textiles.46@company.lv,875.0,612500,unknown
+Liepaja Paper 47,"Liepaja, Latvia",Liepaja,Kaspars Jansons,Operations Manager,+371 66681792,liepaja.paper.47@company.lv,875.0,612500,unknown
+Riga Metal 48,"Riga, Latvia",Riga,Maris Vitols,Managing Director,+371 63651597,riga.metal.48@company.lv,875.0,612500,unknown
+Valmiera Electronics 49,"Valmiera, Latvia",Valmiera,Valdis Eglitis,CEO,+371 65993232,valmiera.electronics.49@company.lv,875.0,612500,unknown
+Liepaja Printing 0,"Liepaja, Latvia",Liepaja,Valdis Eglitis,CEO,+371 65660433,liepaja.printing.0@company.lv,875.0,612500,unknown
+Jelgava Textiles 1,"Jelgava, Latvia",Jelgava,Juris Ozols,Operations Manager,+371 65908988,jelgava.textiles.1@company.lv,875.0,612500,unknown
+Jelgava Paper 2,"Jelgava, Latvia",Jelgava,Peteris Zarins,Operations Manager,+371 66749877,jelgava.paper.2@company.lv,875.0,612500,unknown
+Liepaja Construction 3,"Liepaja, Latvia",Liepaja,Andris Jansons,Owner,+371 63350671,liepaja.construction.3@company.lv,1442.35,1009644,unknown
+Daugavpils Wood 4,"Daugavpils, Latvia",Daugavpils,Aivars Eglitis,CEO,+371 67095220,daugavpils.wood.4@company.lv,875.0,612500,unknown
+Daugavpils Food 5,"Daugavpils, Latvia",Daugavpils,Maris Vitols,Managing Director,+371 66364358,daugavpils.food.5@company.lv,1360.8,952560,unknown
+Ventspils Paper 6,"Ventspils, Latvia",Ventspils,Maris Silins,Owner,+371 66892590,ventspils.paper.6@company.lv,875.0,612500,unknown
+Liepaja Printing 7,"Liepaja, Latvia",Liepaja,Aivars Ozols,CEO,+371 65907327,liepaja.printing.7@company.lv,1239.7,867790,unknown
+Riga Machinery 8,"Riga, Latvia",Riga,Andris Kalns,CEO,+371 67868710,riga.machinery.8@company.lv,875.0,612500,unknown
+Liepaja Wood 9,"Liepaja, Latvia",Liepaja,Andris Kalns,CEO,+371 65489266,liepaja.wood.9@company.lv,2169.65,1518755,unknown
+Riga Plastics 10,"Riga, Latvia",Riga,Andris Kalns,Operations Manager,+371 64250049,riga.plastics.10@company.lv,1341.55,939085,unknown
+Liepaja Machinery 11,"Liepaja, Latvia",Liepaja,Maris Jansons,CEO,+371 63604485,liepaja.machinery.11@company.lv,875.0,612500,unknown
+Ogre Textiles 12,"Ogre, Latvia",Ogre,Janis Vitols,Managing Director,+371 67126384,ogre.textiles.12@company.lv,875.0,612500,unknown
+Valmiera Plastics 13,"Valmiera, Latvia",Valmiera,Valdis Berzins,Managing Director,+371 63329275,valmiera.plastics.13@company.lv,875.0,612500,unknown
+Cesis Paper 14,"Cesis, Latvia",Cesis,Kaspars Kalns,CEO,+371 62331460,cesis.paper.14@company.lv,1143.1,800169,unknown
+Riga Furniture 15,"Riga, Latvia",Riga,Peteris Jansons,Owner,+371 64914451,riga.furniture.15@company.lv,875.0,612500,unknown
+Jelgava Wood 16,"Jelgava, Latvia",Jelgava,Maris Ozols,Managing Director,+371 65874123,jelgava.wood.16@company.lv,1437.45,1006215,unknown
+Liepaja Furniture 17,"Liepaja, Latvia",Liepaja,Aivars Kalns,Owner,+371 66666261,liepaja.furniture.17@company.lv,2457.35,1720145,unknown
+Riga Wood 18,"Riga, Latvia",Riga,Janis Jansons,Owner,+371 65476658,riga.wood.18@company.lv,875.0,612500,unknown
+Daugavpils Metal 19,"Daugavpils, Latvia",Daugavpils,Andris Jansons,CEO,+371 63432998,daugavpils.metal.19@company.lv,1155.0,808500,unknown
+Kekava Beverage 20,"Kekava, Latvia",Kekava,Valdis Kalns,CEO,+371 68189959,kekava.beverage.20@company.lv,875.0,612500,unknown
+Riga Furniture 21,"Riga, Latvia",Riga,Aivars Berzins,Operations Manager,+371 64608129,riga.furniture.21@company.lv,875.0,612500,unknown
+Jekabpils Chemical 22,"Jekabpils, Latvia",Jekabpils,Aivars Silins,Managing Director,+371 66777300,jekabpils.chemical.22@company.lv,875.0,612500,unknown
+Valmiera Plastics 23,"Valmiera, Latvia",Valmiera,Andris Jansons,Managing Director,+371 64511240,valmiera.plastics.23@company.lv,875.0,612500,unknown
+Ventspils Plastics 24,"Ventspils, Latvia",Ventspils,Valdis Kalns,Managing Director,+371 63332596,ventspils.plastics.24@company.lv,875.0,612500,unknown
+Riga Automotive 25,"Riga, Latvia",Riga,Andris Jansons,Operations Manager,+371 68248312,riga.automotive.25@company.lv,875.0,612500,unknown
+Kekava Paper 26,"Kekava, Latvia",Kekava,Peteris Ozols,CEO,+371 67269300,kekava.paper.26@company.lv,2004.1,1402870,unknown
+Valmiera Food 27,"Valmiera, Latvia",Valmiera,Andris Berzins,Operations Manager,+371 68031507,valmiera.food.27@company.lv,1339.1,937369,unknown
+Jelgava Construction 28,"Jelgava, Latvia",Jelgava,Aivars Jansons,Managing Director,+371 68651433,jelgava.construction.28@company.lv,875.0,612500,unknown
+Kekava Food 29,"Kekava, Latvia",Kekava,Aivars Ozols,CEO,+371 64109729,kekava.food.29@company.lv,1443.75,1010625,unknown
+Liepaja Glass 30,"Liepaja, Latvia",Liepaja,Juris Vitols,Managing Director,+371 63270628,liepaja.glass.30@company.lv,1616.3,1131410,unknown
+Jelgava Machinery 31,"Jelgava, Latvia",Jelgava,Maris Jansons,Owner,+371 67537912,jelgava.machinery.31@company.lv,875.0,612500,unknown
+Valmiera Plastics 32,"Valmiera, Latvia",Valmiera,Peteris Silins,CEO,+371 66095954,valmiera.plastics.32@company.lv,875.0,612500,unknown
+Ogre Chemical 33,"Ogre, Latvia",Ogre,Peteris Kalns,Operations Manager,+371 64711174,ogre.chemical.33@company.lv,1941.8,1359260,unknown
+Liepaja Glass 34,"Liepaja, Latvia",Liepaja,Peteris Silins,CEO,+371 62804012,liepaja.glass.34@company.lv,875.0,612500,unknown
+Ogre Wood 35,"Ogre, Latvia",Ogre,Valdis Berzins,Managing Director,+371 64223535,ogre.wood.35@company.lv,875.0,612500,unknown
+Cesis Furniture 36,"Cesis, Latvia",Cesis,Kaspars Kalns,Operations Manager,+371 68814421,cesis.furniture.36@company.lv,1522.15,1065505,unknown
+Daugavpils Food 37,"Daugavpils, Latvia",Daugavpils,Valdis Vitols,Owner,+371 67843266,daugavpils.food.37@company.lv,969.15,678405,unknown
+Cesis Automotive 38,"Cesis, Latvia",Cesis,Valdis Eglitis,CEO,+371 65126826,cesis.automotive.38@company.lv,875.0,612500,unknown
+Jelgava Metal 39,"Jelgava, Latvia",Jelgava,Peteris Jansons,CEO,+371 67890277,jelgava.metal.39@company.lv,1647.1,1152970,unknown
+Ogre Machinery 40,"Ogre, Latvia",Ogre,Juris Vitols,Owner,+371 62868195,ogre.machinery.40@company.lv,875.0,612500,unknown
+Kekava Wood 41,"Kekava, Latvia",Kekava,Janis Zarins,CEO,+371 68995090,kekava.wood.41@company.lv,875.0,612500,unknown
+Riga Construction 42,"Riga, Latvia",Riga,Valdis Eglitis,Operations Manager,+371 63263166,riga.construction.42@company.lv,875.0,612500,unknown
+Ogre Furniture 43,"Ogre, Latvia",Ogre,Andris Jansons,Managing Director,+371 67441193,ogre.furniture.43@company.lv,951.65,666155,unknown
+Ventspils Chemical 44,"Ventspils, Latvia",Ventspils,Kaspars Jansons,Operations Manager,+371 68340214,ventspils.chemical.44@company.lv,875.0,612500,unknown
+Liepaja Paper 45,"Liepaja, Latvia",Liepaja,Andris Jansons,Operations Manager,+371 65119738,liepaja.paper.45@company.lv,875.0,612500,unknown
+Jekabpils Paper 46,"Jekabpils, Latvia",Jekabpils,Aivars Kalns,CEO,+371 66806993,jekabpils.paper.46@company.lv,875.0,612500,unknown
+Jekabpils Construction 47,"Jekabpils, Latvia",Jekabpils,Kaspars Silins,Operations Manager,+371 67765285,jekabpils.construction.47@company.lv,875.0,612500,unknown
+Ventspils Machinery 48,"Ventspils, Latvia",Ventspils,Janis Jansons,Operations Manager,+371 63891268,ventspils.machinery.48@company.lv,875.0,612500,unknown
+Cesis Electronics 49,"Cesis, Latvia",Cesis,Maris Kalns,CEO,+371 65731314,cesis.electronics.49@company.lv,875.0,612500,unknown
+Jelgava Plastics 0,"Jelgava, Latvia",Jelgava,Kaspars Berzins,Operations Manager,+371 64825060,jelgava.plastics.0@company.lv,880.25,616175,unknown
+Jekabpils Construction 1,"Jekabpils, Latvia",Jekabpils,Valdis Berzins,Managing Director,+371 62191704,jekabpils.construction.1@company.lv,875.0,612500,unknown
+Riga Automotive 2,"Riga, Latvia",Riga,Juris Kalns,CEO,+371 63529586,riga.automotive.2@company.lv,875.0,612500,unknown
+Kekava Wood 3,"Kekava, Latvia",Kekava,Valdis Kalns,Managing Director,+371 64029648,kekava.wood.3@company.lv,1856.4,1299480,unknown
+Riga Plastics 4,"Riga, Latvia",Riga,Andris Kalns,CEO,+371 68570195,riga.plastics.4@company.lv,875.0,612500,unknown
+Kekava Electronics 5,"Kekava, Latvia",Kekava,Aivars Eglitis,Owner,+371 65201723,kekava.electronics.5@company.lv,1237.95,866565,unknown
+Jekabpils Automotive 6,"Jekabpils, Latvia",Jekabpils,Aivars Vitols,CEO,+371 68658186,jekabpils.automotive.6@company.lv,875.0,612500,unknown
+Daugavpils Glass 7,"Daugavpils, Latvia",Daugavpils,Andris Ozols,Managing Director,+371 68212448,daugavpils.glass.7@company.lv,2389.1,1672370,unknown
+Liepaja Construction 8,"Liepaja, Latvia",Liepaja,Valdis Vitols,Owner,+371 65073896,liepaja.construction.8@company.lv,875.0,612500,unknown
+Ventspils Machinery 9,"Ventspils, Latvia",Ventspils,Andris Silins,CEO,+371 68422918,ventspils.machinery.9@company.lv,875.0,612500,unknown
+Cesis Construction 10,"Cesis, Latvia",Cesis,Valdis Eglitis,Owner,+371 62464536,cesis.construction.10@company.lv,875.0,612500,unknown
+Kekava Chemical 11,"Kekava, Latvia",Kekava,Maris Kalns,Operations Manager,+371 68446370,kekava.chemical.11@company.lv,875.0,612500,unknown
+Cesis Chemical 12,"Cesis, Latvia",Cesis,Aivars Jansons,Owner,+371 66341903,cesis.chemical.12@company.lv,875.0,612500,unknown
+Ogre Printing 13,"Ogre, Latvia",Ogre,Valdis Berzins,CEO,+371 63101116,ogre.printing.13@company.lv,875.0,612500,unknown
+Liepaja Construction 14,"Liepaja, Latvia",Liepaja,Maris Jansons,Owner,+371 67776462,liepaja.construction.14@company.lv,875.0,612500,unknown
+Liepaja Metal 15,"Liepaja, Latvia",Liepaja,Peteris Ozols,Operations Manager,+371 66509113,liepaja.metal.15@company.lv,875.0,612500,unknown
+Liepaja Automotive 16,"Liepaja, Latvia",Liepaja,Valdis Vitols,Managing Director,+371 64720342,liepaja.automotive.16@company.lv,875.0,612500,unknown
+Cesis Beverage 17,"Cesis, Latvia",Cesis,Aivars Jansons,Managing Director,+371 68933535,cesis.beverage.17@company.lv,2242.8,1569960,unknown
+Ventspils Automotive 18,"Ventspils, Latvia",Ventspils,Maris Berzins,Managing Director,+371 67253932,ventspils.automotive.18@company.lv,1475.25,1032675,unknown
+Valmiera Beverage 19,"Valmiera, Latvia",Valmiera,Juris Vitols,Operations Manager,+371 64406997,valmiera.beverage.19@company.lv,875.0,612500,unknown
+Liepaja Wood 20,"Liepaja, Latvia",Liepaja,Andris Silins,CEO,+371 63060208,liepaja.wood.20@company.lv,875.0,612500,unknown
+Cesis Glass 21,"Cesis, Latvia",Cesis,Maris Kalns,Owner,+371 65121545,cesis.glass.21@company.lv,1518.65,1063055,unknown
+Valmiera Paper 22,"Valmiera, Latvia",Valmiera,Maris Zarins,Owner,+371 67175285,valmiera.paper.22@company.lv,875.0,612500,unknown
+Ogre Textiles 23,"Ogre, Latvia",Ogre,Valdis Berzins,Owner,+371 65103304,ogre.textiles.23@company.lv,875.0,612500,unknown
+Valmiera Chemical 24,"Valmiera, Latvia",Valmiera,Janis Silins,CEO,+371 67500653,valmiera.chemical.24@company.lv,1198.4,838880,unknown
+Riga Automotive 25,"Riga, Latvia",Riga,Peteris Kalns,Managing Director,+371 68908318,riga.automotive.25@company.lv,875.0,612500,unknown
+Valmiera Machinery 26,"Valmiera, Latvia",Valmiera,Juris Silins,Managing Director,+371 65714531,valmiera.machinery.26@company.lv,1445.15,1011605,unknown
+Cesis Printing 27,"Cesis, Latvia",Cesis,Juris Jansons,CEO,+371 64363006,cesis.printing.27@company.lv,875.0,612500,unknown
+Ogre Electronics 28,"Ogre, Latvia",Ogre,Valdis Vitols,Operations Manager,+371 65096293,ogre.electronics.28@company.lv,1440.95,1008665,unknown
+Jekabpils Printing 29,"Jekabpils, Latvia",Jekabpils,Kaspars Kalns,Operations Manager,+371 66169709,jekabpils.printing.29@company.lv,2625.0,1837500,unknown
+Valmiera Paper 30,"Valmiera, Latvia",Valmiera,Peteris Kalns,Managing Director,+371 67366669,valmiera.paper.30@company.lv,875.0,612500,unknown
+Jekabpils Textiles 31,"Jekabpils, Latvia",Jekabpils,Aivars Berzins,CEO,+371 65299886,jekabpils.textiles.31@company.lv,875.0,612500,unknown
+Liepaja Electronics 32,"Liepaja, Latvia",Liepaja,Valdis Jansons,Managing Director,+371 64755986,liepaja.electronics.32@company.lv,875.0,612500,unknown
+Liepaja Furniture 33,"Liepaja, Latvia",Liepaja,Janis Jansons,Managing Director,+371 63435763,liepaja.furniture.33@company.lv,875.0,612500,unknown
+Liepaja Metal 34,"Liepaja, Latvia",Liepaja,Andris Vitols,Managing Director,+371 65652481,liepaja.metal.34@company.lv,875.0,612500,unknown
+Valmiera Food 35,"Valmiera, Latvia",Valmiera,Andris Silins,Operations Manager,+371 68280292,valmiera.food.35@company.lv,2460.5,1722350,unknown
+Riga Construction 36,"Riga, Latvia",Riga,Maris Berzins,Owner,+371 68197125,riga.construction.36@company.lv,875.0,612500,unknown
+Jelgava Plastics 37,"Jelgava, Latvia",Jelgava,Maris Kalns,Managing Director,+371 62450690,jelgava.plastics.37@company.lv,875.0,612500,unknown
+Jekabpils Metal 38,"Jekabpils, Latvia",Jekabpils,Valdis Zarins,CEO,+371 63709369,jekabpils.metal.38@company.lv,875.0,612500,unknown
+Jekabpils Chemical 39,"Jekabpils, Latvia",Jekabpils,Aivars Silins,Owner,+371 66509425,jekabpils.chemical.39@company.lv,875.0,612500,unknown
+Ogre Beverage 40,"Ogre, Latvia",Ogre,Juris Silins,Managing Director,+371 66832615,ogre.beverage.40@company.lv,875.0,612500,unknown
+Liepaja Metal 41,"Liepaja, Latvia",Liepaja,Aivars Kalns,CEO,+371 63891269,liepaja.metal.41@company.lv,875.0,612500,unknown
+Valmiera Printing 42,"Valmiera, Latvia",Valmiera,Kaspars Berzins,Managing Director,+371 68366049,valmiera.printing.42@company.lv,875.0,612500,unknown
+Jelgava Construction 43,"Jelgava, Latvia",Jelgava,Aivars Zarins,Operations Manager,+371 68557723,jelgava.construction.43@company.lv,875.0,612500,unknown
+Liepaja Metal 44,"Liepaja, Latvia",Liepaja,Peteris Berzins,Operations Manager,+371 62154598,liepaja.metal.44@company.lv,2451.75,1716225,unknown
+Daugavpils Plastics 45,"Daugavpils, Latvia",Daugavpils,Janis Silins,Owner,+371 63373347,daugavpils.plastics.45@company.lv,875.0,612500,unknown
+Jelgava Beverage 46,"Jelgava, Latvia",Jelgava,Peteris Kalns,CEO,+371 67430910,jelgava.beverage.46@company.lv,875.0,612500,unknown
+Liepaja Printing 47,"Liepaja, Latvia",Liepaja,Maris Vitols,Managing Director,+371 63591564,liepaja.printing.47@company.lv,875.0,612500,unknown
+Valmiera Construction 48,"Valmiera, Latvia",Valmiera,Maris Eglitis,Owner,+371 62304074,valmiera.construction.48@company.lv,875.0,612500,unknown
+Liepaja Electronics 49,"Liepaja, Latvia",Liepaja,Peteris Jansons,Operations Manager,+371 64764728,liepaja.electronics.49@company.lv,875.0,612500,unknown
