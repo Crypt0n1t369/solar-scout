@@ -2,7 +2,7 @@
 """
 🌞 LATVIA SOLAR SCOUT - LEAD MAGNET AGENT
 ==========================================
-Robust lead generation using DuckDuckGo + BeautifulSoup
+Robust lead generation using Selenium + Firefox
 
 Usage:
     python3 main.py --country LV --query "manufacturing warehouse factory" --max-results 50
@@ -14,14 +14,19 @@ import json
 import random
 import time
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 # Core imports
-import requests
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-from duckduckgo_search import DDGS
+import requests
 
 # ============================================================================
 # CONFIGURATION
@@ -59,6 +64,32 @@ DEFAULT_QUERIES = {
     ],
 }
 
+# Exclude domains (non-relevant)
+EXCLUDE_DOMAINS = [
+    "zhihu.com", "baidu.com", "weibo.com", "qq.com", 
+    "alibaba.com", "tmall.com", "taobao.com", "jd.com",
+    "youtube.com", "facebook.com", "twitter.com", "instagram.com",
+    "linkedin.com", "pinterest.com", "reddit.com", "wikipedia.org",
+    "duckduckgo.com", "google.com", "bing.com", "yahoo.com",
+]
+
+# ============================================================================
+# BROWSER SETUP
+# ============================================================================
+
+def get_firefox_driver(headless: bool = True) -> webdriver.Firefox:
+    """Initialize Firefox WebDriver."""
+    opts = Options()
+    if headless:
+        opts.add_argument('--headless')
+    opts.add_argument('--no-sandbox')
+    opts.add_argument('--disable-dev-shm-usage')
+    opts.add_argument('--disable-gpu')
+    # Randomize User-Agent
+    opts.set_preference("general.useragent.override", random.choice(USER_AGENTS))
+    return webdriver.Firefox(options=opts)
+
+
 # ============================================================================
 # UTILITIES
 # ============================================================================
@@ -72,12 +103,6 @@ def get_random_headers() -> Dict[str, str]:
         "Accept-Encoding": "gzip, deflate",
         "DNT": "1",
         "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-User": "?1",
-        "Cache-Control": "max-age=0",
     }
 
 
@@ -86,6 +111,20 @@ def random_delay(min_sec: float = 2.0, max_sec: float = 5.0) -> None:
     delay = random.uniform(min_sec, max_sec)
     print(f"    💤 Waiting {delay:.1f}s...")
     time.sleep(delay)
+
+
+def is_valid_company_url(url: str) -> bool:
+    """Check if URL is a likely company website."""
+    if not url or not url.startswith('http'):
+        return False
+    url_lower = url.lower()
+    # Exclude domains
+    if any(ex in url_lower for ex in EXCLUDE_DOMAINS):
+        return False
+    # Must have some domain structure
+    if url_lower.count('/') < 3 and '.' in url.split('/')[-1]:
+        return True
+    return True
 
 
 def safe_request(url: str, timeout: int = 15, max_retries: int = 3) -> Optional[requests.Response]:
@@ -105,7 +144,6 @@ def safe_request(url: str, timeout: int = 15, max_retries: int = 3) -> Optional[
         except requests.exceptions.HTTPError as e:
             print(f"    ⚠️  HTTP {e.response.status_code} (attempt {attempt + 1}/{max_retries})")
         except requests.exceptions.RequestException as e:
-            # Handle DNS and connection errors
             error_str = str(e).lower()
             if 'dns' in error_str or 'name or service not known' in error_str:
                 print(f"    🔴 DNS failure (attempt {attempt + 1}/{max_retries})")
@@ -121,92 +159,68 @@ def safe_request(url: str, timeout: int = 15, max_retries: int = 3) -> Optional[
 
 
 # ============================================================================
-# SEARCH PHASE
+# SEARCH PHASE - SELENIUM
 # ============================================================================
 
-def search_duckduckgo(query: str, max_results: int = 50) -> List[Dict[str, str]]:
+def search_with_firefox(driver: webdriver.Firefox, query: str) -> List[Dict[str, str]]:
     """
-    Search using DuckDuckGo (no API key required).
+    Search using DuckDuckGo via Selenium + Firefox.
     Returns list of {title, url, body}
     """
     results = []
-    ddgs = DDGS()
     
-    print(f"  🔍 DDGS: {query}")
-    
-    # Domains to exclude (non-relevant)
-    exclude_domains = ["zhihu.com", "baidu.com", "weibo.com", "qq.com", 
-                       "alibaba.com", "tmall.com", "taobao.com", "jd.com"]
+    print(f"  🔍 Firefox DDG: {query[:50]}...")
     
     try:
-        # Get more results than needed (DDGS returns ~10 per call)
-        # Use region filter for better local results
-        for r in ddgs.text(query, max_results=max_results * 2, region="lv-lv", safesearch="Off"):
-            url = r.get("href", "")
-            
-            # Filter out excluded domains
-            if any(ex in url.lower() for ex in exclude_domains):
-                continue
+        # Navigate to DuckDuckGo
+        search_url = f"https://duckduckgo.com/?q={query.replace(' ', '+')}&t=h_&ia=web"
+        driver.get(search_url)
+        
+        # Wait for results to load
+        time.sleep(4)
+        
+        # Get all links from the page
+        links = driver.find_elements(By.TAG_NAME, 'a')
+        
+        seen_urls = set()
+        for link in links:
+            try:
+                href = link.get_attribute('href')
+                text = link.text.strip()
                 
-            results.append({
-                "title": r.get("title", ""),
-                "url": url,
-                "body": r.get("body", ""),
-                "source": "duckduckgo"
-            })
-            if len(results) >= max_results:
-                break
-    except Exception as e:
-        print(f"    ❌ DDGS error: {e}")
-    
-    return results
-
-
-def search_searxng(query: str, max_results: int = 50) -> List[Dict[str, str]]:
-    """
-    Fallback: Search via public SearXNG instance.
-    """
-    # Public instances (rotate if one fails)
-    searx_instances = [
-        "https://searxng.site",
-        "https://searxng.website",
-        "https://searx.tiekoetter.com",
-    ]
-    
-    results = []
-    
-    for instance in searx_instances:
-        try:
-            url = f"{instance}/search"
-            params = {
-                "q": query,
-                "format": "json",
-                "engines": "google,bing",
-                "language": "en",
-            }
-            
-            print(f"  🔍 SearXNG ({instance}): {query}")
-            
-            response = requests.get(url, params=params, headers=get_random_headers(), timeout=20)
-            response.raise_for_status()
-            data = response.json()
-            
-            for r in data.get("results", [])[:max_results]:
+                # Skip invalid or excluded URLs
+                if not href or not href.startswith('http'):
+                    continue
+                if any(ex in href.lower() for ex in EXCLUDE_DOMAINS):
+                    continue
+                if href in seen_urls:
+                    continue
+                    
+                seen_urls.add(href)
+                
+                # Get snippet/body if available
+                try:
+                    # Try to find parent to get snippet
+                    parent = link.find_element(By.XPATH, "./ancestor::div[contains(@class, 'result')]")
+                    body = parent.text[:200] if parent else ""
+                except:
+                    body = ""
+                
+                # Extract title from link text
+                title = text[:100] if text else href[:60]
+                
                 results.append({
-                    "title": r.get("title", ""),
-                    "url": r.get("url", ""),
-                    "body": r.get("content", ""),
-                    "source": f"searxng:{instance}"
+                    "title": title,
+                    "url": href,
+                    "body": body,
+                    "source": "duckduckgo_firefox"
                 })
-                if len(results) >= max_results:
-                    break
-            
-            if results:
-                break
                 
-        except Exception as e:
-            print(f"    ⚠️  SearXNG {instance} failed: {e}")
-            continue
+            except Exception as e:
+                continue
+        
+    except Exception as e:
+        print(f"    ❌ Firefox error: {e}")
     
     return results
 
@@ -214,37 +228,41 @@ def search_searxng(query: str, max_results: int = 50) -> List[Dict[str, str]]:
 def discover_companies(country: str, queries: List[str], max_per_query: int = 15) -> List[Dict[str, Any]]:
     """
     Phase 1: Company Discovery
-    Uses DuckDuckGo with fallback to SearXNG
+    Uses Selenium + Firefox
     """
     print("\n" + "=" * 60)
-    print("PHASE 1: COMPANY DISCOVERY (DuckDuckGo + SearXNG)")
+    print("PHASE 1: COMPANY DISCOVERY (Selenium + Firefox)")
     print("=" * 60)
+    
+    # Initialize Firefox
+    print("  🌐 Starting Firefox...")
+    driver = get_firefox_driver(headless=True)
     
     all_results = []
     seen_urls = set()
     
-    for i, query in enumerate(queries):
-        print(f"\n[{i+1}/{len(queries)}] {query}")
-        
-        # Try DuckDuckGo first
-        results = search_duckduckgo(query, max_results=max_per_query)
-        
-        # Fallback to SearXNG if no results
-        if not results:
-            print(f"    🔄 Falling back to SearXNG...")
-            results = search_searxng(query, max_results=max_per_query)
-        
-        # Deduplicate by URL
-        for r in results:
-            if r["url"] not in seen_urls:
-                seen_urls.add(r["url"])
-                all_results.append(r)
-        
-        print(f"    ✅ Got {len(results)} results (total: {len(all_results)})")
-        
-        # Random delay between queries
-        if i < len(queries) - 1:
-            random_delay(3, 6)
+    try:
+        for i, query in enumerate(queries):
+            print(f"\n[{i+1}/{len(queries)}] {query}")
+            
+            # Search
+            results = search_with_firefox(driver, query)
+            
+            # Deduplicate
+            for r in results:
+                if r["url"] not in seen_urls:
+                    seen_urls.add(r["url"])
+                    all_results.append(r)
+            
+            print(f"    ✅ Got {len(results)} results (total: {len(all_results)})")
+            
+            # Random delay between queries
+            if i < len(queries) - 1:
+                random_delay(3, 6)
+    
+    finally:
+        driver.quit()
+        print("  🔒 Firefox closed")
     
     print(f"\n💾 Discovered {len(all_results)} unique URLs")
     return all_results
@@ -266,19 +284,23 @@ def scrape_company_info(url: str) -> Optional[Dict[str, Any]]:
     try:
         soup = BeautifulSoup(response.text, "html.parser")
         
-        # Extract company name from title or h1
+        # Extract company name from title
         company_name = ""
         if soup.title:
             company_name = soup.title.string or ""
+        
+        # Clean up title
+        if company_name:
+            for suffix in [" - Official Website", " | Official Site", " - Wikipedia"]:
+                company_name = company_name.replace(suffix, "")
+        
         h1 = soup.find("h1")
         if h1:
-            company_name = h1.get_text(strip=True) or company_name
+            h1_text = h1.get_text(strip=True)
+            if h1_text and len(h1_text) < 100:
+                company_name = h1_text
         
-        # Remove common suffixes
-        for suffix in [" - Wikipedia", " | Official Website", " - Official Site"]:
-            company_name = company_name.replace(suffix, "")
-        
-        # Extract description from meta tags or paragraphs
+        # Extract description from meta tags
         description = ""
         meta_desc = soup.find("meta", {"name": "description"})
         if meta_desc and meta_desc.get("content"):
@@ -289,28 +311,17 @@ def scrape_company_info(url: str) -> Optional[Dict[str, Any]]:
         phone = ""
         address = ""
         
-        # Search in text for common patterns
         text = soup.get_text()
         
-        import re
+        # Email pattern
         email_match = re.search(r'[\w\.-]+@[\w\.-]+\.\w+', text)
         if email_match:
             email = email_match.group(0)
         
+        # Phone pattern
         phone_match = re.search(r'\+?[\d\s\-\(\)]{7,20}', text)
         if phone_match:
             phone = phone_match.group(0)
-        
-        # Look for address-like patterns
-        address_patterns = [
-            r'\d+\s+[\w\s]+,\s*\d{5}\s+\w+',  # Street, ZIP City
-            r'\w+\s+street\s+\d+.*?\w+',       # street address
-        ]
-        for pattern in address_patterns:
-            addr_match = re.search(pattern, text, re.IGNORECASE)
-            if addr_match:
-                address = addr_match.group(0)
-                break
         
         return {
             "name": company_name[:100],
@@ -337,36 +348,22 @@ def enrich_companies(companies: List[Dict[str, Any]], max_to_scrape: int = 30) -
     
     enriched = []
     
-    # Prioritize likely company URLs (filter out search engines, directories)
-    priority_urls = []
-    exclude_domains = ["google", "bing", "yahoo", "wikipedia", "facebook", "linkedin", 
-                       "twitter", "instagram", "youtube", "pinterest", "reddit"]
+    # Prioritize likely company URLs
+    to_scrape = companies[:max_to_scrape]
     
-    for c in companies:
-        url = c.get("url", "")
-        if not url:
-            continue
-        if not any(ex in url.lower() for ex in exclude_domains):
-            priority_urls.append(c)
-    
-    # Limit scraping
-    to_scrape = priority_urls[:max_to_scrape]
-    
-    print(f"  📊 Scraping {len(to_scrape)} URLs (filtered from {len(companies)})")
+    print(f"  📊 Scraping {len(to_scrape)} URLs")
     
     for i, company in enumerate(to_scrape):
         url = company.get("url", "")
-        print(f"\n[{i+1}/{len(to_scrape)}] {url[:60]}...")
+        print(f"\n[{i+1}/{len(to_scrape)}] {url[:50]}...")
         
         info = scrape_company_info(url)
         
         if info:
-            # Merge with original data
             merged = {**company, **info}
             enriched.append(merged)
             print(f"    ✅ {info.get('name', 'Unknown')[:40]}")
         else:
-            # Keep original if scrape failed
             enriched.append(company)
             print(f"    ⚠️  Kept original data")
         
@@ -393,23 +390,24 @@ def validate_companies(companies: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     # Keywords indicating manufacturing/industrial
     positive_keywords = [
         "manufacturing", "factory", "production", "industrial", "warehouse",
-        "metal", "wood", "food", "加工", "production", "fabrik",
-        "manufacturing", "fabrication", "machining", "assembly",
-        "logistics", "distribution", "storage", "wholesale",
-        "construction", "materials", "equipment", "machinery"
+        "metal", "wood", "food", "processing", "fabrication", "machining",
+        "assembly", "logistics", "distribution", "storage", "wholesale",
+        "construction", "materials", "equipment", "machinery",
+        "workshop", "plant", "manufacture", "producer"
     ]
     
-    # Keywords to exclude (not real manufacturing targets)
+    # Keywords to exclude
     exclude_keywords = [
-        "retail", "restaurant", "cafe", "shop", "store",
+        "retail", "restaurant", "cafe", "shop", "store", "hotel",
         "bank", "insurance", "finance", "legal", "consulting",
-        "school", "university", "hospital", "clinic",
-        "government", "municipality", "association"
+        "school", "university", "hospital", "clinic", "health",
+        "government", "municipality", "association", "club"
     ]
     
     validated = []
     
     for c in companies:
+        # Search in all text fields
         text = f"{c.get('title', '')} {c.get('body', '')} {c.get('name', '')} {c.get('description', '')}".lower()
         
         # Must have at least one positive keyword
@@ -424,7 +422,7 @@ def validate_companies(companies: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             validated.append(c)
         else:
             c["validation"] = "failed"
-            c["validation_reason"] = f"positive={has_positive}, exclude_count={exclude_count}"
+            c["validation_reason"] = f"positive={has_positive}, exclude={exclude_count}"
     
     print(f"  ✅ Validated: {len(validated)}/{len(companies)} passed")
     return validated
@@ -466,7 +464,7 @@ def run_pipeline(country: str = "LV", max_results: int = 50, custom_queries: Lis
         json.dump(discovered, f, ensure_ascii=False, indent=2)
     print(f"\n💾 Saved raw discovery to {raw_file}")
     
-    # Phase 2: Enrichment (scrape websites)
+    # Phase 2: Enrichment
     enriched = enrich_companies(discovered, max_to_scrape=min(30, len(discovered)))
     
     # Phase 3: Validation
@@ -496,6 +494,7 @@ if __name__ == "__main__":
     parser.add_argument("--queries", nargs="+", help="Custom search queries")
     parser.add_argument("--max-results", type=int, default=50, help="Max results per query")
     parser.add_argument("--min-employees", type=int, default=10, help="Min employees (heuristic)")
+    parser.add_argument("--no-headless", action="store_true", help="Run browser visible")
     
     args = parser.parse_args()
     
@@ -504,5 +503,14 @@ if __name__ == "__main__":
         queries = args.queries
     elif args.query:
         queries = [args.query]
+    
+    # Override headless mode
+    if args.no_headless:
+        import sys
+        # Patch the driver function
+        import __main__
+        __main__.get_firefox_driver = lambda headless=False: webdriver.Firefox(
+            options=Options() if not headless else Options()
+        )
     
     run_pipeline(country=args.country, max_results=args.max_results, custom_queries=queries)
