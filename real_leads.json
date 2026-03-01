@@ -12,7 +12,9 @@
     "phone": "+371 634 88200",
     "email": "info@liepajasmetalurgs.lv",
     "capacity_kw": 2500,
-    "solar_potential": "Large roof space, industrial site"
+    "solar_potential": "Large roof space, industrial site",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/KVV_Liepajas_Metalurgs_sat.jpg"
   },
   {
     "name": "Latvijas Finieris",
@@ -27,7 +29,9 @@
     "phone": "+371 6780 6900",
     "email": "finieris@finieris.lv",
     "capacity_kw": 1800,
-    "solar_potential": "Large production facility"
+    "solar_potential": "Large production facility",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Latvijas_Finieris_sat.jpg"
   },
   {
     "name": "Grindeks",
@@ -42,7 +46,9 @@
     "phone": "+371 6708 3201",
     "email": "grindeks@grindeks.lv",
     "capacity_kw": 1200,
-    "solar_potential": "Multiple buildings, clean facilities"
+    "solar_potential": "Multiple buildings, clean facilities",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Grindeks_sat.jpg"
   },
   {
     "name": "Laima",
@@ -57,7 +63,9 @@
     "phone": "+371 6780 5700",
     "email": "laima@laima.lv",
     "capacity_kw": 900,
-    "solar_potential": "Production facility roof"
+    "solar_potential": "Production facility roof",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Laima_sat.jpg"
   },
   {
     "name": "Riga Wood",
@@ -72,7 +80,9 @@
     "phone": "+371 6780 2200",
     "email": "info@rigawerke.lv",
     "capacity_kw": 1500,
-    "solar_potential": "Large warehouse facilities"
+    "solar_potential": "Large warehouse facilities",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Riga_Wood_sat.jpg"
   },
   {
     "name": "Valmieras Stikla Skiedra",
@@ -87,7 +97,9 @@
     "phone": "+371 6420 7600",
     "email": "vss@valmiera.lv",
     "capacity_kw": 3000,
-    "solar_potential": "Very large industrial complex"
+    "solar_potential": "Very large industrial complex",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Valmieras_Stikla_Skiedra_sat.jpg"
   },
   {
     "name": "Riga Dairy",
@@ -96,13 +108,15 @@
     "lat": 56.9325,
     "lng": 24.149,
     "industry": "Dairy Production",
-    "website": "rigaspiena.k группа",
+    "website": "rigaspiena.k \u0433\u0440\u0443\u043f\u043f\u0430",
     "decision_maker": "Production Manager",
     "title": "Operations Manager",
     "phone": "+371 6780 1200",
     "email": "info@rigaspiena.lv",
     "capacity_kw": 800,
-    "solar_potential": "Processing facility"
+    "solar_potential": "Processing facility",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Riga_Dairy_sat.jpg"
   },
   {
     "name": "Putnu Fabrika Kekava",
@@ -117,7 +131,9 @@
     "phone": "+371 6796 5100",
     "email": "pfk@putnufabrika.lv",
     "capacity_kw": 2000,
-    "solar_potential": "Large facility with roof space"
+    "solar_potential": "Large facility with roof space",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Putnu_Fabrika_Kekava_sat.jpg"
   },
   {
     "name": "Kalnapilis",
@@ -130,9 +146,11 @@
     "decision_maker": "Plant Manager",
     "title": "Production Director",
     "phone": "+371 6362 5500",
-    "email": "kalnapilis@at姿态.lv",
+    "email": "kalnapilis@at\u59ff\u6001.lv",
     "capacity_kw": 1100,
-    "solar_potential": "Brewery facility"
+    "solar_potential": "Brewery facility",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Kalnapilis_sat.jpg"
   },
   {
     "name": "Ventspils Nafta Terminals",
@@ -147,7 +165,9 @@
     "phone": "+371 6362 4500",
     "email": "vnt@vnt.lv",
     "capacity_kw": 5000,
-    "solar_potential": "Massive terminal, huge solar potential"
+    "solar_potential": "Massive terminal, huge solar potential",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Ventspils_Nafta_Terminals_sat.jpg"
   },
   {
     "name": "Krimelte",
@@ -162,7 +182,9 @@
     "phone": "+371 6780 4000",
     "email": "krimelte@krimelte.lv",
     "capacity_kw": 600,
-    "solar_potential": "Production warehouse"
+    "solar_potential": "Production warehouse",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Krimelte_sat.jpg"
   },
   {
     "name": "Knauf",
@@ -177,7 +199,9 @@
     "phone": "+371 6797 2500",
     "email": "info@knauf.lv",
     "capacity_kw": 1400,
-    "solar_potential": "Large warehouse"
+    "solar_potential": "Large warehouse",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Knauf_sat.jpg"
   },
   {
     "name": "Rockwool",
@@ -192,7 +216,9 @@
     "phone": "+371 6780 9900",
     "email": "rockwool@rockwool.lv",
     "capacity_kw": 2200,
-    "solar_potential": "Production facility"
+    "solar_potential": "Production facility",
+    "solar_installed": "YES",
+    "satellite_image": "docs/images/Rockwool_sat.jpg"
   },
   {
     "name": "Saint Gobain",
@@ -207,7 +233,9 @@
     "phone": "+371 6780 1000",
     "email": "info@saint-gobain.lv",
     "capacity_kw": 1800,
-    "solar_potential": "Warehouse complex"
+    "solar_potential": "Warehouse complex",
+    "solar_installed": "YES",
+    "satellite_image": "docs/images/Saint_Gobain_sat.jpg"
   },
   {
     "name": "Forbo",
@@ -222,7 +250,9 @@
     "phone": "+371 6780 3300",
     "email": "forbo@forbo.lv",
     "capacity_kw": 750,
-    "solar_potential": "Warehouse"
+    "solar_potential": "Warehouse",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Forbo_sat.jpg"
   },
   {
     "name": "SAF Tehnika",
@@ -237,7 +267,9 @@
     "phone": "+371 6784 7100",
     "email": "saf@saf.lv",
     "capacity_kw": 450,
-    "solar_potential": "Electronics facility"
+    "solar_potential": "Electronics facility",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/SAF_Tehnika_sat.jpg"
   },
   {
     "name": "Elko",
@@ -252,7 +284,9 @@
     "phone": "+371 6780 9000",
     "email": "elko@elko.lv",
     "capacity_kw": 600,
-    "solar_potential": "Warehouse"
+    "solar_potential": "Warehouse",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Elko_sat.jpg"
   },
   {
     "name": "Hansa Matrix",
@@ -267,7 +301,9 @@
     "phone": "+371 6722 2100",
     "email": "info@hansamatrix.lv",
     "capacity_kw": 550,
-    "solar_potential": "Manufacturing"
+    "solar_potential": "Manufacturing",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Hansa_Matrix_sat.jpg"
   },
   {
     "name": "Riga Shipyard",
@@ -282,7 +318,9 @@
     "phone": "+371 6780 7200",
     "email": "rfs@rfs.lv",
     "capacity_kw": 3500,
-    "solar_potential": "Huge covered areas"
+    "solar_potential": "Huge covered areas",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Riga_Shipyard_sat.jpg"
   },
   {
     "name": "Depo DIY",
@@ -297,6 +335,8 @@
     "phone": "+371 6780 8100",
     "email": "riga@depodiy.lv",
     "capacity_kw": 1200,
-    "solar_potential": "Large retail roof"
+    "solar_potential": "Large retail roof",
+    "solar_installed": "NO",
+    "satellite_image": "docs/images/Depo_DIY_sat.jpg"
   }
 ]
