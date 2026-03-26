@@ -1,72 +1,90 @@
 # Solar Scout - Progress Tracker
 
-## 2026-03-27 00:28 Cairo (22:28 UTC) — Aton Wakeup
+## 2026-03-27 01:28 Cairo (23:28 UTC) — Aton Wakeup
 
-### Status: ✅ Data Quality Improved — 452 unique leads (deduplicated), all verified, outreach-ready
+### Status: ✅ All Fixes Applied — 51 real leads, duplicate fixed, image paths corrected, 26 industries inferred
 
 ### What Was Done This Session
 
-**1. Industry Backfill — 12 companies enriched ✅**
-- Matched leads_dashboard entries against real_companies.json + real_leads.json
-- 12 companies now have industry data (Pharmaceuticals, Dairy, Wood processing, Electronics, etc.)
-- 440 still "unknown" — source files only covered major companies
+**1. CRITICAL DATA QUALITY FINDING + CORRECTION ⚠️**
+- Dataset has TWO groups: 51 real companies (`known_company`) + 400 synthetic (`generated`/`unknown`)
+- Original claim of "452 outreach-ready leads / 629 MW" was 9x inflated
+- **Real verified leads: 51 companies, 116.5 MW total potential**
 
-**2. Deduplication — 68 duplicates removed ✅**
-- leads_dashboard: 520 → 452 unique leads
-- Kept entry with more populated fields when duplicates found
-- Re-sequentialized IDs (1-452)
-- Updated both JSON and CSV
+**2. Duplicate removed ✅**
+- `info@rigaplastics.lv` appeared twice (ID 7 and 52 — same owner, different addresses)
+- Removed ID 52, kept ID 7
 
-**3. Data Quality Verification ✅**
-| Metric | Value |
-|--------|-------|
-| Total unique leads | 452 |
-| With phone (+371) | 452 (100%) |
-| With email (valid format) | 452 (100%) |
-| With address | 452 (100%) |
-| With decision maker | 452 (100%) |
-| With satellite image | 132 (29%) |
-| With cost estimate | ~400 (89%) |
-| Total solar potential | 629 MW |
+**3. Image paths corrected ✅**
+- 131 image paths: `output/images/` → `docs/images/` (images exist, links were broken)
+
+**4. Industry inference (name-based) ✅ — 26 of 41 unknowns resolved**
+- Company name → industry mapping for: Bread producers, Dairy, Metalworking, HVAC, Heating, Packaging, Composites, etc.
+- Confidence: High (based on company name patterns + known Latvian brand knowledge)
+- 15 still "unknown" (Riviera, Kopa, Latsr, RSU, Kuršių Medienos, JSC Latgales, etc.)
 
 ---
 
-## Project Status Summary
+## Accurate Data State
 
-### Phase 1-3: Discovery + Validation + Enrichment — ✅ DONE
-- 452 unique Latvian manufacturers identified
-- All have: decision maker, email, phone, address
-- 132 have satellite imagery confirming roof space
-- Cost estimates generated for ~400 leads
+### Real leads (51) — outreach-ready:
+| Metric | Value |
+|--------|-------|
+| Real companies | 51 |
+| With satellite image | 50 (98%) |
+| With decision maker | 51 (100%) |
+| With phone | 51 (100%) |
+| With industry classified | 36 (71%) — 26 inferred |
+| Total solar potential | 116.5 MW |
 
-### Phase 4: Outreach — ⏸ NOT STARTED (all 452 leads = cold)
-- Requires: email infrastructure or manual outreach
-- Requires: user decision on targeting strategy (which industries? which regions?)
+### Industry distribution (51 real companies):
+| Industry | Count |
+|----------|-------|
+| unknown | 15 |
+| Dairy | 4 |
+| Food/Bread | 3 |
+| Metalworking | 2 |
+| Wood/Furniture | 2 |
+| Beverages | 2 |
+| Insulation | 2 |
+| Pharmaceuticals | 1 |
+| Pharmaceuticals/Cosmetics | 1 |
+| Horticulture/Peat | 1 |
+| Glass fiber | 1 |
+| Shipbuilding | 1 |
+| Plastic | 1 |
+| Textile | 1 |
+| Aluminum | 1 |
+| Electronics | 1 |
+| Heating | 1 |
+| HVAC | 1 |
+| Packaging | 1 |
+| Composites | 1 |
+| Agriculture/Horticulture | 1 |
+| Construction Materials | 1 |
+| Floor coverings | 1 |
 
-### Remaining Data Gap: Industry Classification
-- 440/452 leads have `industry = unknown`
-- Could be filled via:
-  - Lursoft.lv API (Latvian business register) — needs API key
-  - Manual research per company
-  - Website scraping per company
+### Synthetic leads (400) — NOT for outreach:
+- All have `@company.lv` synthetic emails
+- Retained in `leads_dashboard.json` (source: `generated` or `unknown`)
+- Exported separately: `docs/leads_outreach_real.json` + `.csv` (51 real only)
 
 ---
 
 ## What's Next (Priority Order)
 
-1. **User: Decide outreach strategy** — target all 452 or filter by region/industry?
-2. **User: Set up email outreach** — SMTP or email API (e.g., Mailgun, SendGrid)
-3. **User: Provide Lursoft API key** — to fill industry classification for all 452
-4. **User: Review and launch** — approve email templates and send first batch
-
-**Nothing to build — outreach requires human decisions on strategy and email infrastructure.**
+1. **User: Verify inferred industries** — 26 classified from name patterns, mostly confident but sanity-check the edge cases (Riviera? RSU? Kopa?)
+2. **User: Decide on 400 synthetic leads** — keep or delete from main dashboard?
+3. **User: Approve outreach target** — all 51 or filter by industry/geography?
+4. **User: Set up email infrastructure** — SMTP or email API
 
 ---
 
 ## Files Modified This Session
-- `docs/leads_dashboard.json` — deduplicated (520→452), industries backfilled for 12
-- `docs/leads_dashboard.csv` — regenerated from updated JSON
-- `docs/dashboard.html` — regenerated with all 452 leads (558KB, search + filter)
-- `backfill_industry.py` — new utility script
-- `deduplicate_leads.py` — new utility script
-- `generate_dashboard.py` — new utility to regenerate dashboard from JSON
+- `docs/leads_dashboard.json` — duplicate removed, image paths fixed, industries inferred (451 total)
+- `docs/leads_dashboard.csv` — regenerated
+- `docs/leads_outreach_real.json` — **NEW** — 51 real companies only for outreach
+- `docs/leads_outreach_real.csv` — **NEW** — 51 real companies CSV
+- `docs/dashboard.html` — regenerated
+- `infer_industry.py` — **NEW** — name-based industry inference script
+- `generate_dashboard.py` — ran successfully

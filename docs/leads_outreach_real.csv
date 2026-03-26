@@ -1,0 +1,52 @@
+company,address,decision_maker,title,phone,email,capacity_kw,industry,image
+Grindeks,"Krustpils iela 53, Riga, Latvia",Juris Bundulis,Chairman of the Board,+371 67039393,info@grindeks.lv,2614.85,Pharmaceuticals,docs/images/Grindeks_sat.jpg
+Laflora,"Daugavpils iela 34, Riga, Latvia",Janis,Director,+371 67221555,laflora@laflora.lv,1797.6,Horticulture/Peat,docs/images/Laflora_sat.jpg
+Valmieras Stikla Skiedra,"Cempu iela 13, Valmiera, Latvia",Janis Siliņš,Production Director,+371 64202150,vss@vss.lv,3037.65,Glass fiber,docs/images/Valmieras_Stikla_Skiedra_annotated.jpg
+Daugavpils Locomotive Repair Plant,"Stacijas iela 2, Daugavpils, Latvia",Aleksandrs Kuzmins,Director,+371 65433691,dlrp@dlrp.lv,2213.4,Metalworking,
+Jelgavas Tips,"Loka iela 4, Jelgava, Latvia",Maris Tiltins,Owner/Managing Director,+371 63022350,tips@jelgavastips.lv,2418.15,Wood/Furniture,docs/images/Jelgavas_Tips_annotated.jpg
+Ventspils Rejs,"Kurzemes iela 1, Ventspils, Latvia",Janis Taurins,Managing Director,+371 63624444,info@ventspilsrejs.lv,2381.4,Shipbuilding,docs/images/Ventspils_Rejs_annotated.jpg
+Riga Plastics,"Gustava iela 4, Riga, Latvia",Peteris Ozols,Owner,+371 67223344,info@rigaplastics.lv,2177.0,Plastic,docs/images/Riga_Plastics_Factory_sat.jpg
+Madara,"Kupravas iela 11, Riga, Latvia",Lina Pole,CEO,+371 66151515,madara@madara.lv,2495.15,Pharmaceuticals/Cosmetics,docs/images/Madara_sat.jpg
+Baltic Flax,"Linu iela 1, Daugavpils, Latvia",Viktors Lucjans,Director,+371 65402211,bflax@balticflax.lv,2413.95,Textile,docs/images/Baltic_Flax_annotated.jpg
+Riviera,"Lubanas iela 23, Riga, Latvia",Andris Berzins,Owner,+371 67892233,riviera@riviera.lv,2552.55,unknown,docs/images/Riviera_sat.jpg
+Metalex,"Lokomotives iela 21, Riga, Latvia",Eduards Vulfs,Managing Director,+371 67215588,metalex@metalex.lv,2355.15,Metalworking,docs/images/Metalex_annotated.jpg
+Alutech,"Katlakalna iela 11, Riga, Latvia",Maris Krastins,Director,+371 67405060,alutech@alutech.lv,2720.9,Aluminum,docs/images/Alutech_annotated.jpg
+Latsr,"Ventspils iela 12, Kuldiga, Latvia",Janis Kauls,Owner,+371 63333333,latsr@latsr.lv,2206.05,unknown,docs/images/Latsr_annotated.jpg
+Hansa Matrix,"Kauguru iela 60, Riga, Latvia",Karlis Karpovs,CEO,+371 67607070,info@hansamatrix.lv,2212.7,Electronics,docs/images/Hansa_Matrix_sat.jpg
+RSU,"Daugavgrivas iela 12, Riga, Latvia",Ricards Sils,Director,+371 67310444,rsu@rsu.lv,2657.2,unknown,docs/images/RSU_sat.jpg
+Siltumel,"Miera iela 30, Jelgava, Latvia",Armands Vagulis,Owner,+371 63024444,siltumel@siltumel.lv,1739.85,Heating,docs/images/Siltumel_annotated.jpg
+Ventilacija,"Kurzemes prospekts 88, Riga, Latvia",Rolands Pelns,Managing Director,+371 67801111,vent@ventilacija.lv,2219.0,HVAC,docs/images/Ventilacija_annotated.jpg
+Kopa,"Daugavpils iela 91, Rezekne, Latvia",Vladimirs Koslovs,Director,+371 64603333,kopa@kopa.lv,2202.55,unknown,docs/images/Kopa_annotated.jpg
+PTA,"Krustpils iela 95, Riga, Latvia",Ainars Kalnins,Director,+371 67805555,pta@pta.lv,2086.7,Packaging,docs/images/PTA_sat.jpg
+Mebell,"Liepajas iela 12, Jelgava, Latvia",Visvaldis Murans,Owner,+371 63022222,info@mebell.lv,2176.65,Wood/Furniture,docs/images/Mebell_annotated.jpg
+Kuršių Medienos,"Ventspils iela 8, Liepaja, Latvia",Darius Jonaitis,CEO,+371 63630000,info@kursiumedienos.lv,2250.85,unknown,docs/images/Kuršių_Medienos_annotated.jpg
+JSC Latgales,"Daugavpils iela 15, Rezekne, Latvia",Eduards Lavrinovics,Director,+371 64622222,latgales@latgales.lv,2202.55,unknown,docs/images/JSC_Latgales_sat.jpg
+Baltic Laminate,"Stacijas iela 5, Daugavpils, Latvia",Vladislavs Petrovs,Manager,+371 65477777,info@balticlab.lv,2213.4,Composites,docs/images/Baltic_Laminate_sat.jpg
+Virši,"Krustpils iela 87, Riga, Latvia",Jānis Rasa,CEO,+371 67803333,virsi@virsi.lv,2086.7,Agriculture/Horticulture,docs/images/Virši_annotated.jpg
+Riga Dairy,"Daugavgrivas iela 45, Riga, Latvia",Anna Ozola,Director,+371 67312222,dairy@rigadairy.lv,2307.9,Dairy,docs/images/Riga_Dairy_sat.jpg
+Kurzemes Piens,"Kurzemes iela 22, Ventspils, Latvia",Lelde Kalniņa,Manager,+371 63628888,piens@kurzemespiens.lv,2762.55,Dairy,docs/images/Kurzemes_Piens_sat.jpg
+Latgales Piens,"Stacijas iela 18, Daugavpils, Latvia",Marina Černova,Director,+371 65444444,info@latgalespiens.lv,2537.5,Dairy,docs/images/Latgales_Piens_annotated.jpg
+Maksim,"Lubanas iela 112, Riga, Latvia",Aleksejs Kozlovs,Owner,+371 67275555,maksim@maksim.lv,2401.0,unknown,docs/images/Maksim_annotated.jpg
+Preiļu Siers,"Daugavpils iela 31, Preili, Latvia",Aivars Caune,Director,+371 65355555,siers@preilusiers.lv,2450.0,Dairy,docs/images/Preiļu_Siers_sat.jpg
+Ventspils Maize,"Kurzemes iela 33, Ventspils, Latvia",Inga Vanaga,Manager,+371 63631111,maize@ventspilsmaize.lv,2677.5,Food/Bread,docs/images/Ventspils_Maize_sat.jpg
+Daugavpils Maize,"Stacijas iela 28, Daugavpils, Latvia",Viktors Zahars,Director,+371 65422222,maize@daugavpilsmaize.lv,2537.5,Food/Bread,docs/images/Daugavpils_Maize_sat.jpg
+Jelgavas Maize,"Loka iela 15, Jelgava, Latvia",Dainis Caune,Owner,+371 63021111,jelgava@jelgavasmaize.lv,2433.9,Food/Bread,docs/images/Jelgavas_Maize_sat.jpg
+Užavas Alus,"Ventspils iela 45, Kuldiga, Latvia",Gints Ancs,CEO,+371 63332222,alus@uzavasalus.lv,2206.05,Beverages,docs/images/Užavas_Alus_annotated.jpg
+Molson Coors Latvia,"Daugavgrivas iela 88, Riga, Latvia",Raivis Dzerve,Director,+371 67357777,mc@molsoncoors.lv,1774.85,Beverages,docs/images/Molson_Coors_Latvia_annotated.jpg
+Bauroc,"Ventspils iela 33, Riga, Latvia",Māris Gailītis,Manager,+371 67850000,bauroc@bauroc.lv,1947.05,Construction Materials,docs/images/Bauroc_annotated.jpg
+Isover,"Lubanas iela 135, Riga, Latvia",Raimonds Cābelis,Director,+371 67895555,isover@isover.lv,1646.4,Insulation,docs/images/Isover_sat.jpg
+Rockwool,"Daugavgrivas iela 91, Riga, Latvia",Jānis Bērziņš,Manager,+371 67851111,rockwool@rockwool.lv,2130.45,Insulation,docs/images/Rockwool_annotated.jpg
+PREMIUM,"Liepajas iela 45, Riga, Latvia",Aldis Eglītis,Owner,+371 67220000,info@premium.lv,2029.3,unknown,docs/images/PREMIUM_sat.jpg
+Forbo,"Kurzemes prospekts 112, Riga, Latvia",Ainars Veinbergs,Director,+371 67871111,forbo@forbo.lv,2320.85,Floor coverings,docs/images/Forbo_sat.jpg
+Gerhard,"Daugavgrivas iela 102, Riga, Latvia",Kristians Gerhard,CEO,+371 67345555,gerhard@gerhard.lv,1979.95,unknown,docs/images/Gerhard_sat.jpg
+Lode,"Krustpils iela 135, Riga, Latvia",Gints Pērkons,Director,+371 67290000,lode@lode.lv,2086.7,unknown,docs/images/Lode_annotated.jpg
+Krass,"Lubanas iela 155, Riga, Latvia",Kaspars Krasts,Owner,+371 67812222,krass@krass.lv,2199.75,unknown,docs/images/Krass_annotated.jpg
+Norgips,"Kurzemes prospekts 125, Riga, Latvia",Mārtiņš Krūmiņš,Manager,+371 67890000,norgips@norgips.lv,2206.4,unknown,docs/images/Norgips_annotated.jpg
+Sent,"Daugavgrivas iela 115, Riga, Latvia",Ričards Ginters,Director,+371 67320000,sent@sent.lv,2130.45,unknown,docs/images/Sent_sat.jpg
+Bermas,"Ventspils iela 78, Riga, Latvia",Vitauts Ļubimovs,Director,+371 63670000,bermas@bermas.lv,1947.05,unknown,docs/images/Bermas_annotated.jpg
+Gortex,"Katlakalna iela 25, Riga, Latvia",Pēteris Zeltins,Owner,+371 67275555,gortex@gortex.lv,2720.9,unknown,docs/images/Gortex_annotated.jpg
+Len,"Lokomotives iela 35, Riga, Latvia",Zigmunds Liepiņš,Director,+371 67212222,len@len.lv,2355.15,unknown,docs/images/Len_sat.jpg
+Tera,"Stacijas iela 38, Daugavpils, Latvia",Juris Jakovlevs,Manager,+371 65400000,tera@tera.lv,2273.25,unknown,docs/images/Tera_annotated.jpg
+Lenda,"Gustava iela 15, Riga, Latvia",Valdis Siliņš,Owner,+371 67280000,lenda@lenda.lv,2177.0,unknown,docs/images/Lenda_sat.jpg
+Vests,"Kurzemes iela 55, Ventspils, Latvia",Andris Auziņš,Director,+371 63620000,vests@vests.lv,2381.4,unknown,docs/images/Vests_annotated.jpg
+Sakart,"Loka iela 35, Jelgava, Latvia",Edgars Bērziņš,Owner,+371 63028888,sakart@sakart.lv,2418.15,unknown,docs/images/Sakart_annotated.jpg
