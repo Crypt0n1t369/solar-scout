@@ -66,5 +66,7 @@
 ## Files Modified This Session
 - `docs/leads_dashboard.json` — deduplicated (520→452), industries backfilled for 12
 - `docs/leads_dashboard.csv` — regenerated from updated JSON
+- `docs/dashboard.html` — regenerated with all 452 leads (558KB, search + filter)
 - `backfill_industry.py` — new utility script
 - `deduplicate_leads.py` — new utility script
+- `generate_dashboard.py` — new utility to regenerate dashboard from JSON
