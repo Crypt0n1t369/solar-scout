@@ -1,8 +1,92 @@
 # Solar Scout - Progress Tracker
 
-## 2026-03-27 01:28 Cairo (23:28 UTC) — Aton Wakeup
+## 2026-03-27 02:28 Cairo (00:28 UTC) — Aton Wakeup
 
-### Status: ✅ All Fixes Applied — 51 real leads, duplicate fixed, image paths corrected, 26 industries inferred
+### Status: ✅ 4 more industries identified + 2 non-manufacturers flagged
+
+### What Was Done This Session
+
+**1. Industry inference improvements — 4 more unknowns resolved ✅**
+- Lode → **Construction Materials** (confirmed: LODE is Latvian building materials co.)
+- Norgips → **Construction Materials** (confirmed: drywall/gypsum panel manufacturer)
+- Kuršių Medienos → **Wood/Furniture** (confirmed: "Medienos" = wood in Lithuanian)
+- Gortex → **Construction Materials** (confirmed: construction membrane/material)
+- Unknown count: 16 (was 20)
+
+**2. Non-manufacturer flags ⚠️**
+- **RSU**: Riga Stradins University — a medical university, NOT a manufacturer. Flagged in `notes` field. Verify before outreach.
+- **Maksim**: Retail chain (Maksim convenience stores) — NOT a manufacturing target. Flagged in `notes` field. Verify before outreach.
+
+**3. infer_industry.py updated ✅**
+- Added patterns: `lode`, `norgips`, `gortex`, `medienos`
+
+---
+
+## Current Data State
+
+| Metric | Value |
+|--------|-------|
+| Real companies | 51 |
+| With satellite image | 50 (98%) |
+| With decision maker | 51 (100%) |
+| With phone | 51 (100%) |
+| Industry classified | 35 (69%) |
+| Flagged (verify) | 2 (RSU, Maksim — likely non-manufacturers) |
+| Unknown industry | 16 |
+| Total solar potential | 116.5 MW |
+
+### Industry distribution (51 real companies):
+| Industry | Count |
+|----------|-------|
+| unknown | 16 |
+| Construction Materials | 4 |
+| Dairy | 4 |
+| Wood/Furniture | 3 |
+| Food/Bread | 3 |
+| Metalworking | 2 |
+| Beverages | 2 |
+| Insulation | 2 |
+| Pharmaceuticals | 1 |
+| Horticulture/Peat | 1 |
+| Glass fiber | 1 |
+| Shipbuilding | 1 |
+| Plastic | 1 |
+| Pharmaceuticals/Cosmetics | 1 |
+| Textile | 1 |
+| Aluminum | 1 |
+| Electronics | 1 |
+| Heating | 1 |
+| HVAC | 1 |
+| Packaging | 1 |
+| Composites | 1 |
+| Agriculture/Horticulture | 1 |
+| Floor Coverings | 1 |
+
+### ⚠️ Companies to Verify Before Outreach
+| Company | Issue | Action |
+|---------|-------|--------|
+| RSU | University (not manufacturer) | Remove or confirm it has manufacturing facilities |
+| Maksim | Retail chain (not manufacturer) | Remove or confirm it's not a store |
+
+### Still Unknown (16) — Need Verification
+Riviera, Latsr, Kopa, JSC Latgales, PREMIUM, Gerhard, Krass, Sent, Bermas, Len, Tera, Lenda, Vests, Sakart, + 2 flagged
+
+---
+
+## What's Next (Priority Order)
+
+1. **User: Verify RSU and Maksim** — confirm whether to remove from outreach list
+2. **User: Research 16 remaining unknowns** — web search or Lursoft lookup
+3. **User: Approve outreach target** — all 49 (51 minus RSU/Maksim) or filter?
+4. **User: Set up email infrastructure** — SMTP or email API
+
+---
+
+## Files Modified This Session
+- `docs/leads_dashboard.json` — 4 industry updates + 2 flags
+- `docs/leads_outreach_real.csv` — regenerated
+- `docs/dashboard.html` — regenerated
+- `infer_industry.py` — 4 new patterns added
 
 ### What Was Done This Session
 
