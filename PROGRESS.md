@@ -1,5 +1,66 @@
 # Solar Scout - Progress Tracker
 
+## 2026-03-27 22:26 Cairo (20:26 UTC) — Aton Wakeup
+
+### Status: ✅ Pipeline Solid / SMTP Awaiting User / 15 Companies Ready
+
+**This session: Verified full pipeline integrity. All 3 scripts working correctly, CSV data clean, 15 validated companies confirmed at 33.4 MW total. Git state clean. SMTP configuration remains the only blocker for actual sends.**
+
+### Verification Results
+
+| Check | Result | Details |
+|-------|--------|---------|
+| `regenerate_validated.py` | ✅ | 15 companies / 33.4 MW, 31 invalid MX removed |
+| `generate_emails.py` | ✅ | 15 email drafts regenerated |
+| `send_emails.py --dry-run` | ✅ | All 15 emails preview correctly |
+| `send_emails.py --dry-run-all` | ✅ | Full batch preview confirmed |
+| CSV data validation | ✅ | All 15 rows pass: no empty required fields, all capacities numeric |
+| Decision maker names | ✅ | All 15 verified (Latvian diacritics handled correctly) |
+| SMTP error message | ✅ | Clear guidance when SMTP not configured |
+| Git state | ✅ | Clean working tree, up to date with origin |
+
+### Current Outreach Data
+- **15 validated companies / 33.4 MW** (strict MX validation)
+- All emails bilingual LV + EN, personalized with decision-maker name
+- 30s delay between sends (crash-resilient via sent_log.json)
+
+### What's Working
+```
+leads_outreach_real.json → regenerate_validated.py → leads_outreach_validated.csv
+                                                        ↓
+                          generate_emails.py → email_drafts_validated.md (preview)
+                                                        ↓
+                          send_emails.py --dry-run → email preview
+                          send_emails.py --test     → first 3 emails (real SMTP)
+                          send_emails.py            → all 15 emails (real SMTP)
+```
+
+### P0 Blocker — SMTP Configuration (User Action Required)
+```
+# Gmail example:
+export SMTP_HOST=smtp.gmail.com
+export SMTP_PORT=587
+export SMTP_USER=your@gmail.com
+export SMTP_PASSWORD="xxxx xxxx xxxx xxxx"
+export SENDER_NAME="Your Name"
+export SENDER_EMAIL=your@gmail.com
+export BCC_RECIPIENT=your@gmail.com
+```
+See `docs/SEND_GUIDE.md` for Gmail/Mailgun/SendGrid setup steps.
+
+### What's Next
+1. **User: Configure SMTP** — any SMTP provider (Gmail/Mailgun/SendGrid)
+2. **User: Run `python3 send_emails.py --dry-run --all`** — verify sender info looks right
+3. **User: Run `python3 send_emails.py --test`** — send first 3, verify inbox delivery
+4. **User: Run `python3 send_emails.py`** — send all 15 with 30s delays
+5. **User: Verify 11 unknowns** — requires OpenRouter credits top-up (Lursoft.lv lookup as alternative)
+
+### 11 Unknowns Needing Verification (Blocked on Credits)
+Riviera, Latsr, Kopa, JSC Latgales, Gerhard, Krass, Sent, Bermas, Len, Vests, Sakart
+→ Total unverified: ~24 MW potential → Lursoft.lv or +371 phone calls needed
+
+---
+
 ## 2026-03-27 14:59 Cairo (12:59 UTC) — Aton Wakeup
 
 ### Status: ✅ Pipeline Verified End-to-End / 930 Total Tests / Git Pushed
