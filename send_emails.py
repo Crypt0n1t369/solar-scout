@@ -5,7 +5,7 @@ Reads validated leads from docs/leads_outreach_validated.csv and sends personali
 
 Usage:
     python send_emails.py --dry-run           # Preview first 3 emails (no sending)
-    python send_emails.py --dry-run --all     # Preview all 15 emails (no sending)
+    python send_emails.py --dry-run-all      # Preview all 15 emails (no sending)
     python send_emails.py --test              # Send to first 3 recipients only
     python send_emails.py                     # Send to all 15 validated companies
 
