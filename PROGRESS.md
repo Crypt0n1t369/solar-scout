@@ -48,18 +48,24 @@ export BCC_RECIPIENT=your@gmail.com
 ```
 See `docs/SEND_GUIDE.md` for Gmail/Mailgun/SendGrid setup steps.
 
-### What's Next
-1. **User: Configure SMTP** — any SMTP provider (Gmail/Mailgun/SendGrid)
-2. **User: Run `python3 send_emails.py --dry-run --all`** — verify sender info looks right
-3. **User: Run `python3 send_emails.py --test`** — send first 3, verify inbox delivery
-4. **User: Run `python3 send_emails.py`** — send all 15 with 30s delays
-5. **User: Verify 11 unknowns** — requires OpenRouter credits top-up (Lursoft.lv lookup as alternative)
+### What's Next (Priority Order)
+1. **User: Configure SMTP** — any SMTP provider (Gmail App Password / Mailgun / SendGrid)
+2. **User: Preview all emails** — `python3 send_emails.py --dry-run --all` to verify sender info
+3. **User: Send test batch** — `python3 send_emails.py --test` (first 3 emails, verify inbox not spam)
+4. **User: Send full batch** — `python3 send_emails.py` (all 15 with 30s delays)
+5. **Follow-up** — check `docs/sent_log.json` after 3-5 days for replies
 
-### 11 Unknowns Needing Verification (Blocked on Credits)
-Riviera, Latsr, Kopa, JSC Latgales, Gerhard, Krass, Sent, Bermas, Len, Vests, Sakart
-→ Total unverified: ~24 MW potential → Lursoft.lv or +371 phone calls needed
+### 11 "Unknowns" — Actually Filtered by MX Validation
+All 11 companies originally flagged as "Manufacturing (likely)" were checked via DNS:
+- **Riviera** (2,552 kW): Has A record (web exists) but **null MX** — explicitly refuses email
+- **Latsr, Kopa, Gerhard, Krass, Sent, Bermas, Len, Vests, Sakart** (9 companies): No A record, no MX record — domains don't exist as active web/email destinations
+- **JSC Latgales** (2,202 kW): Shares address with Latgales Piens (already in validated list); no MX record
+
+→ **Conclusion: All 11 were correctly removed by MX validation.** No action needed.
 
 ---
+
+
 
 ## 2026-03-27 14:59 Cairo (12:59 UTC) — Aton Wakeup
 
