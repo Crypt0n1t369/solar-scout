@@ -11,12 +11,16 @@ INDUSTRY_PATTERNS = [
     (r'(?i)metal|steel|fabrication|weld|machining', 'Metalworking'),
     (r'(?i)locomotive', 'Metalworking'),
     (r'(?i)wood|furniture|mebel|koka|saplāks|tips$', 'Wood/Furniture'),
+    (r'(?i)medienos', 'Wood/Furniture'),  # Lithuanian: wood
     (r'(?i)plastic|polimēr', 'Plastic'),
     (r'(?i)bread|maize', 'Food/Bread'),
     (r'(?i)dairy|piens|siers|cheese', 'Dairy'),
     (r'(?i)beverage|alus|beer|brew', 'Beverages'),
     (r'(?i)pharma|cosmetic|madara', 'Pharmaceuticals/Cosmetics'),
     (r'(?i)construction|concrete|cement|bauroc', 'Construction Materials'),
+    (r'(?i)gips|gyp|norgips', 'Construction Materials'),  # Drywall/gypsum panels
+    (r'(?i)gortex', 'Construction Materials'),  # Construction membrane
+    (r'(?i)lode', 'Construction Materials'),  # Lode - Latvian construction materials
     (r'(?i)glass|stikl', 'Glass'),
     (r'(?i)paper|pārstrāde', 'Paper/Packaging'),
     (r'(?i)insulation|isover|rockwool', 'Insulation'),
