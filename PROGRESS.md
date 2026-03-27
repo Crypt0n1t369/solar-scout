@@ -1,5 +1,72 @@
 # Solar Scout - Progress Tracker
 
+
+## 2026-03-27 03:58 Cairo (01:58 UTC) — Aton Wakeup
+
+### Status: ✅ 5 Non-Manufacturers Identified + Removed / 46 Clean Leads / 104.9 MW
+
+**This session: Web research identified 3 more non-manufacturers (PREMIUM=car rental, Tera=medical retailer, Lenda=real estate). Combined with previously known RSU+Maksim, 5 total removed. Remaining 11 unknown industries classified as "Manufacturing (likely)" based on domain/address analysis.**
+
+### What Was Done
+
+**1. Solar Scout — 5 Non-Manufacturers Removed ✅**
+Previously flagged: RSU (university), Maksim (retail chain)
+Newly discovered this session:
+- **PREMIUM** → premium.lv = car rental / VIP transfer service (NOT manufacturing)
+- **Tera** → tera.lv = medical/health products retailer (NOT manufacturing)
+- **Lenda** → lenda.lv = real estate agency (NOT manufacturing)
+
+**2. Remaining 11 Unknowns — Best-Effort Classification ✅**
+All have no accessible website. Classified as "Manufacturing (likely)" based on:
+- Company email domain patterns (@latsr.lv, @gerhard.lv, etc.)
+- Location in industrial areas (Riga, Ventspils, Daugavpils, Jelgava)
+- JSC Latgales: Latgales region, metalwork/logistics plausible; dairy=Latgales Piens at same address
+
+**3. Data Updated ✅**
+- leads_dashboard.json: 5 non-manufacturers flagged
+- leads_outreach_real.csv + .json: regenerated — 46 companies (was 51)
+- dashboard.html: regenerated via generate_dashboard.py
+
+### Current Data State
+
+| Metric | Value |
+|--------|-------|
+| Real manufacturing companies | **46** (was 51) |
+| Industry known | 35 (76%) |
+| Industry "Manufacturing (likely)" | 11 (24%) |
+| Flagged non-manufacturers | 5 |
+| **Total solar potential** | **104.9 MW** |
+
+### 11 Companies Needing Manual Verification Before Outreach
+Riviera, Latsr, Kopa, JSC Latgales, Gerhard, Krass, Sent, Bermas, Len, Vests, Sakart
+→ Recommend Lursoft lookup or direct +371 phone calls
+
+### All Services: ✅ Healthy
+| Service | Port | Status |
+|---------|------|--------|
+| Credo API | 3000 | ✅ |
+| Audio Backend | 3001 | ✅ |
+| Credo Frontend | 3002 | ✅ |
+| Youth Platform | 3003 | ✅ |
+| Audio Frontend | 3005 | ✅ |
+| CG Web | 3006 | ✅ |
+| JCI Portal | 8080 | ✅ |
+
+### P0 Blockers (User Action Required)
+| Item | Blocked By | Status |
+|------|-----------|--------|
+| OpenRouter credits | Budget top-up | BLOCKS: web search + AI |
+| Audio Tool Vercel deploy | Vercel account | Awaiting drg |
+| CG Telegram bot token | tg botFather | Awaiting drg |
+| CG deploy to Vercel | drg import + env vars | Awaiting drg |
+
+### What's Next
+1. **User: Verify 11 unknowns** via Lursoft.lv or phone calls
+2. **User: Approve 46-company outreach list**
+3. **User: Set up email/SMTP infrastructure**
+4. **User: Top up OpenRouter credits**
+
+
 ## 2026-03-27 02:28 Cairo (00:28 UTC) — Aton Wakeup
 
 ### Status: ✅ 4 more industries identified + 2 non-manufacturers flagged
