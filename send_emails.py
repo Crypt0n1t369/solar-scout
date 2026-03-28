@@ -8,6 +8,8 @@ Usage:
     python send_emails.py --dry-run-all      # Preview all 15 emails (no sending)
     python send_emails.py --test              # Send to first 3 recipients only
     python send_emails.py                     # Send to all 15 validated companies
+    python send_emails.py --smtp-check        # Validate SMTP credentials
+    python send_emails.py --check-replies    # Check sent log + follow-up readiness
 
 Environment variables (set in config.py or shell):
     SMTP_HOST     — SMTP server (e.g. smtp.gmail.com)
@@ -355,6 +357,105 @@ def smtp_check(cfg):
         return 1
 
 
+def check_replies(cfg):
+    """Read sent_log.json and report outreach status + suggested follow-ups."""
+    sent_log_path = os.path.join(os.path.dirname(__file__), "docs", "sent_log.json")
+
+    print("=" * 56)
+    print("SOLAR SCOUT — REPLY TRACKING")
+    print("=" * 56)
+
+    if not os.path.exists(sent_log_path):
+        print("\n📭 No sent_log.json found.")
+        print("   Run --test or send batch first: python3 send_emails.py")
+        return 0
+
+    with open(sent_log_path, encoding="utf-8") as f:
+        sent_log = json.load(f)
+
+    if not sent_log:
+        print("\n📭 sent_log.json is empty — no emails sent yet.")
+        return 0
+
+    sent_entries = [e for e in sent_log if e.get("status") == "sent"]
+    failed_entries = [e for e in sent_log if e.get("status") == "failed"]
+
+    print(f"\n📊 Summary: {len(sent_entries)} sent | {len(failed_entries)} failed")
+    print(f"   (from docs/sent_log.json, {len(sent_log)} total entries)\n")
+
+    # Parse timestamps and compute follow-up readiness
+    now = datetime.utcnow()
+    BUSINESS_DAYS_FOR_FOLLOWUP = 5
+
+    print("-" * 56)
+    print(f"{'COMPANY':<28} {'SENT':<12} {'STATUS':<8} {'NEXT ACTION'}")
+    print("-" * 56)
+
+    # Sort by timestamp (oldest first = most urgent for follow-up)
+    def safe_parse(ts):
+        try:
+            return datetime.fromisoformat(ts.replace("Z", "+00:00")).replace(tzinfo=None)
+        except Exception:
+            return None
+
+    for entry in sorted(sent_entries, key=lambda e: safe_parse(e.get("timestamp", "")) or datetime.min):
+        company = entry.get("company", "?")
+        ts_str = entry.get("timestamp", "")
+        sent_at = safe_parse(ts_str)
+        test_label = " [TEST]" if entry.get("test") else ""
+
+        if sent_at:
+            days_ago = (now - sent_at.replace(tzinfo=None)).days
+            hours_ago = int((now - sent_at.replace(tzinfo=None)).total_seconds() / 3600)
+            if days_ago >= BUSINESS_DAYS_FOR_FOLLOWUP:
+                action = f"✅ Ready for follow-up call ({days_ago}d ago)"
+            elif days_ago >= 1:
+                action = f"⏳ Wait {BUSINESS_DAYS_FOR_FOLLOWUP - days_ago} more day(s)"
+            else:
+                action = f"🕐 Sent {hours_ago}h ago — wait for opens"
+        else:
+            action = "❓ Unknown send time"
+
+        print(f"  {company:<26} {ts_str[:10]:<12} ✅ sent   {action}{test_label}")
+
+    for entry in failed_entries:
+        company = entry.get("company", "?")
+        error = entry.get("error", "unknown error")
+        print(f"  {company:<26} {'—':<12} ❌ failed  {error[:30]}")
+
+    print("-" * 56)
+
+    ready = [
+        e for e in sent_entries
+        if safe_parse(e.get("timestamp", ""))
+        and (now - safe_parse(e.get("timestamp", "")).replace(tzinfo=None)).days >= BUSINESS_DAYS_FOR_FOLLOWUP
+    ]
+    if ready:
+        print(f"\n📞 {len(ready)} company(ies) ready for follow-up:")
+        for e in ready:
+            email = e.get("email", "?")
+            capacity = e.get("capacity_kw", "?")
+            print(f"   • {e['company']} ({capacity} kW) — {email}")
+        print(f"\n   Suggested: call +371 prefix, reference solar email sent {BUSINESS_DAYS_FOR_FOLLOWUP}+ days ago")
+    else:
+        oldest = min(
+            (safe_parse(e.get("timestamp", "")) for e in sent_entries if safe_parse(e.get("timestamp", ""))),
+            default=None
+        )
+        if oldest:
+            days = (now - oldest.replace(tzinfo=None)).days
+            print(f"\n⏳ No companies ready yet. Check back in {BUSINESS_DAYS_FOR_FOLLOWUP - days} day(s).")
+        print(f"\n📝 Manual reply tracking: check your inbox BCC copies for responses.")
+
+    if failed_entries:
+        print(f"\n⚠️  {len(failed_entries)} email(s) failed — retry after fixing SMTP:")
+        print(f"   python3 send_emails.py --test   # retry first 3")
+        print(f"   python3 send_emails.py          # retry all (after --smtp-check)")
+
+    print(f"\n📄 Full log: docs/sent_log.json")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description="Solar Scout mail-merge sender")
     parser.add_argument("--dry-run", action="store_true",
@@ -367,6 +468,8 @@ def main():
                         help="Seconds between each email (default: 30)")
     parser.add_argument("--smtp-check", action="store_true",
                         help="Test SMTP connectivity without sending anything")
+    parser.add_argument("--check-replies", action="store_true",
+                        help="Check sent log and show follow-up readiness")
     args = parser.parse_args()
 
     cfg   = load_config()
@@ -374,6 +477,8 @@ def main():
 
     if args.smtp_check:
         return smtp_check(cfg)
+    if args.check_replies:
+        return check_replies(cfg)
 
     if args.dry_run:
         run_dry_run(leads, cfg, limit=3)

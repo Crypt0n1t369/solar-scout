@@ -119,23 +119,23 @@ Reply-pending companies auto-identified from `sent_log.json`.
 
 ## Verified Senders (15 Companies)
 
-| Company | Decision Maker | kW | Industry |
-|---------|---------------|-----|---------|
-| Valmieras Stikla Skiedra | Janis Siliņš | 3,038 | Glass fiber |
-| Grindeks | Juris Bundulis | 2,615 | Pharmaceuticals |
-| Latgales Piens | Marina Černova | 2,538 | Dairy |
-| Preiļu Siers | Aivars Caune | 2,450 | Dairy |
-| Metalex | — | 2,355 | Metalworking |
-| Baltic Laminate | — | 2,213 | Composites |
-| Norgips | — | 2,206 | Construction Materials |
-| Užavas Alus | — | 2,206 | Beverages |
-| Rockwool | — | 2,130 | Insulation |
-| PTA | — | 2,087 | Plastic |
-| Virši | — | 2,087 | Horticulture/Peat |
-| Lode | — | 2,087 | Construction Materials |
-| Bauroc | — | 1,947 | Construction Materials |
-| Laflora | — | 1,798 | Horticulture |
-| Isover | — | 1,646 | Insulation |
+| Company | Decision Maker | Title | kW | Industry |
+|---------|---------------|-------|-----|---------|
+| Valmieras Stikla Skiedra | Janis Siliņš | Production Director | 3,038 | Glass fiber |
+| Grindeks | Juris Bundulis | Chairman of the Board | 2,615 | Pharmaceuticals |
+| Latgales Piens | Marina Černova | Director | 2,538 | Dairy |
+| Preiļu Siers | Aivars Caune | Director | 2,450 | Dairy |
+| Metalex | Eduards Vulfs | Managing Director | 2,355 | Metalworking |
+| Baltic Laminate | Vladislavs Petrovs | Manager | 2,213 | Composites |
+| Norgips | Mārtiņš Krūmiņš | Manager | 2,206 | Construction Materials |
+| Užavas Alus | Gints Ancs | CEO | 2,206 | Beverages |
+| Rockwool | Jānis Bērziņš | Manager | 2,130 | Insulation |
+| PTA | Ainars Kalnins | Director | 2,087 | Packaging |
+| Virši | Jānis Rasa | CEO | 2,087 | Agriculture/Horticulture |
+| Lode | Gints Pērkons | Director | 2,087 | Construction Materials |
+| Bauroc | Māris Gailītis | Manager | 1,947 | Construction Materials |
+| Laflora | Janis | Director | 1,798 | Horticulture/Peat |
+| Isover | Raimonds Cābelis | Director | 1,646 | Insulation |
 
 ---
 

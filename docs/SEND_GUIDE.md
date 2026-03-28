@@ -136,6 +136,16 @@ After sending, check `docs/sent_log.json` for delivery status:
 cat docs/sent_log.json
 ```
 
+Or use the built-in reply tracker:
+```bash
+python3 send_emails.py --check-replies
+```
+
+This shows:
+- Which emails were sent / failed and when
+- Which companies are ready for follow-up (5+ business days)
+- Suggested next action (call or wait)
+
 Expected fields per entry:
 - `timestamp`: ISO 8601 UTC
 - `company`: company name
@@ -143,25 +153,7 @@ Expected fields per entry:
 - `capacity_kw`: estimated solar capacity
 - `status`: `"sent"` or `"failed"`
 - `error`: error message (if failed)
-
----
-
-## Follow-Up Reminders
-
-Track replies manually. After 5 business days with no reply:
-```bash
-# Generate a follow-up reminder list
-python3 -c "
-import csv
-with open('docs/sent_log.json') as f:
-    import json
-    log = json.load(f)
-sent = [e for e in log if e['status'] == 'sent']
-print(f'Reply-pending: {len(sent)} companies')
-for e in sent:
-    print(f\"  {e['company']} — {e['email']}\")
-"
-```
+- `test`: `true` if sent via `--test` flag
 
 ---
 
