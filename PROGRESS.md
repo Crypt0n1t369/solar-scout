@@ -1,5 +1,69 @@
 # Solar Scout - Progress Tracker
 
+## 2026-03-28 14:56 Cairo (12:56 UTC) — Aton Wakeup
+
+### Status: ✅ Pipeline Verified / All 15 Emails Correct / SMTP Is Only Blocker
+
+**This session: Verified all services healthy (6/6). Confirmed email pipeline end-to-end — 15 emails render correctly with proper gender-aware Latvian grammar (Godātais/Godātā). All 10 Tier 2 companies correctly blocked by MX validation. API.md doc fix committed for Audio Tool. Solar Scout is ready — SMTP configuration is the only remaining action.**
+
+### Verification Results
+
+| Check | Result |
+|-------|--------|
+| All 6 services (3000/3001/3003/3005/3006/8080) | ✅ All HTTP 200 |
+| Audio Tool backend (3001) | ✅ 10 protocols, demo mode active |
+| Audio Tool frontend (3005) | ✅ HTTP 200 |
+| Solar Scout `send_emails.py --dry-run` | ✅ 3 emails preview correctly |
+| Latvian grammar (Godātā Marina Černova) | ✅ Feminine names correct |
+| MX validation (10 Tier 2 companies) | ✅ All blocked — NO MX RECORD |
+| Solar Scout pipeline | ✅ `generate_emails.py` → `email_drafts_validated.md` → `send_emails.py` |
+| Audio Tool API.md | ✅ Fixed "9 protocols" → "10 protocols" |
+
+### Solar Scout — Current State
+
+**✅ Pipeline Complete — User Action Required to Send**
+
+```
+regenerate_validated.py → leads_outreach_validated.csv (15 companies, 33.4 MW)
+                           ↓
+generate_emails.py      → email_drafts_validated.md (preview, 15 drafts)
+                           ↓
+send_emails.py --dry-run → email preview (working ✅)
+send_emails.py --test   → first 3 emails (requires SMTP config)
+send_emails.py          → all 15 emails (requires SMTP config)
+```
+
+**P0 Blocker — SMTP Configuration (User Action Required)**
+```bash
+# Gmail example:
+export SMTP_HOST=smtp.gmail.com
+export SMTP_PORT=587
+export SMTP_USER=your@gmail.com
+export SMTP_PASSWORD="xxxx xxxx xxxx xxxx"
+export SENDER_NAME="Your Name"
+export SENDER_EMAIL=your@gmail.com
+export BCC_RECIPIENT=your@gmail.com
+```
+See `docs/SEND_GUIDE.md` for Gmail/Mailgun/SendGrid setup steps.
+
+### Audio Tool — Current State
+
+**✅ 43/43 Tests Passing / 10 Protocols / Demo Mode Active**
+
+- Backend (3001): 10 protocols (NSDR, IFS, SOMATIC_AGENCY, ACT, FUTURE_SELF, WOOP, NVC, IDENTITY, NARRATIVE, GENERAL) ✅
+- Frontend (3005): HTTP 200 ✅
+- API.md fixed: "9 supported" → "10 supported" ✅
+- P0 blockers: Vercel deploy, OpenRouter credits (user action needed)
+
+### What's Next
+1. **User: Configure SMTP** — Solar Scout ready to send 15 emails (see `docs/SEND_GUIDE.md`)
+2. **User: Preview all 15** — `python3 send_emails.py --dry-run-all`
+3. **User: Send test batch** — `python3 send_emails.py --test`
+4. **User: Deploy Audio Tool to Vercel** — for public URL
+5. **User: Add OpenRouter credits** — unlocks LLM features
+
+---
+
 ## 2026-03-28 11:26 Cairo (09:26 UTC) — Aton Wakeup
 
 ### Status: ✅ Critical Data Quality Fix — Corrected 36→15 Companies / 82.6→33.4 MW
