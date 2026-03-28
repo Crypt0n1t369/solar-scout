@@ -295,6 +295,66 @@ def run_send(leads, cfg, test_only=False, delay=30):
     return sent, failed
 
 
+def smtp_check(cfg):
+    """Test SMTP connectivity and report configuration status."""
+    print("=" * 50)
+    print("SMTP CONNECTIVITY CHECK")
+    print("=" * 50)
+
+    missing = []
+    if not cfg["host"]:
+        missing.append("SMTP_HOST")
+    if not cfg["user"]:
+        missing.append("SMTP_USER")
+    if not cfg["password"]:
+        missing.append("SMTP_PASSWORD")
+    if not cfg["sender_email"]:
+        missing.append("SENDER_EMAIL")
+    if not cfg["sender_name"] or cfg["sender_name"] == "[YOUR NAME]":
+        missing.append("SENDER_NAME (still using placeholder)")
+
+    if missing:
+        print(f"\n❌ Not configured: {', '.join(missing)}")
+        print("\nSet these environment variables:")
+        for var in ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASSWORD", "SENDER_NAME", "SENDER_EMAIL", "BCC_RECIPIENT"]:
+            print(f"   export {var}=...")
+        print(f"\nSee docs/SEND_GUIDE.md for setup steps.")
+        return 1
+
+    print(f"\n✅ SMTP configured:")
+    print(f"   Host:     {cfg['host']}:{cfg['port']}")
+    print(f"   User:     {cfg['user']}")
+    print(f"   From:     {cfg['sender_name']} <{cfg['sender_email']}>")
+    print(f"   BCC:      {cfg['bcc_recipient'] or '(none)'}")
+
+    print(f"\n🔌 Testing connection to {cfg['host']}:{cfg['port']}...")
+    try:
+        if cfg["port"] == 465:
+            server = SMTP_SSL(cfg["host"], cfg["port"], timeout=10)
+        else:
+            server = SMTP(cfg["host"], cfg["port"], timeout=10)
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+        server.login(cfg["user"], cfg["password"])
+        server.quit()
+        print(f"✅ Login successful — SMTP credentials are valid!")
+        print(f"\n🚀 Ready to send. Suggested next steps:")
+        print(f"   1. python3 send_emails.py --dry-run-all     # preview all 15")
+        print(f"   2. python3 send_emails.py --test            # send first 3")
+        print(f"   3. python3 send_emails.py                   # send all 15")
+        return 0
+    except Exception as e:
+        print(f"\n❌ Connection failed: {e}")
+        print(f"\n💡 Troubleshooting:")
+        print(f"   - Gmail: use an App Password (16 chars), not your main password")
+        print(f"   - Mailgun: use SMTP credentials from Settings → SMTP")
+        print(f"   - Port 587: ensure STARTTLS is available")
+        print(f"   - Port 465: ensure SSL is supported")
+        print(f"   See docs/SEND_GUIDE.md for detailed setup steps.")
+        return 1
+
+
 def main():
     parser = argparse.ArgumentParser(description="Solar Scout mail-merge sender")
     parser.add_argument("--dry-run", action="store_true",
@@ -305,10 +365,15 @@ def main():
                         help="Send to first 3 recipients only (real send)")
     parser.add_argument("--delay", type=int, default=30,
                         help="Seconds between each email (default: 30)")
+    parser.add_argument("--smtp-check", action="store_true",
+                        help="Test SMTP connectivity without sending anything")
     args = parser.parse_args()
 
     cfg   = load_config()
     leads = load_leads()
+
+    if args.smtp_check:
+        return smtp_check(cfg)
 
     if args.dry_run:
         run_dry_run(leads, cfg, limit=3)
@@ -323,6 +388,7 @@ def main():
         print("   SENDER_NAME, SENDER_EMAIL, BCC_RECIPIENT")
         print()
         print("   Run with --dry-run to preview emails without sending.")
+        print("   Run with --smtp-check to test your SMTP configuration.")
         return 1
 
     if args.test:
