@@ -1,5 +1,56 @@
 # Solar Scout - Progress Tracker
 
+## 2026-03-28 15:56 Cairo (13:56 UTC) — Aton Wakeup
+
+### Status: ✅ `--check-replies` Added / All 6 Services Healthy / Pipeline Solid
+
+**This session: Added `--check-replies` flag to `send_emails.py` (reads sent_log.json, shows sent/failed summary + 5-day follow-up readiness per company). Fixed OUTREACH_PLAN.md decision-maker table — all 15 names now correct with titles. Updated SEND_GUIDE.md to use built-in `--check-replies` instead of manual Python snippet. Committed and pushed `e2f3b1e`. All 6 services confirmed healthy. Solar Scout is pipeline-complete and awaiting SMTP configuration.**
+
+### What Was Done This Session
+1. ✅ **`--check-replies` flag added to `send_emails.py`** — isolated, self-contained:
+   - Reads `docs/sent_log.json` and shows sent/failed summary
+   - Sorts by timestamp (oldest = most urgent for follow-up)
+   - Shows per-company: days/hours since sent, follow-up readiness (5-day window)
+   - Companies ready for follow-up highlighted with suggested next action
+   - Failed entries shown with error message
+   - Works gracefully when log is empty or doesn't exist
+2. ✅ **OUTREACH_PLAN.md decision-maker table corrected** — all 15 entries now have full names + titles (was showing "—" for most)
+3. ✅ **SEND_GUIDE.md updated** — replaced manual Python snippet with `python3 send_emails.py --check-replies`
+4. ✅ **All 6 services confirmed healthy:**
+   - Audio Backend (3001): `{"status":"ok","openRouterLinked":true}` ✅
+   - Audio Frontend (3005): HTTP 200 ✅
+   - Credo API (3000): `{"status":"ok"}` ✅
+   - Youth Platform (3003): `{"status":"ok"}` ✅
+   - CG Web (3006): `{"status":"ok"}` ✅
+   - JCI Portal (8080): `{"status":"ok"}` ✅
+5. ✅ **Git committed + pushed:** `e2f3b1e` — "solar-scout: add --check-replies flag + fix OUTREACH_PLAN decision-maker table"
+
+### Git Commits This Session
+| Commit | Description |
+|--------|-------------|
+| `e2f3b1e` | solar-scout: add --check-replies flag + fix OUTREACH_PLAN decision-maker table |
+
+### What's Working
+```
+python3 send_emails.py --smtp-check       # validate SMTP before sending
+python3 send_emails.py --dry-run-all      # preview all 15 (no SMTP needed)
+python3 send_emails.py --dry-run         # preview first 3 (no SMTP needed)
+python3 send_emails.py --check-replies   # NEW: check sent log + follow-up readiness
+python3 send_emails.py --test             # send first 3 (requires SMTP)
+python3 send_emails.py                    # send all 15 (requires SMTP)
+```
+
+### What's Next (Priority Order)
+1. **User: Configure SMTP** — any provider (Gmail App Password / Mailgun / SendGrid)
+   - Quick check: `python3 send_emails.py --smtp-check` after configuring
+2. **User: Preview all 15** — `python3 send_emails.py --dry-run-all`
+3. **User: Send test batch** — `python3 send_emails.py --test` (3 emails, verify inbox)
+4. **User: Send full batch** — `python3 send_emails.py` (all 15, 30s delay)
+5. **After 5 days** — `python3 send_emails.py --check-replies` to see follow-up readiness
+6. **Follow-up** — call companies with no reply, reference solar email
+
+---
+
 ## 2026-03-28 15:26 Cairo (13:26 UTC) — Aton Wakeup
 
 ### Status: ✅ `--smtp-check` Flag Added / Pipeline Verified / All 15 Ready
