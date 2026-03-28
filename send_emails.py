@@ -31,12 +31,28 @@ from email.mime.text import MIMEText
 from smtplib import SMTP, SMTP_SSL
 
 
+# Feminine Latvian first names (need "Godātā" instead of "Godātais")
+LATVIAN_FEMININE_NAMES = {
+    "marina", "anna", "karina", "kristīne", "līga", "liga",
+    "maija", "daina", "aira", " vera", "solvita", "zanda",
+    "ginta", "inga", "lāsma", "egita", " Santa", "ilva", "estere",
+    "diana", "loreta", "monta", "rūta", "laura", "karoline",
+}
+
+
+def is_feminine_name(first_name: str) -> bool:
+    """Return True if the first name is known to be feminine in Latvian."""
+    normalized = first_name.strip().lower()
+    return normalized in LATVIAN_FEMININE_NAMES
+
+
 def load_config():
     """Load SMTP config from environment variables (with config.py as fallback for SMTP fields only)."""
     # Env vars always win for sender identity
-    sender_name  = os.getenv("SENDER_NAME", "[YOUR NAME]")
-    sender_email = os.getenv("SENDER_EMAIL", "[YOUR@EMAIL.COM]")
-    bcc_recip    = os.getenv("BCC_RECIPIENT", "")
+    sender_name   = os.getenv("SENDER_NAME", "[YOUR NAME]")
+    sender_email  = os.getenv("SENDER_EMAIL", "[YOUR@EMAIL.COM]")
+    sender_phone  = os.getenv("SENDER_PHONE", "+371 XXX XXXX")
+    bcc_recip     = os.getenv("BCC_RECIPIENT", "")
 
     # SMTP credentials: env vars first, then config.py fallback
     host     = os.getenv("SMTP_HOST", "")
@@ -65,7 +81,7 @@ def load_config():
     return {
         "host": host, "port": port, "user": user, "password": password,
         "sender_name": sender_name, "sender_email": sender_email,
-        "bcc_recipient": bcc_recip,
+        "sender_phone": sender_phone, "bcc_recipient": bcc_recip,
     }
 
 
@@ -87,7 +103,8 @@ def build_email_body(lead, cfg, lang="lv"):
     address  = lead["address"].strip()
     capacity = int(lead["capacity_kw"])
     first_name = name.split()[0] if name else name
-    greeting_lv = f"Godātais {name}," if name else "Godātais/a,"
+    # Gender-aware Latvian greeting: "Godātais" (masc.) vs "Godātā" (fem.)
+    greeting_lv = f"Godātā {name}," if (name and is_feminine_name(first_name)) else f"Godātais {name}," if name else "Godātais/a,"
     greeting_en = f"Dear {first_name}," if first_name else "Dear sir or madam,"
 
     if lang == "lv":
@@ -107,7 +124,7 @@ Ietaupījums: līdz 30-50% no elektroenerģijas izmaksām
 Vai būtu ērti 15 minūšu zvans šonedēļ, lai izvērtētu iespējas?
 
 Ar cieņu,
-{cfg['sender_name']} | [PHONE] | {cfg['sender_email']}
+{cfg['sender_name']} | {cfg['sender_phone']} | {cfg['sender_email']}
 
 ---
 Šis e-pasts tika nosūtīts saskaņā ar Latvijas Personas datu aizsardzības likumu.
@@ -124,7 +141,7 @@ Based on our preliminary analysis, your facility at {address} could host approxi
 Is 15 minutes convenient this week for a quick call to discuss the specifics?
 
 Best regards,
-{cfg['sender_name']} | [PHONE] | {cfg['sender_email']}
+{cfg['sender_name']} | {cfg['sender_phone']} | {cfg['sender_email']}
 
 ---
 This email was sent in compliance with applicable email marketing regulations.

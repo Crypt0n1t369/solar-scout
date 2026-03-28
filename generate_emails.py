@@ -5,6 +5,20 @@ import json
 import subprocess
 import csv
 
+# Feminine Latvian first names (need "Godātā" instead of "Godātais")
+LATVIAN_FEMININE_NAMES = {
+    "marina", "anna", "karina", "kristīne", "līga", "liga",
+    "maija", "daina", "aira", "vera", "solvita", "zanda",
+    "ginta", "inga", "lāsma", "egita", "santa", "ilva", "estere",
+    "diana", "loreta", "monta", "rūta", "laura", "karoline",
+}
+
+
+def is_feminine_name(first_name: str) -> bool:
+    """Return True if the first name is known to be feminine in Latvian."""
+    return first_name.strip().lower() in LATVIAN_FEMININE_NAMES
+
+
 data = json.load(open('docs/leads_outreach_real.json'))
 
 def is_valid_email(email):
@@ -45,11 +59,14 @@ with open('docs/email_drafts_validated.md', 'w') as f:
         capacity = int(c.get('capacity_kw', 0))
         industry = c.get('industry', '')
 
+        first_name = name.split()[0] if name else ''
+        greeting_lv = f"Godātā {name}," if is_feminine_name(first_name) else f"Godātais {name},"
+
         subject_lv = f"SaulesPaneļi Latvija — Bezmaksas konsultācija jūsu ražotnei"
         latvian = f"""**TO:** {email}
 **SUBJECT (LV):** {subject_lv}
 
-Godātais {name},
+{greeting_lv}
 
 Esmu [VĀRDS] no [COMPANY NAME] — mēs palīdzam Latvijas rūpniecības uzņēmumiem saražot savu elektroenerģiju ar saules paneļiem.
 

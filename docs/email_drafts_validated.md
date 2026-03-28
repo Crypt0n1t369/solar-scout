@@ -99,7 +99,7 @@ Best regards,
 **TO:** info@latgalespiens.lv
 **SUBJECT (LV):** SaulesPaneļi Latvija — Bezmaksas konsultācija jūsu ražotnei
 
-Godātais Marina Černova,
+Godātā Marina Černova,
 
 Esmu [VĀRDS] no [COMPANY NAME] — mēs palīdzam Latvijas rūpniecības uzņēmumiem saražot savu elektroenerģiju ar saules paneļiem.
 
