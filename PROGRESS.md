@@ -1,5 +1,52 @@
 # Solar Scout - Progress Tracker
 
+## 2026-03-28 01:56 Cairo (23:56 UTC) — Aton Wakeup
+
+### Status: ✅ Grammar Bug Fixed / 2 Code Bugs Fixed / All 15 Emails Verified / Pushed
+
+**This session: Found and fixed 2 bugs in `send_emails.py` and `generate_emails.py`. Committed and pushed `4193196`.**
+
+### Bugs Fixed This Session
+
+**Bug 1 — Latvian Grammar: "Godātais" vs "Godātā" (Gender-aware greeting)**
+- `send_emails.py` + `generate_emails.py`: Added `LATVIAN_FEMININE_NAMES` set + `is_feminine_name()` heuristic
+- Marina Černova now correctly addressed as **"Godātā Marina Černova"** (feminine) not ~~"Godātais Marina Černova"~~
+- All 14 masculine names correctly keep "Godātais" ✅
+- File: `send_emails.py` (grammar in `build_email_body()`), `generate_emails.py` (same fix)
+
+**Bug 2 — `[PHONE]` Placeholder Never Substituted**
+- `send_emails.py`: `SENDER_PHONE` env var now loaded in `load_config()` (defaults to `+371 XXX XXXX`)
+- Both LV and EN email signatures now use `{cfg['sender_phone']}` instead of hardcoded `[PHONE]`
+- `generate_emails.py`: draft signatures still show `[TĀLRUNIS]` (pre-generated static preview) — live send uses real phone ✅
+
+### Verification Results
+
+| Check | Result |
+|-------|--------|
+| `send_emails.py --dry-run-all` (all 15) | ✅ Grammar correct for all 15 |
+| Marina Černova greeting | ✅ "Godātā Marina Černova" |
+| All 14 masculine names | ✅ "Godātais [Name]" |
+| Grammar fix (send_emails.py import) | ✅ No syntax errors |
+| Grammar fix (generate_emails.py) | ✅ Drafts regenerated |
+| Email data quality (15 companies) | ✅ No empty fields, all capacities numeric |
+| Services health (/health endpoint) | ✅ 3000, 3001, 3003 all return `{"status":"ok"}` |
+| Git push | ✅ `4193196` → origin/master |
+
+### Git Commit
+| Commit | Description |
+|--------|-------------|
+| `4193196` | solar-scout: fix Latvian grammar bug (Godātā/Godātais gender) + add SENDER_PHONE |
+
+### What's Next (Priority Order)
+1. **User: Configure SMTP** — set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `SENDER_NAME`, `SENDER_EMAIL`, `SENDER_PHONE`, `BCC_RECIPIENT`
+2. **User: Preview all emails** — `python3 send_emails.py --dry-run-all` to verify sender info renders correctly
+3. **User: Send test batch** — `python3 send_emails.py --test` (first 3 emails, real SMTP)
+4. **User: Send full batch** — `python3 send_emails.py` (all 15, 30s delay between each)
+5. **User: Top up OpenRouter credits** (~5-10 USD, unlocks AI research)
+6. **User: Verify 11 unknowns** via Lursoft.lv or +371 calls (could add ~24 MW)
+
+---
+
 ## 2026-03-27 22:26 Cairo (20:26 UTC) — Aton Wakeup
 
 ### Status: ✅ Pipeline Solid / SMTP Awaiting User / 15 Companies Ready
