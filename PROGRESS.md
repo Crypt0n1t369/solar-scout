@@ -1,5 +1,76 @@
 # Solar Scout - Progress Tracker
 
+## 2026-03-28 15:26 Cairo (13:26 UTC) — Aton Wakeup
+
+### Status: ✅ `--smtp-check` Flag Added / Pipeline Verified / All 15 Ready
+
+**This session: Added `--smtp-check` flag to `send_emails.py` for pre-flight SMTP validation (connects, logs in, reports success/failure with diagnostics). Confirmed pipeline intact — `regenerate_validated.py` (15 co, 33.4 MW), `generate_emails.py`, `send_emails.py --dry-run-all` all working. All 6 services healthy. Audio Tool: 43/43 tests passing. Committed and pushed `de47334`.**
+
+### What Was Done This Session
+1. ✅ **`--smtp-check` flag added to `send_emails.py`** — isolated, self-contained addition:
+   - Reports which env vars are missing with a checklist
+   - Attempts SMTP connection + STARTTLS + login
+   - On success: prints ✅ + suggests next steps (`--dry-run-all` → `--test` → full send)
+   - On failure: prints diagnostic (common causes: Gmail needs App Password, wrong port, etc.)
+   - Exits 1 if not configured, exits 0 if login succeeds
+   - Does NOT require SMTP to be configured — works as a diagnostic tool
+2. ✅ **Pipeline verified end-to-end:**
+   - `regenerate_validated.py` → 15 companies / 33.4 MW ✅
+   - `generate_emails.py` → `docs/email_drafts_validated.md` (15 drafts) ✅
+   - `send_emails.py --dry-run` → 3 email preview ✅
+   - `send_emails.py --dry-run-all` → all 15 preview ✅
+   - `send_emails.py --smtp-check` → reports missing config (as expected) ✅
+3. ✅ **All 6 services confirmed healthy:**
+   - Audio Backend (3001): `{"status":"ok","openRouterLinked":true}` ✅
+   - Audio Frontend (3005): HTTP 200 ✅
+   - Credo API (3000): `{"status":"ok"}` ✅
+   - Youth Platform (3003): `{"status":"ok"}` ✅
+   - Solar Scout send_emails.py: new `--smtp-check` flag working ✅
+4. ✅ **Git committed + pushed:** `de47334` — "solar-scout: add --smtp-check flag"
+
+### Git Commits This Session
+| Commit | Description |
+|--------|-------------|
+| `de47334` | solar-scout: add --smtp-check flag to validate SMTP connectivity before sending |
+
+### Verified: 15 Validated Companies (33.4 MW)
+| Company | Decision Maker | Capacity |
+|---------|---------------|----------|
+| Valmieras Stikla Skiedra | Janis Siliņš | 3,037 kW |
+| Grindeks | Juris Bundulis | 2,614 kW |
+| Latgales Piens | Marina Černova | 2,537 kW |
+| Preiļu Siers | Aivars Caune | 2,450 kW |
+| Metalex | Eduards Vulfs | 2,355 kW |
+| Baltic Laminate | Vladislavs Petrovs | 2,213 kW |
+| Norgips | Mārtiņš Krūmiņš | 2,206 kW |
+| Užavas Alus | Gints Ancs | 2,206 kW |
+| Rockwool | Jānis Bērziņš | 2,130 kW |
+| PTA | Ainars Kalnins | 2,086 kW |
+| Virši | Jānis Rasa | 2,086 kW |
+| Lode | Gints Pērkons | 2,086 kW |
+| Bauroc | Māris Gailītis | 1,947 kW |
+| Laflora | Janis | 1,797 kW |
+| Isover | Raimonds Cābelis | 1,646 kW |
+
+### What's Working
+```
+python3 send_emails.py --smtp-check       # NEW: validate SMTP before sending
+python3 send_emails.py --dry-run-all      # preview all 15 (no SMTP needed)
+python3 send_emails.py --dry-run         # preview first 3 (no SMTP needed)
+python3 send_emails.py --test             # send first 3 (requires SMTP)
+python3 send_emails.py                    # send all 15 (requires SMTP)
+```
+
+### What's Next (Priority Order)
+1. **User: Configure SMTP** — any provider (Gmail App Password / Mailgun / SendGrid)
+   - Quick check: `python3 send_emails.py --smtp-check` after configuring
+2. **User: Preview all 15** — `python3 send_emails.py --dry-run-all`
+3. **User: Send test batch** — `python3 send_emails.py --test` (3 emails, verify inbox)
+4. **User: Send full batch** — `python3 send_emails.py` (all 15, 30s delay)
+5. **Follow-up** — check `docs/sent_log.json` after 3-5 days for replies
+
+---
+
 ## 2026-03-28 14:56 Cairo (12:56 UTC) — Aton Wakeup
 
 ### Status: ✅ Pipeline Verified / All 15 Emails Correct / SMTP Is Only Blocker
