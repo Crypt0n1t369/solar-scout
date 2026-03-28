@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Generate personalized email drafts for validated leads."""
+"""Generate personalized email drafts for validated leads.
 
-import json
-import subprocess
+Reads from docs/leads_outreach_validated.csv (produced by regenerate_validated.py),
+ensuring consistency with send_emails.py.
+"""
+
 import csv
 
 # Feminine Latvian first names (need "Godātā" instead of "Godātais")
@@ -19,44 +21,31 @@ def is_feminine_name(first_name: str) -> bool:
     return first_name.strip().lower() in LATVIAN_FEMININE_NAMES
 
 
-data = json.load(open('docs/leads_outreach_real.json'))
+# Read directly from the validated CSV (same source as send_emails.py)
+with open("docs/leads_outreach_validated.csv") as f:
+    valid = list(csv.DictReader(f))
 
-def is_valid_email(email):
-    domain = email.split('@')[1] if '@' in email else ''
-    if not domain:
-        return False
-    try:
-        mx = subprocess.run(['dig', '+short', domain, 'MX'], capture_output=True, text=True, timeout=3)
-        out = mx.stdout.strip()
-        if not out:
-            return False
-        parts = out.split()
-        if len(parts) >= 2 and parts[1] == '.':
-            return False
-        if 'localhost' in out:
-            return False
-        return True
-    except:
-        return False
-
-valid = [c for c in data if is_valid_email(c.get('email', ''))]
-valid.sort(key=lambda x: -x.get('capacity_kw', 0))
+total_kw = sum(float(r.get("capacity_kw", 0) or 0) for r in valid)
+total_mw = total_kw / 1000
 
 # Generate email drafts
 with open('docs/email_drafts_validated.md', 'w') as f:
-    f.write('# Validated Outreach Emails — 15 Companies Ready to Send\n\n')
-    f.write(f'Total: {len(valid)} companies | {sum(v.get("capacity_kw",0) for v in valid)/1000:.1f} MW\n\n')
-    f.write('> ⚠️ Email validation: strict MX check — requires valid mail server (not localhost, not null MX)\n')
-    f.write('> ❌ Riviera (null MX) and Ventilacija (localhost MX) removed from previous 16-company list\n\n---\n\n')
+    f.write(f'# Validated Outreach Emails — {len(valid)} Companies Ready to Send\n\n')
+    f.write(f'Total: {len(valid)} companies | {total_mw:.1f} MW\n\n')
+    f.write(
+        '> ⚠️ Email validation: strict MX check — requires valid mail server (not localhost, not null MX)\n'
+        '> ⚠️ Draft preview — replace [YOUR NAME] / [YOUR@EMAIL.COM] / [PHONE] before sending\n\n'
+        '---\n\n'
+    )
     
     for c in valid:
-        company = c['company']
+        company = c.get('company', '')
         name = c.get('decision_maker', '[DECISION MAKER]')
         title = c.get('title', '')
-        email = c['email']
-        phone = c['phone']
+        email = c.get('email', '')
+        phone = c.get('phone', '')
         address = c.get('address', '')
-        capacity = int(c.get('capacity_kw', 0))
+        capacity = int(float(c.get('capacity_kw', 0) or 0))
         industry = c.get('industry', '')
 
         first_name = name.split()[0] if name else ''
@@ -108,5 +97,4 @@ Best regards,
         f.write(f"\n\n---\n\n")
 
 print(f'✅ Generated {len(valid)} email drafts → docs/email_drafts_validated.md')
-print(f'✅ Validated CSV → docs/leads_outreach_validated.csv')
-print(f'📊 Total validated capacity: {sum(v.get("capacity_kw",0) for v in valid)/1000:.1f} MW')
+print(f'📊 Total validated capacity: {total_mw:.1f} MW ({len(valid)} companies)')

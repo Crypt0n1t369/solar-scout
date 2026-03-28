@@ -5,40 +5,41 @@
 
 ---
 
-## What Changed This Session
+## Current State (Corrected)
 
-- Validated list **expanded from 15 → 36 companies** (82.6 MW combined)
-- 10 low-confidence companies flagged separately (see Tier 2 below)
-- Pipeline verified: `--dry-run-all` produces correct emails for all 36
+- Validated list: **15 companies (33.4 MW)** — strict MX validation, all confirmed deliverable
+- 21 companies were incorrectly added to the outreach CSV without MX validation (fixed 2026-03-28)
+- 10 companies flagged as "Manufacturing (likely)" have no MX record — cannot email them
+- Pipeline verified: `--dry-run-all` confirms all 15 emails generate correctly
 
 ---
 
 ## Outreach Tiers
 
-### Tier 1 — Ready to Send (36 companies, 82.6 MW)
+### Tier 1 — Ready to Send (15 companies, 33.4 MW)
 All have: confirmed email, named decision-maker, identified address, verified solar capacity.
 
 | Batch | # Companies | MW | Action |
 |-------|-------------|-----|--------|
-| Batch 1 (today) | 36 | 82.6 | Configure SMTP → send all at once |
+| Batch 1 (today) | 15 | 33.4 | Configure SMTP → send all at once |
 
-**Total capacity:** 82,560 kW across 36 companies
+**Total capacity:** 33,400 kW across 15 companies
 
-### Tier 2 — Needs Verification (10 companies, 22.4 MW)
-"Manufacturing (likely)" — no web presence confirmed. Verify via Lursoft.lv or +371 call before sending.
+### Tier 2 — Needs Verification (10 companies, ~22 MW)
+"Manufacturing (likely)" — no web presence, no MX record. Cannot email. Verify via Lursoft.lv or +371 call before sending.
 
 | # | Company | kW | Why uncertain |
 |---|---------|----|---------------|
-| 1 | Riviera | 2,553 | No web, riviera.lv under construction |
-| 2 | Latsr | 2,206 | No web presence |
-| 3 | Kopa | 2,203 | Small town, no web |
-| 4 | JSC Latgales | 2,203 | Unconfirmed industry |
-| 5 | Gerhard | 1,980 | No web presence |
-| 6 | Krass | 2,200 | No web presence |
-| 7 | Sent | 2,130 | No web presence |
-| 8 | Bermas | 1,947 | No web presence |
-| 9 | Len | 2,355 | No web presence |
-| 10 | Vests | 2,381 | No web presence |
+| 1 | Riviera | 2,553 | Null MX — domain refuses email |
+| 2 | Latsr | 2,206 | No MX record |
+| 3 | Kopa | 2,203 | No MX record |
+| 4 | JSC Latgales | 2,203 | No MX record |
+| 5 | Gerhard | 1,980 | No MX record |
+| 6 | Krass | 2,200 | No MX record |
+| 7 | Sent | 2,130 | No MX record |
+| 8 | Bermas | 1,947 | No MX record |
+| 9 | Len | 2,355 | No MX record |
+| 10 | Vests | 2,381 | No MX record |
 
 ---
 
@@ -62,7 +63,7 @@ export BCC_RECIPIENT="your@gmail.com"
 ```bash
 export SMTP_HOST="smtp.mailgun.org"
 export SMTP_PORT="587"
-export SMTP_USER="postmaster@yourdomain.lv"
+export SMTP_HOST="postmaster@yourdomain.lv"
 export SMTP_PASSWORD="your-smtp-password"
 export SENDER_NAME="Your Name"
 export SENDER_EMAIL="your@yourdomain.lv"
@@ -70,7 +71,7 @@ export BCC_RECIPIENT="your@yourdomain.lv"
 ```
 
 ### Step 2: Say "Go" (or "Wait")
-Reply: **"GO"** → I'll fire the full batch of 36 immediately.
+Reply: **"GO"** → I'll fire the full batch of 15 immediately.
 
 ---
 
@@ -78,7 +79,7 @@ Reply: **"GO"** → I'll fire the full batch of 36 immediately.
 
 | Metric | Target | Notes |
 |--------|--------|-------|
-| Emails sent | 36 | All Tier 1 |
+| Emails sent | 15 | All Tier 1 |
 | Open rate | 25–40% | Latvian B2B avg |
 | Reply rate | 5–10% | "Yes, interested" or "No thanks" |
 | Calls booked | 2–4 | Target |
@@ -92,7 +93,7 @@ Reply: **"GO"** → I'll fire the full batch of 36 immediately.
 
 ```
 $ python3 send_emails.py --dry-run-all
-DRY RUN — 36 email(s) would be sent ✅
+DRY RUN — 15 email(s) would be sent ✅
 ```
 
 Each email includes:
@@ -109,11 +110,34 @@ Each email includes:
 
 After 5 business days, run:
 ```bash
-cd solar-scout && python3 send_emails.py --dry-run  # to check replies
+cd solar-scout && python3 send_emails.py --check-replies
 ```
 
 Reply-pending companies auto-identified from `sent_log.json`.
 
 ---
 
+## Verified Senders (15 Companies)
+
+| Company | Decision Maker | kW | Industry |
+|---------|---------------|-----|---------|
+| Valmieras Stikla Skiedra | Janis Siliņš | 3,038 | Glass fiber |
+| Grindeks | Juris Bundulis | 2,615 | Pharmaceuticals |
+| Latgales Piens | Marina Černova | 2,538 | Dairy |
+| Preiļu Siers | Aivars Caune | 2,450 | Dairy |
+| Metalex | — | 2,355 | Metalworking |
+| Baltic Laminate | — | 2,213 | Composites |
+| Norgips | — | 2,206 | Construction Materials |
+| Užavas Alus | — | 2,206 | Beverages |
+| Rockwool | — | 2,130 | Insulation |
+| PTA | — | 2,087 | Plastic |
+| Virši | — | 2,087 | Horticulture/Peat |
+| Lode | — | 2,087 | Construction Materials |
+| Bauroc | — | 1,947 | Construction Materials |
+| Laflora | — | 1,798 | Horticulture |
+| Isover | — | 1,646 | Insulation |
+
+---
+
 *Pipeline: `solar-scout/send_emails.py` | Leads: `solar-scout/docs/leads_outreach_validated.csv` | Template: `solar-scout/docs/EMAIL_TEMPLATE.md`*
+

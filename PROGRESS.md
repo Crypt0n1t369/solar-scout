@@ -1,5 +1,67 @@
 # Solar Scout - Progress Tracker
 
+## 2026-03-28 11:26 Cairo (09:26 UTC) — Aton Wakeup
+
+### Status: ✅ Critical Data Quality Fix — Corrected 36→15 Companies / 82.6→33.4 MW
+
+**This session: Found critical data quality issue. The `leads_outreach_validated.csv` had 36 companies but 21 of them FAIL MX validation — they were added without running MX checks. True validated count is 15 companies / 33.4 MW. Fixed `generate_emails.py` to read from the validated CSV (consistent with `send_emails.py`). Regenerated `email_drafts_validated.md`. All docs updated.**
+
+### Critical Fix — Outreach Data Corrected
+
+| Metric | Before (WRONG) | After (CORRECT) |
+|--------|----------------|-----------------|
+| Validated companies | 36 | **15** |
+| Total MW | 82.6 | **33.4** |
+| CSV companies passing MX | 15/36 | **15/15** ✅ |
+| Email drafts | 14 (outdated) | **15** ✅ |
+
+**Root cause:** `generate_emails.py` ran MX validation independently on `leads_outreach_real.json` (15 passing), while `regenerate_validated.py` produced a CSV later expanded to 36 without re-validation. `send_emails.py` correctly read the CSV (36), but many had no valid MX.
+
+**Fix:**
+- `generate_emails.py` now reads from `leads_outreach_validated.csv` (same source as `send_emails.py`)
+- `regenerate_validated.py` is the single source of truth for validated leads
+- All docs updated (OUTREACH_PLAN.md, workspace PROGRESS.md, MEMORY_CONTEXT.md)
+
+### Verified Pipeline (15 companies, 33.4 MW)
+
+| Check | Result |
+|-------|--------|
+| `regenerate_validated.py` | ✅ 15 companies / 33.4 MW |
+| `generate_emails.py` | ✅ 15 drafts → `email_drafts_validated.md` |
+| `send_emails.py --dry-run-all` | ✅ 15 emails preview correctly |
+| Grammar (Godātā/Godātais) | ✅ Marina Černova, Inga Vanaga, Anna Ozola = feminine |
+
+### What's Working
+```
+regenerate_validated.py → leads_outreach_validated.csv (15 companies, MX-validated)
+                           ↓
+generate_emails.py      → email_drafts_validated.md (preview, 15 drafts)
+                           ↓
+send_emails.py --dry-run → email preview
+send_emails.py --test   → first 3 emails (real SMTP)
+send_emails.py          → all 15 emails (real SMTP)
+```
+
+### P0 Blocker — SMTP Configuration (User Action Required)
+```bash
+export SMTP_HOST=smtp.gmail.com
+export SMTP_PORT=587
+export SMTP_USER=your@gmail.com
+export SMTP_PASSWORD="xxxx xxxx xxxx xxxx"
+export SENDER_NAME="Your Name"
+export SENDER_EMAIL=your@gmail.com
+export BCC_RECIPIENT=your@gmail.com
+```
+Then: `python3 send_emails.py --dry-run-all` → `python3 send_emails.py --test` → `python3 send_emails.py`
+
+### What's Next
+1. **User: Configure SMTP** — any SMTP provider (Gmail App Password / Mailgun / SendGrid)
+2. **User: Preview all emails** — `python3 send_emails.py --dry-run-all` to verify sender info renders
+3. **User: Send test batch** — `python3 send_emails.py --test` (first 3 emails, verify inbox not spam)
+4. **User: Send full batch** — `python3 send_emails.py` (all 15 with 30s delays)
+
+---
+
 ## 2026-03-28 01:56 Cairo (23:56 UTC) — Aton Wakeup
 
 ### Status: ✅ Grammar Bug Fixed / 2 Code Bugs Fixed / All 15 Emails Verified / Pushed

@@ -3,7 +3,7 @@
 Total: 15 companies | 33.4 MW
 
 > ⚠️ Email validation: strict MX check — requires valid mail server (not localhost, not null MX)
-> ❌ Riviera (null MX) and Ventilacija (localhost MX) removed from previous 16-company list
+> ⚠️ Draft preview — replace [YOUR NAME] / [YOUR@EMAIL.COM] / [PHONE] before sending
 
 ---
 
